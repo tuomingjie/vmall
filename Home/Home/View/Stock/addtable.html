@@ -1,0 +1,228 @@
+<style>
+    tr{
+        background-color: #ffffff;
+        padding: 5px;
+        border-bottom: 1px solid #cccccc;
+    }
+    td{
+        border-right: 1px solid #cccccc;
+    }
+    .title{
+        height: 60px;
+        line-height: 60px;
+        font-size: 30px;
+        margin-left: 20px;
+        margin-right: 10px;
+    }
+    .content{
+        margin-left: 20px;
+        margin-right: 10px;
+        font-size: 20px;
+        height: auto;
+        /*text-align: center;*/
+    }
+    .desc-input{
+        width: 100%;
+    }
+
+</style>
+<div class="title">
+    商品入库
+</div>
+<div >
+    <table class="table" width="100%" layoutH="112">
+        <thead>
+        <th>操作</th>
+        <th>入库仓库</th>
+        <th>商品名称</th>
+        <th>商品数量</th>
+        <th>商品进价</th>
+        <th>预计售价</th>
+        </thead>
+        <tbody>
+        <tr>
+            <td style="width: 60px;"><a href=" javascript:;" onclick="adddemo(this)">添加</a>&nbsp;
+                <!--<a href="#" onclick="del(this)">删除</a>-->
+            </td>
+            <td style="text-align: right;width: 200px;">
+                <select name="store" style="width: 100%">
+                    <option value="0">总仓库</option>
+                    <volist name="customer" id="vo">
+                        <option value="{$vo.customer_id}">{$vo.customer_name}</option>
+                    </volist>
+                </select>
+            </td>
+            <td style="width: 300px;">
+                <select class="select" name="goods_name" style="width: 100%;">
+                    <volist name="goods" id="vo">
+                        <if condition="$vo.goods_id eq $goods_id">
+                            <option value="{$vo.goods_id}" selected = "selected">{$vo.goods_name}</option>
+                            <else/>
+                            <option value="{$vo.goods_id}">{$vo.goods_name}</option>
+                        </if>
+                    </volist>
+                </select>
+            </td>
+            <td style="width: 80px;"><input name="goods_num" class="desc-input" value=""></td>
+            <td style="width: 80px;"><input name="goods_buy_price" class="desc-input" value=""></td>
+            <td style="width: 80px;"><input name="goods_sell_price" class="desc-input" value=""></td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="formBar">
+        <ul>
+            <li><div class="buttonActive"><div class="buttonContent"><button id="addaction" type="submit">确认入库</button></div></div></li>
+            <li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+        </ul>
+    </div>
+</div>
+
+</div>
+
+<!--选择商品隐藏内容-->
+
+<script>
+    //提交数据
+    $('#addaction').click(function () {
+        //遍历获取入库信息
+        var aler = true;
+        var goods_id = new Array(); //或者写成：var btns= [];
+        jQuery("select[name='goods_name']").each(function(key,value) {
+            goods_id[key] = $(this).val();
+            if(!$(this).val()){
+                aler = false;
+                return aler;
+            }
+        });
+        var goods_num = new Array(); //或者写成：var btns= [];
+        jQuery("input[name='goods_num']").each(function(key,value) {
+            goods_num[key] = $(this).val();
+            if(!$(this).val()){
+                aler = false;
+                return aler;
+            }
+        });
+        var goods_buy_price = new Array(); //或者写成：var btns= [];
+        jQuery("input[name='goods_buy_price']").each(function(key,value) {
+            goods_buy_price[key] = $(this).val();
+        });
+        var goods_sell_price = new Array(); //或者写成：var btns= [];
+        jQuery("input[name='goods_sell_price']").each(function(key,value) {
+            goods_sell_price[key] = $(this).val();
+        });
+        //获取仓库id
+//        var storehouse_id = $('#store').val();
+        var storehouse_id = new Array(); //或者写成：var btns= [];
+        jQuery("select[name='store']").each(function(key,value) {
+            storehouse_id[key] = $(this).val();
+        });
+        console.log(storehouse_id);
+        if(aler == true){
+            $.ajax({
+                url: "__CONTROLLER__/add_action",
+                type: 'post',
+                dataType: 'json',
+                data: {
+                    goods_id:goods_id,
+                    goods_num:goods_num,
+                    goods_buy_price:goods_buy_price,
+                    goods_sell_price:goods_sell_price,
+                    storehouse_id:storehouse_id
+                },
+                success: function (data) {
+                    alert(data.msg);
+                    if(data.status == 'success'){
+                        window.location.replace(location.href);
+                    }
+                },
+                fail: function (data) {
+
+                    return;
+                }
+            });
+        }else {
+            alert('商品名、数量、仓库不能为空')
+        }
+    })
+    //添加商品demo结构
+    function adddemo(th) {
+        $.ajax({
+            url: "__CONTROLLER__/goods",
+            type: 'post',
+            dataType: 'json',
+            data: {
+
+            },
+            success: function (data) {
+                var str =' <tr>';
+                str+='       <td style="width: 60px;"><a href="#" onclick="adddemo(this)">添加</a>&nbsp;';
+                str+='<a href="#" onclick="del(this)">删除</a> ';
+                str+='</td>';
+                str+='<td style="text-align: right;width: 200px;">' ;
+                str+=  ' <span onclick="storehouse(this)">...</span></td>';
+                str+=' <td><select class="select" name="goods_name" style="width: 100%;">';
+                for (var i = 0; i < data.list.length; i++) {
+                    var list =data.list[i];
+                    str+='<option value="'+list.goods_id+'">'+list.goods_name+'</option>';
+                }
+                str+='        </select></td>';
+                str+='            <td style="width: 80px;"><input name="goods_num" class="desc-input" value=""></td>';
+                str+='            <td style="width: 80px;"><input name="goods_buy_price" class="desc-input" value=""></td>';
+                str+='            <td style="width: 80px;"><input name="goods_sell_price" class="desc-input" value=""></td>';
+                str+='    </tr>';
+
+                $('tbody').append(str);
+                if(data.status == 'error'){
+                    alert(data.msg);
+                }
+            },
+
+        });
+    }
+    //删除产品demo结构
+    function del(th) {
+        $(th).parent().parent().remove();
+    }
+    function storehouse(th) {
+        $.ajax({
+            url: "__CONTROLLER__/storehouse",
+            type: 'post',
+            dataType: 'json',
+            data: {
+            },
+            success: function (data) {
+                var str ='';
+                str+= '<select name="store" style="width: 100%">' ;
+                str+='<option value="0">总仓库</option>';
+                for (var i = 0; i < data.list.length; i++) {
+                    var list =data.list[i];
+                    str+='<option value="'+list.customer_id+'">'+list.customer_name+'</option>';
+                }
+                str+= '</select>' ;
+//                alert(str);
+                $(th).parent().html(str);
+                if(data.status == 'error'){
+                    alert(data.msg);
+                }
+            },
+
+        });
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

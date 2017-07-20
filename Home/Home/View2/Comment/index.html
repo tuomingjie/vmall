@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>商品评价_个人中心_信源电商商城</title>
+<link rel="shortcut icon" href="__PUBLIC__/Ico/favicon.ico">
+<link href="__PUBLIC__/Css/person/ec.css" rel="stylesheet" type="text/css">
+
+<link href="__PUBLIC__/Css/person/main.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+#commodity-list-head .current{
+	border:1px solid #ccc;
+	display:inline-block;
+	width:7px;
+	height:16px;
+	font-weight:400;
+	text-align:center;
+	line-height:16px;
+    font-size:12px;
+	padding:0 5px;
+	background:#D2D2D2;
+	margin-left:5px;
+	margin-right:5px;
+}
+#commodity-list-head .num{
+    border:1px solid #ccc;
+	display:inline-block;
+	width:7px;
+	height:16px;
+	font-weight:400;
+	text-align:center;
+	line-height:16px;
+    font-size:12px;
+	padding:0 5px;
+	
+	margin-left:5px;
+	margin-right:5px;
+
+}
+#commodity-list-head .prev{
+    border:1px solid #ccc;
+	display:inline-block;
+	width:7px;
+	height:16px;
+	font-weight:400;
+	text-align:center;
+	line-height:16px;
+    font-size:9px;
+	padding-left:3px;
+	padding-right:5px;
+	
+	margin-left:5px;
+	margin-right:5px;
+}
+
+#commodity-list-head .next{
+    border:1px solid #ccc;
+	display:inline-block;
+	width:7px;
+	height:16px;
+	text-align:center;
+	line-height:16px;
+    font-size:9px;
+	padding-left:3px;
+	padding-right:5px;
+	
+	margin-left:5px;
+	margin-right:5px;
+
+
+}
+
+
+
+
+
+</style>
+
+</head>
+
+
+
+<body>
+<include file="Public/pinkheader"/>
+<include file="Public/searchheader"/>
+<include file="Public/naver" />
+<script src="__PUBLIC__/Js/base.js"></script>
+
+
+
+<div class="hr-10"></div>
+<div class="g">
+	<!--面包屑 -->
+	<div class="breadcrumb-area icon-breadcrumb fcn">您现在的位置：
+		<a href="{:U('Index/index')}" title="首页">首页</a>&nbsp;&gt;&nbsp;
+		<span id="personCenter"><a href="{:U('Member/index')}" title="个人中心">个人中心</a></span>
+		<span id="pathPoint">&nbsp;&gt;&nbsp;</span>
+		<b id="pathTitle">商品评价</b>
+	</div>
+</div>
+<div class="hr-15"></div>
+
+<div class="g">
+    <div class="fr u-4-5"><!--栏目 -->
+<div class="part-area clearfix">
+    <div class="fl">
+        <h3 class="ce-title"><span>商品评价</span></h3>
+    </div>
+</div>
+<div class="hr-2"></div>
+<!--商品评价 -->
+<div class="ce-list">
+	<div class="myOrders-title-area">
+        <div class="h clearfix">
+            <div class="fl">
+                <div class="h-tab">
+                   
+                </div>
+            </div>
+        </div>
+        <div class="b">
+            <table id="commodity-list-head" border="0" cellpadding="0" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th class="tr-span-7">编号</th>
+                        <th class="tr-span-5">商品名称</th>
+                        <th class="tr-span-3">评价时间</th>
+                        <th>评价</th>
+                        <th class="tr-span-2">评价分数</th>
+                    </tr>
+                </thead>
+				   <volist name="list" id="vo">
+				   <tr>
+                        <th class="tr-span-7">{$i}</th>
+                        <th class="tr-span-5">{$vo.goods_name|substr=0,15}</th>
+                        <th class="tr-span-3">{$vo.comment_time|date="y-m-d H:i:s",###}</th>
+                        <th>{$vo.comment_content|substr=0,15|}...</th>
+                        <th class="tr-span-2">{$vo.comment_score}</th>
+                    </tr>
+					</volist>
+					<tr align="right">
+					
+					
+					 <th colspan='4'>{$page}</th>
+                 </tr>
+            </table>
+        </div>
+    </div>
+
+        
+	<div style="display:block;" class="ce-area " id="commodity-list">
+		<table border="0" cellpadding="0" cellspacing="0">
+			<tbody>
+			      
+			</tbody>
+		</table>
+	</div>
+
+	<!--空数据-商品评价 -->
+	<div style="display: block;" id="commodity-list-empty" class="ce-empty-area"></div>
+	
+	
+</div>
+<div class="hr-25"></div>
+<!--分页 -->
+<div class="pager" id="list-pager"></div>
+<input id="colid" value="0" type="hidden">
+
+
+
+
+
+</div>
+	<div class="fl u-1-5">
+    	
+
+<!--左边菜单 -->
+<div class="mc-menu-area">
+	<div class="h"><a href="{:U('Member/index')}" class="button-go-mc" title="个人中心"><span>个人中心</span></a></div>
+    <div class="b">
+        <ul>
+        	<li>
+        	<h3>订单中心</h3>
+            	<ol>
+                	<li id="li-order"><a href="{:U('OrderCenter/index')}" title="我的订单"><span>我的订单</span></a></li>
+                   
+                </ol>
+            </li>
+            <li>
+            <h3>个人中心</h3>
+            	<ol>
+                	<li id="li-account" ><a href="{:U('PersonCenter/index')}" title="个人信息"><span>个人信息</span></a></li>
+                    <li id="li-security"><a href="{:U('PersonCenter/pwd')}" title="密码管理"><span>密码管理</span></a></li>
+                    <li id="li-balance" ><a href="{:U('PersonCenter/account')}" title="账户余额"><span>账户余额</span></a></li>
+                    <li id="li-myAddress"><a href="{:U('PersonCenter/address')}" title="收货信息"><span>收货信息</span></a></li>
+					<li id="li-enterprise" class="hide"></li>
+                </ol>
+            </li>
+            <li>
+            <h3>社区中心</h3>
+            	<ol>
+                	<li id="li-prdRemark" class="current"><a href="{:U('Comment/index')}" title="商品评价"><span>商品评价</span></a></li>
+                </ol>
+            </li>
+        </ul>
+    </div>
+    <div class="f"></div>
+</div>
+    </div>
+</div>
+<div class="hr-60"></div>
+
+<!--口号-20121025 -->
+<include file="Public/footer" />
+</body></html>

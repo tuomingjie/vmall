@@ -1,0 +1,161 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+<link rel="stylesheet" href="/vmallshop/Public/Mobile/ionic/css/ionic.min.css" />
+<script type="text/javascript" src="/vmallshop/Public/Mobile/ionic/js/ionic.js"></script>
+<script type="text/javascript" src="/vmallshop/Public/Mobile/ionic/js/ionic.bundle.js"></script>
+<script type="text/javascript" src="/vmallshop/Public/Jquery/jquery-1.7.2.js"></script>
+<link rel="stylesheet" href="/vmallshop/Public/Mobile/layer/need/layer.css" />
+<script type="text/javascript" src="/vmallshop/Public/Mobile/layer/layer.js"></script>
+
+    <title>商品详情</title>
+    <script type="text/javascript">
+        angular.module('ionicApp', ['ionic'])
+
+            .controller('SlideController', function($scope) {
+
+                $scope.myActiveSlide = 1;
+
+            })
+    </script>
+    <style type="text/css">
+        .slider {
+            height: 100%;
+        }
+        .slider-slide {
+            color: #000;
+            background-color: #fff; text-align: center;
+            font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; font-weight: 300; }
+        .blue {
+            width: 100%;
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+
+        .pink {
+            background-color: pink;
+        }
+        .box{
+            height:100%;
+        }
+        .box h1{
+            position:relative; top:50%; transform:translateY(-50%);
+        }
+        .goods_info1{
+            height: auto;
+            width: 94%;
+            background: #fff;
+            padding: 0px 3%;
+            border-bottom: 1px solid #e2e2e2;
+        }
+        .good_info1 .price {
+            height: 40px;
+            width: 100%;
+            font-size: 18px;
+            color: #ff6500;
+            line-height: 40px;
+        }
+        .good_info1 .price span {
+            font-size: 12px;
+            color: #999;
+        }
+        .good_info1 .info2 {
+            height: 38px;
+            width: 100%;
+            border-bottom: 1px dashed #f3f3f3;
+            padding: 11px 0px;
+            color: #666;
+        }
+        .good_speci {
+            height: 44px;
+            width: 100%;
+            overflow: hidden;
+            background: #fff;
+            padding: 0px 3%;
+            border-bottom: 1px solid #e2e2e2;
+            line-height: 44px;
+            color: #666;
+            font-size: 14px;
+        }
+        .good_info2 {
+            height: auto;
+            width: 100%;
+            background: #fff;
+            margin-top: 14px;
+        }
+        .good_info2 .menu {
+            height: 40px;
+            width: 100%;
+        }
+        .good_info2 .menu .nav {
+            height: 37px;
+            width: 33%;
+            float: left;
+            font-size: 14px;
+            color: #666;
+            text-align: center;
+            line-height: 37px;
+            border-bottom: 2px solid #e3e3e3;}
+        .good_info2 .menu .navon {
+            color: #ff6500;
+            height: 37px;
+            line-height: 37px;
+            border-bottom: 2px solid #ff6500;
+        }
+    </style>
+</head>
+<!--<body ng-app="ionicApp" animation="slide-left-right-ios7" ng-controller="SlideController">-->
+<body>
+<div ng-controller="SlideController" ng-app="ionicApp" style="height: 280px;">
+<ion-slide-box active-slide="myActiveSlide" does-continue="true" slide-interval="500" >
+    <ion-slide>
+        <div class="box blue" style='background-image: url("/vmallshop/Upload<?php echo ($data["goods_big_pic"]); ?>")'><h1>YELLOW</h1></div>
+    </ion-slide>
+    <?php if(is_array($desc_pic)): $i = 0; $__LIST__ = $desc_pic;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><ion-slide>
+            <div class="box blue" style='background-image: url("/vmallshop/Upload<?php echo ($vo["gp_pic"]); ?>")'>
+                <h1>BLUE</h1>
+            </div>
+
+    </ion-slide><?php endforeach; endif; else: echo "" ;endif; ?>
+
+</ion-slide-box>
+</div>
+<div class="item">
+    <div class="good_info1">
+        <div class="info2">&nbsp;<?php echo ($data["goods_name"]); ?></div>
+        <div class="price">￥<d id="marketprice">
+            <?php echo ($data["goods_sale_price"]); ?>
+        </d>&nbsp;<span id="productpricecontainer"></span>
+            <span style="float:right"><d id="stockcontainer">库存:<d id="stock"><?php echo ($data["goods_num"]); ?></d></d> 销量:38人</span>
+        </div>
+    </div>
+
+
+</div>
+<div class="item" style="background-color: #eeeeee;padding: 10px 0;">
+    <div class="good_speci" onclick="choose()">
+        <span id="optiondiv">请选择商品规格及数量</span>
+        <i class="icon ion-ios-arrow-right" style="float:right; line-height:44px; font-size:26px;"></i>
+    </div>
+</div>
+<div class="item" style="padding: 16px 16px 16px 0">
+    <div class="good_info2">
+        <div class="menu">
+            <div id="nav_1" class="nav navon" onclick="tab(1)">图文详情</div>
+            <div id="nav_3" class="nav" onclick="tab(3)">用户评价</div>
+            <div id="nav_4" class="nav" onclick="tab(4)" style="border-right:0px; width:33%">同店推荐</div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

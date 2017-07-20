@@ -1,0 +1,81 @@
+    
+	
+	{//这是浏览商品的}
+	
+	<div  class="h">
+        <h3  class="fl"><span>最近浏览过的商品</span></h3>
+        <span  class="fr"><a  class="icon-clear"  href="javascript:;" >清空</a></span>
+    </div>
+    <div  class="b">
+        
+        <div  class="pro-list">
+            <ul  id="product-history-list">
+			   <!--------浏览过的商品----------------->
+			
+			 <!--------浏览过的商品----------------->
+		</ul>
+        </div>
+		<script type="text/javascript">
+		      //浏览商品的js代码
+		      $(function(){
+			      $.ajax({
+				     url:"{:U('ScanGoods/index')}",
+					 type:"POST",
+					 dataType:'json',
+					 
+					 success:function(responseText,status,xhr){
+					     if(status=="success"){
+						    if(responseText.status==1){
+							  var scanString=responseText.content;
+							   $(scanString).appendTo("#product-history-list");
+							}
+						 
+						 }
+					 
+					 
+					 
+					 
+					 }
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  });
+				  
+				     //清空商品信息
+				  $(".h .fr").click(function(){
+				     
+				     $("#product-history-list li").remove();
+				  
+				     $.ajax({
+					     url:"{:U("ScanGoods/del")}",
+						 type:"POST",
+					 
+					 
+					 });
+				  
+				  
+				  
+				  
+				  }
+				  );
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  });
+		
+		</script>
+		
+ </div>
+ 
+ 

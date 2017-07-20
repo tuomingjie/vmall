@@ -1,0 +1,109 @@
+<!--* 网站后台订单查看视图 * author:莫顺渠 -->
+<form id="pagerForm" action="__URL__/index" method="post">
+	<input type="hidden" name="pageNum" value="{$currentPage|default='1'}" />
+	<input type="hidden" name="numPerPage" value="{$numPerPage}" /><!--每页显示多少条-->
+	<input type="hidden" name="_order" value="{$Think.request._order}"/>
+	<input type="hidden" name="_sort" value="{$Think.request._sort}"/>
+</form>
+<div class="pageHeader">
+	<form rel="pagerForm" onsubmit="return navTabSearch(this);" method="post">
+	<input type="hidden" name="numPerPage" value="{$numPerPage}" /><!--每页显示多少条-->
+	<div class="searchBar">
+		<table class="searchContent">
+			<tr>
+				<td>
+					订单号：<input type="text" name="order_no" value="{$Think.post.order_no}" />
+						
+				</td>
+				<td>
+					<div class="buttonActive"><div class="buttonContent"><button type="submit">检索</button></div></div>
+				</td>
+			</tr>
+		</table>
+	</div>
+	</form>
+</div>
+<div class="pageContent">
+	<div class="panelBar">
+		<ul class="toolBar">
+			
+			<li><a class="delete" href="__URL__/del/order_id/{$Think.config.TMPL_L_DELIM}item_id{$Think.config.TMPL_R_DELIM}/navTabId/listorder" target="ajaxTodo" title="确定要删除吗?"><span>删除</span></a></li>
+			<li><a class="edit" href="__URL__/edit/order_id/{$Think.config.TMPL_L_DELIM}item_id{$Think.config.TMPL_R_DELIM}"  width="550" height="380" target="dialog"><span>修改</span></a></li>
+			<li class="line">line</li>
+			<li><a class="icon"  href="javascript:navTabPageBreak()"><span>刷新</span></a></li>
+			<!--<li><a class="icon" href="demo/common/dwz-team.xls" target="dwzExport" targetType="navTab" title="实要导出这些记录吗?"><span>导出EXCEL</span></a></li>-->
+		</ul>
+	</div>
+	<table class="table" width="100%" layoutH="112">
+		<thead>
+			<tr>
+				<th width="40" orderField="order_id" <if condition="$Think.request._order eq 'order_id'">class="{$Think.request._sort}"</if>>订单ID</th>
+				
+				<th width="40" orderField="order_no" <if condition="$Think.request._order eq 'order_no'">class="{$Think.request._sort}"</if>>订单号</th>
+				
+				<th width="40" orderField="user_name" <if condition="$Think.request._order eq 'user_name'">class="{$Think.request._sort}"</if>>会员名</th>
+				
+				<th width="40" orderField="order_time" min="6" <if condition="$Think.request._order eq 'order_time'">class="{$Think.request._sort}"</if>>订单生成时间</th>
+				
+				<th width="40" orderField="order_money" <if condition="$Think.request._order eq 'order_money'">class="{$Think.request._sort}"</if>>订单金额</th>
+				
+				
+				
+				<th width="40" orderField="order_total_money" <if condition="$Think.request._order eq 'order_total_money'">class="{$Think.request._sort}"</if>>总金额(含其他费用)</th>
+				
+				<th width="40" orderField="order_payment_content" <if condition="$Think.request._order eq 'order_payment_content'">class="{$Think.request._sort}"</if>>付款方式</th>
+				
+				<th width="40" orderField="payment_status" <if condition="$Think.request._order eq 'payment_status'">class="{$Think.request._sort}"</if>>支付状态</th>
+				
+				<th width="40" orderField="examine_status" <if condition="$Think.request._order eq 'examine_status'">class="{$Think.request._sort}"</if>>审核状态</th>
+				<th width="40">操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			<volist name="list" id="vo">
+				<tr target="item_id" rel="{$vo.order_id}">
+					<td>{$vo.order_id}</td>
+					<td>{$vo.order_no}</td>
+					<td>{$vo.user_name}</td>
+					<td>{$vo.order_time|date="Y-m-d H:i:s",###}</td>
+					<td>{$vo.order_money}</td>
+					
+
+					<td>{$vo.order_total_money}</td>
+					<td>{$vo.order_payment_content}</td>
+
+					<td><if condition=" $vo.payment_status eq 1">已支付<else/>未支付</if></td>
+					
+					<if condition=" $vo.examine_status eq 0"><td>审核中</td></if>
+					<if condition=" $vo.examine_status eq 1"><td>不通过</td></if>
+					<if condition=" $vo.examine_status eq 2"><td>已通过</td></if>
+					
+					
+					<style>
+						.select_to{padding:2px 6px;background:#ddd;text-align:center;border:1px solid #999;border-radius:2px;}
+						.select_to:hover{ text-decoration: none;}
+					</style>
+					<td>
+						<a href="__MODULE__/OrderDesc/index/order_id/{$vo.order_id}" target="navTab" rel="listorder" title="查看" class="select_to" >查看</a>
+					
+					</td>
+				</tr>
+			</volist>
+		</tbody>
+	</table>
+	<div class="panelBar">
+		<div class="pages">
+			<span>显示</span>
+			<select class="combox" name="numPerPage" onchange="navTabPageBreak({$Think.config.TMPL_L_DELIM}numPerPage:this.value{$Think.config.TMPL_R_DELIM})">
+				<option value="10" <if condition="$numPerPage eq 10">selected</if>>10</option>
+				<option value="15" <if condition="$numPerPage eq 15">selected</if>>15</option>
+				<option value="20" <if condition="$numPerPage eq 20">selected</if>>20</option>
+				<option value="25" <if condition="$numPerPage eq 25">selected</if>>25</option>
+				<option value="30" <if condition="$numPerPage eq 30">selected</if>>30</option>
+			</select>
+			<span>共{$totalCount}条</span>
+		</div>
+		<div class="pagination" targetType="navTab" totalCount="{$totalCount}" numPerPage="{$numPerPage}" pageNumShown="10" currentPage="{$currentPage}"></div>
+	</div>
+</div>
+

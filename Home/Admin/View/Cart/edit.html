@@ -1,0 +1,47 @@
+
+<div class="pageContent">
+	<form method="post" action="__URL__/update/navTabId/listcart/callbackType/closeCurrent"  class="pageForm required-validate" 
+		onsubmit="return validateCallback(this,dialogAjaxDone);"><?php  //窗体组件采用这个 iframeCallback(this, navTabAjaxDone); ?>
+		<input type="hidden" name="cart_id" value="{$vo.cart_id}"/>
+		<div class="pageFormContent" layoutH="60">
+			<dl>
+				<dt>商品:</dt>
+				<dd>
+					<select class="combox required" name="goods_id" id="w_combox_city" ref="w_combox_area" >
+					   <option value="0">---商品选择---</option>
+					   <foreach name="goods_info" item="vo1" key="k" >
+						 <option value={$vo1.goods_id}  <?php echo $vo['goods_id']==$vo1['goods_id']?'selected':''; ?> >{$vo1.goods_name}</option>
+					   </foreach>
+					</select>
+				</dd>
+			</dl>
+			<dl>
+				<dt>用户:</dt>
+				<dd>
+					<select class="combox required" name="user_id" id="w_combox_city1" ref="w_combox_area" >
+					   <option value="0">---用户选择---</option>
+					   <foreach name="user_info" item="vo2" key="k2" >
+						 <option value={$vo2.user_id}  <?php echo $vo2['user_id']==$vo['user_id']?'selected':''; ?> >{$vo2.user_name}</option>
+					   </foreach>
+					</select>
+				</dd>
+			</dl>
+			<dl>
+				<dt>数量:</dt>
+				<dd>
+					<input type="number" class="required"  style="width:100%" name="goods_num" value="{$vo.goods_num}"/>
+				</dd>
+			</dl>
+			
+			
+		</div>
+		
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+</div>
+

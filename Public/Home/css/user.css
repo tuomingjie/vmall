@@ -1,0 +1,203 @@
+/*登录页*/
+.user-header{
+    width: 1100px;
+    margin: 0 auto;
+    padding:15px 0px;
+    overflow: hidden;
+}
+.user-header .left-logo{
+    float: left;
+}
+.left-logo .logo{
+    float: left;
+    display: block;
+}
+.left-logo  .logo-txt{
+    float: left;
+    font-size: 20px;
+    color:#1a8236;
+    padding-top: 40px;
+    padding-left: 10px;
+    line-height: 25px;
+    text-align: center;
+}
+.user-header .welcome{
+    float: right;
+    font-size: 20px;
+    color:#e90000;
+    padding-top: 40px;
+}
+.user-footer{
+    margin-top: 20px;
+    border-top: 1px solid #919191;
+    padding: 35px 0px 20px;
+}
+.user-footer-bd{
+    width: 1200px;
+    margin: 0 auto;
+}
+.user-foot-nav{
+    text-align: center;
+    overflow: hidden;
+}
+.user-foot-nav a{
+    display: inline-block;
+    width: 140px;
+    height: 20px;
+    line-height: 20px;
+    border-right: 1px solid #898989;
+    text-align: center;
+    font-size: 18px;
+    color:#474747;
+}
+.user-foot-nav a:hover{
+    color:#e90000;
+}
+.user-foot-nav a:last-child{ border: none;}
+.user-foot-info{
+    padding-top: 20px;
+    text-align: center;
+    font-size: 18px;
+    color: #474747;
+    line-height: 40px;
+}
+.user-content{
+    width: 1100px;
+    margin: 0 auto;
+}
+.user-content .user-img{
+    float: left;
+    width: 600px;
+}
+.user-content .user-login{
+    float: right;
+    width: 475px;
+}
+.user-content .user-login h3{
+    font-size: 22px;
+    height: 40px;
+    line-height: 40px;
+    padding: 10px 0px;
+    color:#17324d;
+    padding-left: 20px;
+    border-bottom: 1px solid  #CCCCCC;
+}
+.loginFalse{
+    display:none;
+    height:32px;
+    line-height: 32px;
+    overflow:hidden;
+    border:1px solid #ece482;
+    background:#fefacb url(../images/false.png) no-repeat 5px center;
+    font-family: "宋体";
+    color:#4e4e4e;
+    border-radius: 5px;
+    padding-left:25px;
+    width: 335px;
+    margin:15px auto 0px;
+}
+.login_user,.login_password{
+    padding-left: 50px;
+    overflow: hidden;
+    width: 305px;
+    height: 45px;
+    line-height: 45px;
+    position: relative;
+    border: 1px solid #666;
+    border-radius: 6px;
+}
+.login_user{
+    background: url(../images/account.png) no-repeat 10px center;
+    margin:25px auto 0px;
+}
+.login_password{
+    background: url(../images/password.png) no-repeat 10px center;
+    margin: 25px auto 0px;
+}
+.login_user .inp-user,.login_password .inp-user{
+    float: left;
+    width: 280px;
+    height: 35px;
+    padding: 0px 10px;
+    line-height: 35px;
+    margin-top: 5px;
+    border-left: 1px solid #666;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+    background: none;
+    outline: none;
+    font-family:"Microsoft Yahei";
+    font-size: 18px;
+}
+.login_user .btnDel{
+    position: absolute;
+    z-index: 3;
+    top: 15px;
+    right: 10px;
+    width: 17px;
+    height: 17px;
+    overflow: hidden;
+    background: url(../images/delete.png) no-repeat;
+    cursor: pointer;
+    text-indent: -999em;
+    cursor: pointer;
+    display: none;
+}
+.login_password  .btneye{
+    position: absolute;
+    z-index: 3;
+    top: 18px;
+    right: 10px;
+    width: 20px;
+    height: 12px;
+    overflow: hidden;
+    background: url(../images/eye.png) no-repeat center center;
+    cursor: pointer;
+    text-indent: -999em;
+    cursor: pointer;
+}
+.loginSelf{
+    width: 365px;
+    margin: 25px auto 0px;
+    font-size: 15px;
+    color:#3b3a3a;
+}
+.btnLogin{
+    width: 365px;
+    height: 55px;
+    margin: 25px auto 0px;
+    border-radius: 8px;
+    background: #E90101;
+    text-align: center;
+    line-height: 55px;
+    color: #fff;
+    background:#E90101;
+    display: block;
+    font-size: 20px;
+}
+.btnLogin:hover{
+    background: #DA0101;
+    color: #fff;
+}
+.Login-tip{
+    text-align: right;
+    height: 35px;
+    line-height: 35px;
+    font-size: 15px;
+    width: 360px;
+    margin: 15px auto 0px;
+}
+.Login-tip a{
+    padding-left: 10px;
+    color:#3b3b3b;
+}
+.Login-tip .mima{
+    color: red;
+}
+.Login-tip .fogmi{
+    color: #3b3b3b;
+}
+.Login-tip a:hover{
+    text-decoration: underline;
+}

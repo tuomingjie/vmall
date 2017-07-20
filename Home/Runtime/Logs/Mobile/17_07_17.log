@@ -1,0 +1,42 @@
+[ 2017-07-17T09:05:52+08:00 ] ::1 /vmallshop/index.php/Mobile/Login/loginaction
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.285016s ]
+SQL: SELECT * FROM `vmall_user` WHERE `user_name` = 'test001' AND `user_pwd` = 'e10adc3949ba59abbe56e057f20f883e'  [ RunTime:0.001000s ]
+SQL: UPDATE `vmall_user` SET `user_last_time`=1500253551,`user_last_ip`=0 WHERE `user_id` = 24 [ RunTime:0.280016s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-17T10:36:09+08:00 ] ::1 /vmallshop/index.php/Mobile/User/index
+ERR: invalid data source name
+
+[ 2017-07-17T10:44:09+08:00 ] ::1 /vmallshop/index.php/Mobile/User/index
+ERR: SQLSTATE[HY000] [1130] Host '61.140.233.208' is not allowed to connect to this MySQL server
+
+[ 2017-07-17T10:44:45+08:00 ] ::1 /vmallshop/index.php/Mobile/User/index
+ERR: SQLSTATE[HY000] [1130] Host '61.140.233.208' is not allowed to connect to this MySQL server
+
+[ 2017-07-17T11:42:40+08:00 ] ::1 /vmallshop/index.php/Mobile/Login/loginaction
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.039003s ]
+SQL: SELECT * FROM `vmall_user` WHERE `user_name` = 'test001' AND `user_pwd` = 'e10adc3949ba59abbe56e057f20f883e'  [ RunTime:0.013000s ]
+SQL: UPDATE `vmall_user` SET `user_last_time`=1500262960,`user_last_ip`=0 WHERE `user_id` = 24 [ RunTime:0.146008s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-17T11:52:32+08:00 ] ::1 /vmallshop/index.php/Mobile/Goods/detail
+ERR: 错误的查询条件:[goods-id=>]
+
+[ 2017-07-17T11:53:00+08:00 ] ::1 /vmallshop/index.php/Mobile/Goods/detail%EF%BC%9Fgoods_id%20=9
+ERR: 非法操作:detail？goods_id =9
+
+[ 2017-07-17T11:53:33+08:00 ] ::1 /vmallshop/index.php/Mobile/Goods/detail%EF%BC%9Fgoods_id%20=9
+ERR: 非法操作:detail？goods_id =9
+

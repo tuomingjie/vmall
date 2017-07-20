@@ -1,0 +1,26 @@
+
+<div class="pageContent">
+	<form method="post" action="__URL__/update/navTabId/listorder_payment/callbackType/closeCurrent"  class="pageForm required-validate" 
+		onsubmit="return validateCallback(this,dialogAjaxDone);"><?php  //窗体组件采用这个 iframeCallback(this, navTabAjaxDone); ?>
+		<input type="hidden" name="order_payment_id" value="{$vo.order_payment_id}"/>
+		<div class="pageFormContent" layoutH="60">
+			<div class="pageFormContent" layoutH="60">
+				<dt>用户付款方式：</dt>
+				<select name="order_payment_content" class="required combox">
+					<option value="货到付款" selected>货到付款</option>
+					<option value="账户支付" >账户支付</option>
+					<option value="网银支付" >网银支付</option>
+					<option value="第三方支付" >第三方支付</option>
+				</select>
+			</div>
+		</div>
+		
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+</div>
+

@@ -1,0 +1,24 @@
+<!--* 网站后台退换货修改 * author:莫顺渠 -->
+<div class="pageContent">
+	<form method="post" action="__URL__/update/navTabId/listgood_rollback/callbackType/closeCurrent"  class="pageForm required-validate" 
+		onsubmit="return validateCallback(this,dialogAjaxDone);"><?php  //窗体组件采用这个 iframeCallback(this, navTabAjaxDone); ?>
+		<input type="hidden" name="good_rollback_id" value="{$vo.good_rollback_id}"/>
+		<div class="pageFormContent" layoutH="60">
+				<dt>订单状态：</dt>
+				<select name="good_rollback_state" class="required combox">
+					<option value="申请退款" selected>申请退款</option>
+					<option value="申请换货" >申请换货</option>
+					<option value="申请审批" >申请审批</option>
+					<option value="换货成功" >换货成功</option>
+					<option value="退款成功" >退款成功</option>
+			        <option value="取消申请" >取消申请</option>
+				</select>
+		</div>
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+</div>

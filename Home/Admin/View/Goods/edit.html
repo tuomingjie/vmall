@@ -1,0 +1,434 @@
+<style>
+	.region_div, .region_div2{clear:both;}
+	#add_btn, #del_btn{margin-top:5px; background:#ddd; padding:4px 6px;float:left;border:1px solid #666;border-radius:2px;cursor:pointer;}
+	.goods_btn{
+	margin-top:5px; background:#ddd; padding:4px 6px;float:left;border:1px solid #666;border-radius:2px;cursor:pointer;margin-right:5px;
+	}
+	
+	.goods_ul{width:100%;}
+	.goods_ul .sheng{width:100%;height:30px;border-bottom:dotted 1px #ccc;}
+	.sheng_ul li{width:50%;height:30px;float:left;line-height:30px;}
+	.sheng_ul li input{margin-top:5px;width:50%;}
+</style>
+<div class="pageContent">
+	<form method="post" action="__URL__/update/navTabId/listgoods/callbackType/closeCurrent"  class="pageForm required-validate" 
+		onsubmit="return iframeCallback(this, navTabAjaxDone);" 
+		enctype="multipart/form-data"><?php  //窗体组件采用这个 iframeCallback(this, navTabAjaxDone); ?>
+		<input type="hidden" name="goods_id" value="{$vo.goods_id}"/>
+		<div class="pageFormContent" layoutH="60">
+			
+			<dl>
+				<dt>商品编号:</dt>
+				<dd><input type="text"  style="width:100%" name="goods_no" value="{$vo.goods_no}" readonly></dd>
+			</dl>
+			
+			<dl>
+				<dt>商品名称:</dt>
+				<dd><input type="text"  style="width:100%" name="goods_name" value="{$vo.goods_name}"/></dd>
+			</dl>
+			<dl class="nowrap">
+			<dt>商品关键描述：</dt>
+			<dd><textarea name="goods_keywords" cols="80" rows="2">{$vo.goods_keywords}</textarea></dd>
+		    </dl>
+			<dl>
+				<dt>商品上市时间:</dt>
+				<dd><input type="text"  style="width:100%" name="goods_time" value="{$vo.goods_time|date='Y-m-d',###}" readonly></dd>
+			</dl>
+			<p>
+				<label>商品状态：</label>
+				<select name="goods_state" class="required combox">
+				    <option value="无" >无</option>
+					<option value="新品" selected>新品</option>
+					<option value="热卖" >热卖</option>
+					
+					<option value="首发" >首发</option>
+					<option value="人气" >人气</option>
+			        <option value="商品已下架" >商品已下架</option>
+				   
+				</select>
+			</p>
+			<dl>
+				<dt>商品原价:</dt>
+				<dd><input type="text" class="required number"  style="width:100%" name="goods_original_price" value='{$vo.goods_original_price}'/></dd>
+			</dl>
+			<dl>
+				<dt>商品促销价:</dt>
+				<dd><input type="text" class="number number"  style="width:100%" name="goods_sale_price" value="{$vo.goods_sale_price}"/></dd>
+			</dl>
+			
+			<dl>
+				<dt>供应价:</dt>
+				<dd><input type="text" class="required number"  style="width:100%" name="supply_price" value="{$vo.supply_price}"/></dd>
+			</dl>
+			<dl>
+				<dt>基准价:</dt>
+				<dd><input type="text" class="required number "  style="width:100%" name="base_price" value="{$vo.base_price}"/></dd>
+			</dl>
+			
+			<!--
+			<div style="width:100%;height:10px;clear:both;"></div>
+			
+			<div class="region_div">
+				<volist name="region_price_info" id='vo2' key='k'>
+					<div class="region_div2">
+						<dl>
+							<dt>地区:</dt>
+							<dd title="{$vo2.region_id}">
+								<select class="combox required" name="region_id[]" id="w_combox_city{$k}" ref="w_combox_area"  >
+								   <option value="0">---地区选择---</option>
+								   <foreach name="one" item="one_v" key="one_k" >
+									 <option value={$one_v.region_id} <?php echo $vo2['region_id']==$one_v['region_id']?'selected':'';?> >{$one_v.region_name}省</option>
+										<foreach name="two" item="two_v" key="two_k" >
+											<if condition="$two_v.parent_id eq $one_v.region_id ">
+												<option value={$two_v.region_id} <?php echo $vo2['region_id']==$two_v['region_id']?'selected':'';?>>&nbsp;&nbsp;&nbsp;{$two_v.region_name}市</option>
+												<foreach name="three" item="three_v" key="three_k" >
+													<if condition="$three_v.parent_id eq $two_v.region_id ">
+														<option value={$three_v.region_id} <?php echo $vo2['region_id']==$three_v['region_id']?'selected':'';?>>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$three_v.region_name}区/市</option>
+													</if>
+												</foreach>
+											</if>
+										</foreach>
+								   </foreach>
+								</select>
+							</dd>
+						</dl>
+						<dl>
+							<dt>价格:</dt>
+							<dd><input type="text" class=" number"  style="width:50%" name="region_price[]" value="{$vo2.rp_price}" title="{$vo2.rp_price}"/></dd>
+							
+						</dl>
+						<span class="goods_btn update" value="{$vo2.rp_id}"  >确定修改</span>
+						<span class="goods_btn del" value="{$vo2.rp_id}">确定删除</span>
+						
+					</div>
+				</volist>
+			</div>
+			<div class="region_div2"><span class="goods_btn" id="add_btn" >添加</span></div>
+			<div style="width:100%;height:20px;clear:both;"></div>
+			-->
+			
+			
+			<dl class="nowrap">
+			<dt>商品优惠描述：</dt>
+			<dd><textarea name="goods_sale_desc" cols="80" rows="2">{$vo.goods_sale_desc}</textarea></dd>
+		    </dl>
+			
+			
+			<dl>
+				<dt>商品数量:</dt>
+				<dd><input type="text" class="required digits"  style="width:100%" name="goods_num" value="{$vo.goods_num}"/></dd>
+			</dl>
+			<dl>
+				<dt>商品重量:</dt>
+				<dd><input type="text" class="required "  style="width:100%" name="goods_weight" value="{$vo.goods_weight}"/></dd>
+			</dl>
+			
+			<p>
+				<label>商品大图：</label>
+				<input name="goods_img" type="file" style="width:240px;" />
+			</p>
+			<div style="width:100%;height:20px;clear:both;"></div>
+			<p>
+			
+			<label>商品分类：</label>
+		   <select class="combox required" name="category_id" id="w_combox_city" ref="w_combox_area" >
+		       
+			   <volist name="cat_info" id='cs'>
+			       <eq name="cs.category_id" value="$vo.category_id">
+				    <option value={$cs.category_id} selected>{$cs.category_name}</option>
+				   <else/>
+				     <option value={$cs.category_id}>{$cs.category_name}</option>
+				   </eq>
+			   </volist>
+			   
+	      </select>
+			 </p>
+			 
+			 <p>
+				<label>供应商：</label>
+				<select name="supplier_id" class="required combox">
+				    <option value="0" >请选择</option>
+					<volist name="supplier_info" id='su'>
+					<option value="{$su.supplier_id}" <?php echo $vo['supplier_id'] == $su['supplier_id']?'selected':'';?>  >{$su.supplier_name}</option>
+					</volist>
+				</select>
+			</p>
+			
+			<dl>
+				<dt>地区价格:</dt>
+				<dd>
+					<input type="checkbox" id="is_region_price"  name="isset_region_price" value="<?php echo $vo['isset_region_price'];?>" <?php echo $vo['isset_region_price']==1?'checked':'';?> />
+					开启
+				</dd>
+			</dl>
+			
+			
+			<p>
+				<label>品牌：</label>
+				<select name="brand_id" class="required combox">
+				    <option value="0" >请选择</option>
+					<volist name="brand_info" id='b_vo'>
+					<option value="{$b_vo.brand_id}" <?php echo $vo['brand_id']==$b_vo['brand_id']?'selected':'';?>>{$b_vo.brand_name}</option>
+					</volist>
+				</select>
+			</p>
+			 
+			 <p>
+				<label>商品拥有的属性：</label>
+				<input name="goods_attr_value"  value="{$vo.goods_attr_value}" />
+			</p>
+			
+			<div class="divider"></div>
+			<!-----------------------------------产品详情开始----------------------------------------->
+			<dl>
+				<dt>商品内容：</dt>
+				<dd>
+					<div class="unit">
+						<textarea class="editor" name="goods_content" rows="30" cols="100"
+							upLinkUrl="upload.php" upLinkExt="zip,rar,txt" 
+							upImgUrl="upload.php" upImgExt="jpg,jpeg,gif,png" 
+							upFlashUrl="upload.php" upFlashExt="swf"
+							upMediaUrl="upload.php" upMediaExt:"avi">{$vo.goods_content}</textarea>
+					</div>
+				</dd>
+			</dl>
+			
+			
+			
+			<!-----------------------------------产品详情结束----------------------------------------->
+			
+			
+		</div>
+		
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+</div>
+
+
+
+<script>
+/*
+$(function(){
+
+//增加一个地区和金额(原有)
+$('#add_btn').click(function(){
+	var str = "<div class='region_div2'><dl><dt>地区:</dt><dd>";
+	str += "{$html}";
+	str += "</dd></dl><dl><dt>价格:</dt><dd><input type='text' class=' number'  style='width:50%' name='region_price[]'/></dd></dl><span class='goods_btn'  type='1' onclick='operation(this)' title='' oldRegionId='' oldPrice='' >确认添加</span><span id='del_btn' onclick='del(this)' title=''>取消添加</span></div>";
+	$('.region_div').append(str);
+});
+
+
+//更新地区金额(原有)
+$('.update').click(function(){
+	
+	var rp_id =  $(this).attr('value');	//当前ID值
+
+	var region_id = $(this).parents('.region_div2').children(":first").children('dd').children('.combox').children('.select').children('a').attr('value');	//地区ID
+	var region_ids = $(this).parents('.region_div2').children(":first").children('dd').attr('title');	//原来地区ID
+	
+	var region_price = $(this).parents('.region_div2').children("dl").eq(1).children('dd').children('input[name="region_price[]"]').val();	//金额
+	var region_prices = $(this).parents('.region_div2').children("dl").eq(1).children('dd').children('input[name="region_price[]"]').attr('title');	//原来金额
+	
+	if(region_id != region_ids || region_price != region_prices){
+		ajax_update(rp_id,region_id,region_price);
+	}else{
+		alert('没有修改信息');
+	}
+	
+	
+});
+
+
+
+
+
+//删除地区金额(原有)
+
+$('.del').click(function(){
+	var rp_id = $(this).attr('value');
+	if(window.confirm('你确定要删除吗？')){
+		 
+		var result = ajax_del(rp_id);
+		if(result){
+			$(this).parents(".region_div2").remove();
+			alert('删除成功');
+		}else{
+			alert('删除失败');
+		}
+		
+		
+		
+	}else{
+		 //alert("取消");
+		 return false;
+	}
+
+})
+
+	
+});
+//移除一个新添加的地区和金额
+function del(btn){
+	$(btn).parents(".region_div2").remove();
+}
+
+
+//新添加的地区金额  添加和修改操作
+function operation(btn){
+	var goods_id = $('input[name="goods_id"]').val();	//商品ID
+	var type = $(btn).attr('type');
+	var region_id = $(btn).parents('.region_div2').children(":first").children('dd').children('select').val();	//地区ID 
+	var region_price = $(btn).parents('.region_div2').children("dl").eq(1).children('dd').children('input[name="region_price[]"]').val();	//金额
+	
+	if(type==1){
+		
+		if(region_id == 0 || region_price ==''){
+			alert("请填写完整地区和金额");
+			return false;
+		}
+		
+		var check = ajax_add(goods_id,region_id,region_price);
+		if(check){
+			$(btn).text('确认修改');
+			$(btn).attr('type',2);
+			$(btn).attr('oldRegionId',region_id);
+			$(btn).attr('oldPrice',region_price);
+			$(btn).attr('title',check);
+			$(btn).next('span').text('确定删除');
+			$(btn).next('span').attr('title',check);
+			$(btn).next('span').attr('onclick','n_del(this)');
+			alert('添加成功!');
+		}else{
+			alert('添加失败!');
+		}
+	}else{
+	
+		var region_ids = $(btn).attr('oldRegionId');	//获取原有地区ID
+		var region_prices = $(btn).attr('oldPrice'); //获取原有地区金额
+		var rp_id = $(btn).attr('title');		//编号id
+		
+		if(region_id != region_ids || region_price != region_prices){
+			ajax_update(rp_id,region_id,region_price);
+		}else{
+			alert('没有修改信息');
+		}
+		
+		
+	}
+	
+	
+
+	
+}
+
+//删除地区金额(新添加)
+function n_del(btn){
+	var rp_id = $(btn).attr('title');
+	if(window.confirm('你确定要删除吗？')){
+		 
+		var result = ajax_del(rp_id);
+		if(result){
+			$(btn).parents(".region_div2").remove();
+		}
+		
+		
+		
+	}else{
+		 //alert("取消");
+		 return false;
+	}
+}
+
+
+
+//ajax 更新地区金额
+ 
+function ajax_update(a,b,c){
+	$.ajax({
+            type: "POST",
+            url: "{:U('Goods/ajax_update')}",
+            data: {
+				rp_id:a,
+				region_id:b,
+				rp_price:c
+			},
+            dataType: "json",
+            success: function (data) {
+                if(data.status){
+					alert(data.msg);
+				}else{
+					alert(data.msg);
+				}
+			}
+    });
+}
+
+//ajax  删除地区金额纪录
+
+function ajax_del(a){
+	var str = false;
+	$.ajax({
+            type: "POST",
+            url: "{:U('Goods/ajax_del')}",
+			async:false, 
+            data: {
+				rp_id:a
+			},
+            dataType: "json",
+            success: function (data) {
+                if(data.status){
+					
+					str=true;
+				}else{
+					
+					str = false;
+				}
+			}
+    });
+	return str;
+}
+
+
+//ajax 添加地区金额
+ 
+function ajax_add(a,b,c){
+	var check = false;
+	$.ajax({
+            type: "POST",
+            url: "{:U('Goods/ajax_add')}",
+            data: {
+				goods_id:a,
+				region_id:b,
+				rp_price:c
+			},
+			async:false, 
+            dataType: "json",
+            success: function (data) {
+                if(data.status){
+					
+					check = data.rp_id;
+				}else{
+					
+					check = false;
+				}
+			}
+    });
+	return check;
+}
+
+
+
+
+*/
+
+
+
+
+</script>
+

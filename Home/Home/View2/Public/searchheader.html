@@ -1,0 +1,369 @@
+<!------------------搜索导航---作者:曹建伟------------------------------->
+<script  src="__PUBLIC__/Js/base.js"></script>
+
+<div  class="top-banner"  id="top-banner-block"></div>
+<!----1----------------------------------------------------------------------------->
+<!--------2-搜索条部分---------------------------------------------------------------->
+<js href="__JQUERY__"/>
+<header  class="header">
+	<div  class="layout">
+		
+		<div  class="logo" style="padding-top:8px;"><a  href="{:U('Index/index')}"  title="Vmall.com - 信源电商商城"><img  src="__PUBLIC__/Images/newLogo.png"  alt="Vmall.com - 信源电商商城"></a></div>
+		
+		<div  class="searchBar">
+			
+				<div  class="searchBar-key">
+	<b>热门搜索：</b>
+	
+	    <!--------搜索上的几个关键商品--------->
+		<a  href="{:U('Search/index')}?keywords='畅玩版'"  target="_blank">畅玩版</a>
+	    
+	    
+		<a  href="{:U('Search/index')}?keywords=荣耀3C"  target="_blank">荣耀3C</a>
+	    
+	    
+		<a  href="{:U('Search/index')}?keywords=X1"  target="_blank">X1</a>
+	    
+	    
+		<a  href="{:U('Search/index')}?keywords=P7"  target="_blank">信源电商P7</a>
+	    
+	    
+		<a  href="{:U('Search/index')}?keywords=荣耀立方"  target="_blank">荣耀立方</a>
+	   <!--------搜索上的几个关键商品--------->
+</div>
+			<div  class="searchBar-form"  id="searchBar-area">
+			    <!-----------搜索条------------------->
+				<form  method="get"  action="" onsubmit="return false;">					
+					
+					
+					
+					<input  type="text"  class="text"  maxlength="100"  id="search_kw"  style="z-index: 1;"  autocomplete="off"  placeholder="请输入搜索关键字" style="height:18px;">
+					
+					<input  type="submit"  class="button"  value=" " id="submit_go">
+					<input  type="hidden"  id="default-search"  value="荣耀6">
+				</form>
+				<!-----------搜索条------------------->
+			</div>
+		</div>
+		<script type="text/javascript">
+		   $(function(){
+		  
+		      var url="{:U('Search/index')}";
+			 
+			  $("#submit_go").click(function(){
+			     
+			      var search_kw=$("#search_kw").val();
+				     
+				  if(search_kw.length==0){
+				       alert('搜索关键字不能为空');
+				  
+				  }else{
+				     window.location.href=url+'?keywords='+search_kw;
+				  
+				  }
+			  
+			  
+			  
+			  
+			  });
+			  
+		   
+		   
+		   
+		   
+		   
+		   
+		   
+		   
+		   });
+		
+		
+		
+		</script>
+		
+		
+		
+		<div  class="header-toolbar">
+			
+			<div  class="header-toolbar-item"  id="header-toolbar-imall">
+				
+				<div  class="i-mall">
+				     <!------------自己的商城---------------->
+					<div  class="h"><a  href="{:U('Memeber/index')}"  rel="nofollow"  timetype="timestamp">我的商城</a>
+					
+					<i></i><s></s><u></u></div>
+					  <!---------登录注册--------------------->
+					<div  class="b"  id="header-toolbar-imall-content">
+						<div  class="i-mall-prompt"  id="cart_unlogin_info" style="display:block;">
+							<p>你好，请&nbsp;&nbsp;<a  href="{:U('Login/index')}"  rel="nofollow">登录</a> / <a  href="{:U('Sign/index')}"  rel="nofollow">注册</a></p>
+							
+						  
+						</div>
+						<div class="i-mall-prompt" id="cart_login_info" style="display:none">
+							<p><a href="{:U('Member/index')}" id="cart_memeber"></a><em class="vip-state" id="vip-info">&nbsp;&nbsp;&nbsp;&nbsp;<a href="{:U('Member/index')}" title="VMALL V0会员" id="vip-Active"><i class="icon-vip-level-0"></i></a></em></p>
+						</div>
+						 <!---------登录注册--------------------->
+						<div  class="i-mall-uc "  id="cart_nlogin_info">
+							<ul>
+							     <!-----------代付款和-------------->
+								<li><a  href="{:U('OrderCenter/index')}"  timetype="timestamp">待付款</a><span  id="toolbar-orderWaitingHandleCount">0</span></li>
+								<li><a  href="{:U('OrderCenter/index')}"  timetype="timestamp">待评论</a><span  id="toolbar-notRemarkCount">0</span></li>
+								<!------------代付款------------>
+							</ul>
+						</div>
+						
+						
+						<div  class="i-mall-uc ">
+							<p><br></p>
+						</div>
+					</div>
+				</div>
+			</div>
+<script type="text/javascript">
+    $(function(){
+	     
+	    $.ajax({
+		     url:"{:U('SmallCat/myShop')}",
+			 type:'POST',
+			 dataType:'json',
+			 success:function(responseText,status,xhr){
+			    
+			      if(status=='success'){
+				      
+				     if(responseText.login_status==1){
+					   
+					     $("#cart_login_info").show();
+					     $("#cart_unlogin_info").hide();
+					     var user_name=responseText.user_name;
+						 $("#cart_login_info #cart_memeber").html(responseText.user_name);
+						  //计算用户的级别
+						 var ico_user_level="icon-vip-level-0";
+						 switch(responseText.user_level){
+						     case 5: ico_user_level="icon-vip-level-5";break;
+						     case 4: ico_user_level="icon-vip-level-4";break;
+						     case 3: ico_user_level="icon-vip-level-3";break;
+						     case 2: ico_user_level="icon-vip-level-2";break;
+						     case 1: ico_user_level="icon-vip-level-1";break;
+						     case 0: ico_user_level="icon-vip-level-0";break;
+							 default:ico_user_level="icon-vip-level-0";
+						 }
+						 $("#cart_login_info #vip-Active").find('i').addClass('ico_user_level');
+						 $("#toolbar-orderWaitingHandleCount").html(responseText.unpay_count);
+						  $("#toolbar-notRemarkCount").html(responseText.uncomment_count);
+						 
+					 }else{
+					     $("#cart_unlogin_info").show();
+					     $("#cart_login_info").hide();
+					 }
+				  }else{
+				      $("#cart_unlogin_info").show();
+					  $("#cart_login_info").hide();
+				  
+				  }
+			 
+			 },
+			 
+			 error:function(){
+			       $("#cart_unlogin_info").show();
+				   $("#cart_login_info").hide();
+			 },
+			 
+			 timeout:60*1000,
+		
+		
+		
+		
+		
+		
+		});
+	
+	
+	
+	
+	
+	
+	
+	}); 
+
+
+
+
+</script>
+			
+			
+			       <!--------------购物车的商品--------------------->
+			<div  class="header-toolbar-item"  id="header-toolbar-minicart">
+				
+				<div class="minicart">
+					<div class="h" id="header-toolbar-minicart-h"><a href="{:U('Cart/index')}" rel="nofollow" timetype="timestamp">我的购物车<span><em id="header-cart-total">0</em><b></b></span></a><i></i><s></s><u></u></div>
+					    <div style="display:block;" class="b" id="header-toolbar-minicart-content">
+						<div style="display:block;" class="minicart-pro-empty" id="minicart-pro-empty">
+							<span class="icon-minicart">您的购物车是空的，赶紧选购吧！</span>
+						</div>
+						
+						<div style="display:none;" id="minicart-pro-list-block">
+						<ul class="minicart-pro-list" id="minicart-pro-list"><!--microCartList start-->
+						<!--microCartList end-->
+						</ul>
+						</div>
+						<div style="display:none;" class="minicart-pro-settleup" id="minicart-pro-settleup">
+							<p>共<em id="micro-cart-total">1</em>件商品</p>
+							<p>共计<b id="micro-cart-totalPrice">¥&nbsp;<span>2888.00<span></b></p>
+							<a class="button-minicart-settleup" href="{:U('Cart/index')}">去结算</a>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+<script type="text/javascript">
+ //购物进行ajax处理
+ $(function(){
+         //鼠标移入移除事件
+	  $("#header-toolbar-minicart-content").hide();
+	 $("#header-toolbar-minicart-h").hover(function(){
+	      $("#header-toolbar-minicart-content").show();
+	 
+	 },function(){
+	      $("#header-toolbar-minicart-content").hide();
+	 });
+	 
+	  $("#header-toolbar-minicart-content").hover(function(){
+	         $(this).show();
+	  
+	  },function(){
+	        $(this).hide();
+	  });
+
+     
+	  //ajax查询数量和商品
+	  
+	  do_cat();
+	  
+function do_cat(){
+	 $.ajax({
+	     
+		 url:"{:U('SmallCat/myGoods')}",
+		 type:'GET',
+		 dataType:'json',
+		 success:function(responseText,status,xhr){
+		     if(status=="success"){
+			     if(responseText.cat_status==1){
+				     $("#header-cart-total").html(responseText.content.total_nums);
+					 $("#minicart-pro-empty").hide();
+					 $("#minicart-pro-list-block").show();
+					 $("#minicart-pro-list-block #minicart-pro-list").html(responseText.info);
+					 $("#minicart-pro-settleup").show();
+					 $("#minicart-pro-settleup #micro-cart-total").html(responseText.content.total_nums);
+					 $("#minicart-pro-settleup #micro-cart-totalPrice").find('span').html(responseText.content.total_price.toFixed(2));
+					 
+				 }else{
+				  $("#header-cart-total").html('0');
+			      $("#minicart-pro-list-block").hide();
+			      $("#minicart-pro-settleup").hide();
+			      $("#minicart-pro-empty").show();
+				 
+				 }
+			 
+			 }else{
+			  $("#header-cart-total").html('0');
+			  $("#minicart-pro-list-block").hide();
+			  $("#minicart-pro-settleup").hide();
+			  $("#minicart-pro-empty").show();
+			 
+			 }
+		   
+		 },
+		 error:function(){
+		     $("#header-cart-total").html('0');
+			 $("#minicart-pro-list-block").hide();
+			 $("#minicart-pro-settleup").hide();
+			 $("#minicart-pro-empty").show();
+		 },
+		 timeout:60*1000,
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 });
+ 
+} 
+
+ //事件委托的形式添加事件
+
+$("#minicart-pro-list").on('click',".icon-minicart-del",function(){
+      var goods_id=$(this).next('input').val();
+	  var parent_li=$(this).closest('li');
+	    //ajax的形式删除元素
+	  $.ajax({
+	     url:"{:U('SmallCat/delGoods')}",
+		 type:'POST',
+		 data:{
+		    'goods_id':goods_id,
+		 },
+		 dataType:'json',
+		 success:function(responseText,status,xhr){
+		     if(status=='success'){
+			      //返回1 说明session 中删除成功!
+			     if(responseText.del_status==1){
+				    
+					    //删除此条信息
+					   
+					  parent_li.remove();
+					   //修改金额和总数量
+					  $("#header-cart-total").html(responseText.total_num);
+					  $("#minicart-pro-settleup #micro-cart-total").html(responseText.total_num);
+					   $("#minicart-pro-settleup #micro-cart-totalPrice").find('span').html(responseText.total_money.toFixed(2));
+	                 var lis=$("#minicart-pro-list li").size();
+					 
+					 if(lis<=0){
+					   $("#header-cart-total").html('0');
+			           $("#minicart-pro-list-block").hide();
+			           $("#minicart-pro-settleup").hide();
+			           $("#minicart-pro-empty").show();
+					 
+					 }else{
+					 
+					 
+					 }
+					
+				 
+				 }
+			 }
+		 
+		 }
+		 
+	  
+	  
+	  
+	  });
+	  
+});
+ 
+ 
+ 
+ 
+ 
+ });
+ 
+
+
+
+
+</script>			
+			 <!--------------购物车的商品--------------------->
+			
+		</div>
+	</div>			
+</header>
+<!--------2-搜索条部分---------------------------------------------------------------->
+
+<!----------------------3-----导航条部分----------------------------------------------->
+
+<textarea  id="micro-cart-tpl"  class="hide">
+</textarea>
+
+
+

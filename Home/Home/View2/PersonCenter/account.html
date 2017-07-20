@@ -1,0 +1,189 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="__PUBLIC__/Css/person/ec.core.css" rel="stylesheet" type="text/css">
+
+<link href="__PUBLIC__/Css/person/main.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+.inform-title-area .current{
+	border:1px solid #ccc;
+	display:inline-block;
+	width:7px;
+	height:16px;
+	font-weight:400;
+	text-align:center;
+	line-height:16px;
+    font-size:12px;
+	padding:0 5px;
+	background:#D2D2D2;
+	margin-left:5px;
+	margin-right:5px;
+}
+.inform-title-area .num{
+    border:1px solid #ccc;
+	display:inline-block;
+	width:7px;
+	height:16px;
+	font-weight:400;
+	text-align:center;
+	line-height:16px;
+    font-size:12px;
+	padding:0 5px;
+	
+	margin-left:5px;
+	margin-right:5px;
+
+}
+.inform-title-area .prev{
+    border:1px solid #ccc;
+	display:inline-block;
+	width:7px;
+	height:16px;
+	font-weight:400;
+	text-align:center;
+	line-height:16px;
+    font-size:9px;
+	padding-left:3px;
+	padding-right:5px;
+	
+	margin-left:5px;
+	margin-right:5px;
+}
+
+.inform-title-area .next{
+    border:1px solid #ccc;
+	display:inline-block;
+	width:7px;
+	height:16px;
+	text-align:center;
+	line-height:16px;
+    font-size:9px;
+	padding-left:3px;
+	padding-right:5px;
+	
+	margin-left:5px;
+	margin-right:5px;
+
+
+}
+ #searchBar-area  #search_kw{
+   
+      height:30px;
+   }
+
+
+
+
+</style>
+
+</head>
+<body>
+<include file="Public/pinkheader"/>
+<include file="Public/searchheader"/>
+<include file="Public/naver"/>
+<div class="hr-10"></div>
+<div class="g">
+	<!--面包屑 -->
+	<div class="breadcrumb-area icon-breadcrumb fcn">您现在的位置：
+		<a href="{:U('Index/index')}" title="首页">首页</a>&nbsp;&gt;&nbsp;
+		<span id="personCenter"><a href="{:U('Member/index')}" title="个人中心">个人中心</a></span>
+		<span id="pathPoint">&nbsp;&gt;&nbsp;</span>
+		<b id="pathTitle">账户余额</b>
+	</div>
+</div>
+<div class="hr-15"></div>
+
+<div class="g">
+    <div class="fr u-4-5"><!--栏目 -->
+<div class="part-area clearfix">
+    <div class="fl">
+        <h3 class="balance-title"><span>账户余额</span></h3>
+    </div>
+</div>
+<div class="hr-20"></div>
+<!--账户余额 -->
+<div class="balance-area">
+	<div class="balance-have">您的余额:{$account_money|default=0.00}元</div>
+    <!--账户余额-消费明细列表 -->
+    <dl>
+    	<dt>消费明细列表（0条）</dt>
+        <dd>
+            <!--通知通告-消费明细列表 -->
+            <div class="inform-title-area">
+                <div class="b">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th class="tr-span-4" style="width:220px;">购买时间</th>
+                                <th class="tr-span-5">金额</th>
+                                <th class="tal">详情</th>
+                            </tr>
+                        </thead>
+						   <volist name="list" id="vo">
+						    <tr align="center">
+                                <td  style="height:34px">{$vo.user_payment_time|date="Y-m-d H:i:s",###}</td>
+                                <td  style="height:34px;">{$vo.user_payment_money}</td>
+                                <td style="height:34px;">{$vo.user_payment_why}</td>
+						   </tr>
+						   </volist>
+						   <if condition="$data_status eq 1">
+						     <tr align="right">
+							    <td colspan="3" >{$page}</td>
+							 </tr>
+						   </if>
+                    </table>
+                </div>
+            </div>
+            <!--通知通告-空数据 --> 
+            <div class="inform-empty-area  {$none_hide}">对不起，您暂时没有信息！</div>
+            <div class="hr-20"></div>
+            <!--分页 -->
+            <div class="pager" id="list-pager">
+               
+            </div>
+        </dd>
+    </dl>
+</div>
+
+<script src="__PUBLIC__/Js/balance.js"></script></div>
+	<div class="fl u-1-5">
+    	
+
+<!--左边菜单 -->
+<div class="mc-menu-area">
+	<div class="h"><a href="#" class="button-go-mc" title="个人中心"><span>个人中心</span></a></div>
+    <div class="b">
+         <ul>
+        	<li>
+        	<h3>订单中心</h3>
+            	<ol>
+                	<li id="li-order"><a href="{:U('OrderCenter/index')}" title="我的订单"><span>我的订单</span></a></li>
+                   
+                </ol>
+            </li>
+            <li>
+            <h3>个人中心</h3>
+            	<ol>
+                	<li id="li-account"><a href="{:U('PersonCenter/index')}" title="个人信息"><span>个人信息</span></a></li>
+                    <li id="li-security"><a href="{:U('PersonCenter/pwd')}" title="密码管理"><span>密码管理</span></a></li>
+                    <li id="li-balance" ><a href="{:U('PersonCenter/account')}" title="账户余额"><span>账户余额</span></a></li>
+                    <li id="li-myAddress" class='current'><a href="{:U('PersonCenter/address')}" title="收货信息"><span>收货信息</span></a></li>
+					<li id="li-enterprise" class="hide"></li>
+                </ol>
+            </li>
+            <li>
+            <h3>社区中心</h3>
+            	<ol>
+                	<li id="li-prdRemark"><a href="{:U('Comment/index')}" title="商品评价"><span>商品评价</span></a></li>
+                </ol>
+            </li>
+        </ul>
+    </div>
+    <div class="f"></div>
+</div>
+    </div>
+</div>
+<div class="hr-60"></div>
+
+<include file="Public/footer"/>
+
+<div id="AutocompleteContainter_919b5" style="position: absolute; z-index: 9999; top: 93px; left: 556.5px;"><div class="autocomplete-w1"><div class="autocomplete" id="Autocomplete_919b5" style="display: none; width: 315px; max-height: 400px;"></div></div></div></body></html>

@@ -1,0 +1,604 @@
+[ 2017-06-26T16:50:21+08:00 ] 127.0.0.1 /index.php/Home/SmallCat/myShop.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: user_name D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 47 行.
+NOTIC: [8] Undefined variable: user_level D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 48 行.
+NOTIC: [8] Undefined variable: unpay_count D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 49 行.
+NOTIC: [8] Undefined variable: uncomment_count D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 50 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-06-26T16:50:21+08:00 ] 127.0.0.1 /index.php/Home/Login/checkLogin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: user_name D:\phpStudy\WWW\vmallshop\Home\Home\Controller\LoginController.class.php 第 186 行.
+NOTIC: [8] Undefined variable: user_level D:\phpStudy\WWW\vmallshop\Home\Home\Controller\LoginController.class.php 第 187 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-26T16:50:21+08:00 ] 127.0.0.1 /index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-26T16:50:22+08:00 ] 127.0.0.1 /index.php/Home/Advice/makeCategory.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_advice_category [ RunTime:0.005000s ]
+SQL: SELECT * FROM `vmall_advice_category`  [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-26T16:50:23+08:00 ] 127.0.0.1 /index.php/Home/Category/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_category [ RunTime:0.005001s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_pid` = 0 ORDER BY category_id  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-10'  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-16'  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-20'  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-23'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-26'  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-30'  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-33'  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\vmallshop\Home\Home\Controller\CategoryController.class.php 第 19 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-26T16:50:29+08:00 ] 127.0.0.1 /index.php/Home/Login/checkLogin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: user_name D:\phpStudy\WWW\vmallshop\Home\Home\Controller\LoginController.class.php 第 186 行.
+NOTIC: [8] Undefined variable: user_level D:\phpStudy\WWW\vmallshop\Home\Home\Controller\LoginController.class.php 第 187 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-26T16:50:29+08:00 ] 127.0.0.1 /index.php/Home/SmallCat/myShop.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: user_name D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 47 行.
+NOTIC: [8] Undefined variable: user_level D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 48 行.
+NOTIC: [8] Undefined variable: unpay_count D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 49 行.
+NOTIC: [8] Undefined variable: uncomment_count D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 50 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-26T16:50:29+08:00 ] 127.0.0.1 /index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-26T16:50:30+08:00 ] 127.0.0.1 /index.php/Home/Advice/makeCategory.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: DESCRIBE vmall_advice_category [ RunTime:0.005000s ]
+SQL: SELECT * FROM `vmall_advice_category`  [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-26T16:50:31+08:00 ] 127.0.0.1 /index.php/Home/Category/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_category [ RunTime:0.004000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_pid` = 0 ORDER BY category_id  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-10'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-16'  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-20'  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-23'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-26'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-30'  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-33'  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\vmallshop\Home\Home\Controller\CategoryController.class.php 第 19 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-26T16:51:06+08:00 ] 127.0.0.1 /index.php/Home/Login/checkLogin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: user_name D:\phpStudy\WWW\vmallshop\Home\Home\Controller\LoginController.class.php 第 186 行.
+NOTIC: [8] Undefined variable: user_level D:\phpStudy\WWW\vmallshop\Home\Home\Controller\LoginController.class.php 第 187 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-26T16:51:06+08:00 ] 127.0.0.1 /index.php/Home/SmallCat/myShop.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: user_name D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 47 行.
+NOTIC: [8] Undefined variable: user_level D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 48 行.
+NOTIC: [8] Undefined variable: unpay_count D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 49 行.
+NOTIC: [8] Undefined variable: uncomment_count D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 50 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-26T16:51:07+08:00 ] 127.0.0.1 /index.php/Home/Advice/makeCategory.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_advice_category [ RunTime:0.005000s ]
+SQL: SELECT * FROM `vmall_advice_category`  [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-26T16:51:07+08:00 ] 127.0.0.1 /index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-26T16:51:08+08:00 ] 127.0.0.1 /index.php/Home/Category/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_category [ RunTime:0.006000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_pid` = 0 ORDER BY category_id  [ RunTime:0.001001s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-10'  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-16'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-20'  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-23'  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-26'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-30'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-33'  [ RunTime:0.001000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\vmallshop\Home\Home\Controller\CategoryController.class.php 第 19 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-26T17:58:17+08:00 ] 192.168.2.106 /index.php/Home/Login/checkLogin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: user_name D:\phpStudy\WWW\vmallshop\Home\Home\Controller\LoginController.class.php 第 186 行.
+NOTIC: [8] Undefined variable: user_level D:\phpStudy\WWW\vmallshop\Home\Home\Controller\LoginController.class.php 第 187 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-26T17:58:17+08:00 ] 192.168.2.106 /index.php/Home/SmallCat/myShop.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8] Undefined variable: user_name D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 47 行.
+NOTIC: [8] Undefined variable: user_level D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 48 行.
+NOTIC: [8] Undefined variable: unpay_count D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 49 行.
+NOTIC: [8] Undefined variable: uncomment_count D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 50 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-26T17:58:17+08:00 ] 192.168.2.106 /index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-26T17:58:18+08:00 ] 192.168.2.106 /index.php/Home/Category/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_category [ RunTime:0.004000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_pid` = 0 ORDER BY category_id  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-10'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-16'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-20'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-23'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-26'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-30'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-33'  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\vmallshop\Home\Home\Controller\CategoryController.class.php 第 19 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-26T17:58:19+08:00 ] 192.168.2.106 /index.php/Home/Advice/makeCategory.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_advice_category [ RunTime:0.005000s ]
+SQL: SELECT * FROM `vmall_advice_category`  [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-06-26T18:30:07+08:00 ] 192.168.2.105 /index.php/Home/Category/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_category [ RunTime:0.006001s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_pid` = 0 ORDER BY category_id  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-10'  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-16'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-20'  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-23'  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-26'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-30'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-33'  [ RunTime:0.001000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\vmallshop\Home\Home\Controller\CategoryController.class.php 第 19 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-26T18:35:50+08:00 ] 192.168.2.105 /index.php/Home/Category/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_category [ RunTime:0.006000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_pid` = 0 ORDER BY category_id  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-10'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-16'  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-20'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-23'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-26'  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-30'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-33'  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\vmallshop\Home\Home\Controller\CategoryController.class.php 第 19 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-26T18:36:46+08:00 ] 192.168.2.105 /index.php/Home/Category/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: DESCRIBE vmall_category [ RunTime:0.006001s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_pid` = 0 ORDER BY category_id  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-10'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-16'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-20'  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-23'  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-26'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-30'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-33'  [ RunTime:0.001000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\vmallshop\Home\Home\Controller\CategoryController.class.php 第 19 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-26T18:36:47+08:00 ] 192.168.2.105 /index.php/Home/HotSale/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_hot_sale [ RunTime:0.007001s ]
+SQL: SELECT vmall_goods.goods_id,`goods_name`,`goods_original_price`,`goods_sale_price`,`goods_tiny_pic` FROM `vmall_hot_sale` LEFT JOIN vmall_goods ON vmall_hot_sale.goods_id=vmall_goods.goods_id  LIMIT 6   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: hotStr D:\phpStudy\WWW\vmallshop\Home\Home\Controller\HotSaleController.class.php 第 48 行.
+NOTIC: [8] Undefined index: info D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-06-26T18:44:19+08:00 ] 192.168.2.104 /index.php/Home/Login/checkLogin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: user_name D:\phpStudy\WWW\vmallshop\Home\Home\Controller\LoginController.class.php 第 186 行.
+NOTIC: [8] Undefined variable: user_level D:\phpStudy\WWW\vmallshop\Home\Home\Controller\LoginController.class.php 第 187 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-26T18:44:19+08:00 ] 192.168.2.104 /index.php/Home/SmallCat/myShop.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: user_name D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 47 行.
+NOTIC: [8] Undefined variable: user_level D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 48 行.
+NOTIC: [8] Undefined variable: unpay_count D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 49 行.
+NOTIC: [8] Undefined variable: uncomment_count D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 50 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-26T18:44:19+08:00 ] 192.168.2.104 /index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-26T18:44:20+08:00 ] 192.168.2.104 /index.php/Home/Category/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_category [ RunTime:0.006000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_pid` = 0 ORDER BY category_id  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-10'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-16'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-20'  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-23'  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-26'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-30'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-33'  [ RunTime:0.001000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\vmallshop\Home\Home\Controller\CategoryController.class.php 第 19 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-26T18:44:21+08:00 ] 192.168.2.104 /index.php/Home/Advice/makeCategory.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE vmall_advice_category [ RunTime:0.006000s ]
+SQL: SELECT * FROM `vmall_advice_category`  [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-26T18:44:39+08:00 ] 192.168.2.104 /index.php/Home/Login/checkLogin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: user_name D:\phpStudy\WWW\vmallshop\Home\Home\Controller\LoginController.class.php 第 186 行.
+NOTIC: [8] Undefined variable: user_level D:\phpStudy\WWW\vmallshop\Home\Home\Controller\LoginController.class.php 第 187 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-26T18:44:39+08:00 ] 192.168.2.104 /index.php/Home/SmallCat/myShop.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: user_name D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 47 行.
+NOTIC: [8] Undefined variable: user_level D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 48 行.
+NOTIC: [8] Undefined variable: unpay_count D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 49 行.
+NOTIC: [8] Undefined variable: uncomment_count D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 50 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-06-26T18:44:39+08:00 ] 192.168.2.104 /index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-26T18:44:40+08:00 ] 192.168.2.104 /index.php/Home/Category/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_category [ RunTime:0.006000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_pid` = 0 ORDER BY category_id  [ RunTime:0.001001s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-10'  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-16'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-20'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-23'  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-26'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-30'  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-33'  [ RunTime:0.001000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\vmallshop\Home\Home\Controller\CategoryController.class.php 第 19 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-26T18:44:42+08:00 ] 192.168.2.104 /index.php/Home/HotSale/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_hot_sale [ RunTime:0.006000s ]
+SQL: SELECT vmall_goods.goods_id,`goods_name`,`goods_original_price`,`goods_sale_price`,`goods_tiny_pic` FROM `vmall_hot_sale` LEFT JOIN vmall_goods ON vmall_hot_sale.goods_id=vmall_goods.goods_id  LIMIT 6   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: hotStr D:\phpStudy\WWW\vmallshop\Home\Home\Controller\HotSaleController.class.php 第 48 行.
+NOTIC: [8] Undefined index: info D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-06-26T18:44:42+08:00 ] 192.168.2.104 /index.php/Home/ScanGoods/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: info D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-06-26T18:44:43+08:00 ] 192.168.2.104 /index.php/Home/Advice/makeCategory.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_advice_category [ RunTime:0.007001s ]
+SQL: SELECT * FROM `vmall_advice_category`  [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-26T18:44:45+08:00 ] 192.168.2.104 /index.php/Home/Login/checkLogin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: user_name D:\phpStudy\WWW\vmallshop\Home\Home\Controller\LoginController.class.php 第 186 行.
+NOTIC: [8] Undefined variable: user_level D:\phpStudy\WWW\vmallshop\Home\Home\Controller\LoginController.class.php 第 187 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-26T18:44:45+08:00 ] 192.168.2.104 /index.php/Home/SmallCat/myShop.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: user_name D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 47 行.
+NOTIC: [8] Undefined variable: user_level D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 48 行.
+NOTIC: [8] Undefined variable: unpay_count D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 49 行.
+NOTIC: [8] Undefined variable: uncomment_count D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 50 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-26T18:44:45+08:00 ] 192.168.2.104 /index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-26T18:44:46+08:00 ] 192.168.2.104 /index.php/Home/Category/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_category [ RunTime:0.006001s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_pid` = 0 ORDER BY category_id  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-10'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-16'  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-20'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-23'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-26'  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-30'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-33'  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\vmallshop\Home\Home\Controller\CategoryController.class.php 第 19 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-26T18:44:46+08:00 ] 192.168.2.104 /index.php/Home/ScanGoods/add.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-26T18:44:47+08:00 ] 192.168.2.104 /index.php/Home/HotSale/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_hot_sale [ RunTime:0.006000s ]
+SQL: SELECT vmall_goods.goods_id,`goods_name`,`goods_original_price`,`goods_sale_price`,`goods_tiny_pic` FROM `vmall_hot_sale` LEFT JOIN vmall_goods ON vmall_hot_sale.goods_id=vmall_goods.goods_id  LIMIT 6   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: hotStr D:\phpStudy\WWW\vmallshop\Home\Home\Controller\HotSaleController.class.php 第 48 行.
+NOTIC: [8] Undefined index: info D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-06-26T18:44:47+08:00 ] 192.168.2.104 /index.php/Home/ScanGoods/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: info D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-06-26T18:44:48+08:00 ] 192.168.2.104 /index.php/Home/Advice/makeCategory.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: DESCRIBE vmall_advice_category [ RunTime:0.007001s ]
+SQL: SELECT * FROM `vmall_advice_category`  [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-26T18:44:50+08:00 ] 192.168.2.104 /index.php/Home/Login/checkLogin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: user_name D:\phpStudy\WWW\vmallshop\Home\Home\Controller\LoginController.class.php 第 186 行.
+NOTIC: [8] Undefined variable: user_level D:\phpStudy\WWW\vmallshop\Home\Home\Controller\LoginController.class.php 第 187 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-26T18:44:50+08:00 ] 192.168.2.104 /index.php/Home/SmallCat/myShop.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: user_name D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 47 行.
+NOTIC: [8] Undefined variable: user_level D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 48 行.
+NOTIC: [8] Undefined variable: unpay_count D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 49 行.
+NOTIC: [8] Undefined variable: uncomment_count D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 50 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-26T18:44:50+08:00 ] 192.168.2.104 /index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-26T18:44:51+08:00 ] 192.168.2.104 /index.php/Home/Category/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_category [ RunTime:0.007000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_pid` = 0 ORDER BY category_id  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-10'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-16'  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-20'  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-23'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-26'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-30'  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-33'  [ RunTime:0.001000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\vmallshop\Home\Home\Controller\CategoryController.class.php 第 19 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-26T18:44:52+08:00 ] 192.168.2.104 /index.php/Home/Advice/makeCategory.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_advice_category [ RunTime:0.006000s ]
+SQL: SELECT * FROM `vmall_advice_category`  [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+

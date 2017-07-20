@@ -1,0 +1,81 @@
+/*公司简介*/
+.company-main{
+    width: 1200px;
+    margin: 20px auto;
+}
+.company-main .left-con{
+    float: left;
+    width: 225px;
+    background: #fff;
+    -webkit-box-shadow: 2px 2px 8px #ccc;
+    -moz-box-shadow: 2px 2px 8px #ccc;
+    box-shadow: 2px 2px 8px #ccc;
+}
+.company-main .left-con h3{
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    background: #059746;
+}
+.company-main .left-con .side-nav{
+    padding: 5px 0px 10px;
+}
+.company-main  .side-nav li{
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #EBEBEB;
+}
+.company-main  .side-nav li a{
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    color:#464646;
+    text-align: center;
+    display: block;
+    overflow: hidden;
+}
+.company-main .side-nav li:last-child{border: none;}
+.company-main .side-nav li:hover a{
+    color:#029242;
+}
+.company-main .right-con{
+    float: right;
+    background: #fff;
+    width: 940px;
+    padding: 0px 10px 10px 10px;
+    background: #fff;
+}
+.right-con .top-head{
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #009B46;
+    overflow: hidden;
+}
+.right-con .top-head h3{
+    float: left;
+    font-size: 18px;
+    color: #009944;
+}
+.right-con .top-head .r-nav{
+    float: right;
+    font-size: 16px;
+    color:#8b8b8b;
+}
+.right-con .top-head .r-nav a{
+    color:#8b8b8b;
+}
+.right-con .top-head .r-nav a:hover{
+    color:#D91E0B;
+}
+.right-con .text{
+    padding-top: 10px;
+    font-size: 16px;
+    color:#2d2d2d;
+    line-height: 220%;
+    text-indent: 20px;
+}
+.right-con .text p{
+    margin-top: 10px;
+}

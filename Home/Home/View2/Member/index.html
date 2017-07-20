@@ -1,0 +1,139 @@
+
+﻿<!DOCTYPE html>
+<!--------个人中心-------------->
+<html>
+<head><meta charset="UTF-8">
+<title>首页_个人中心_信源电商商城</title>
+<link href="__PUBLIC__/Css/ec.core.css" rel="stylesheet" type="text/css">
+<link href="__PUBLIC__/Css/mainn.css" rel="stylesheet" type="text/css">
+<script src="__PUBLIC__/Css/jsapi.js" namespace="ec"></script>
+<script src="__PUBLIC__/Js/jquery-1.4.4.min.js"></script>
+<script src="__PUBLIC__/Js/ec.core.js"></script> 
+<script src="__PUBLIC__/Js/ec.business.js"></script> 
+
+
+</head>
+
+<body>
+<!---------------------引入公共头------------------------------->
+<include file="Public/pinkheader" />
+
+<script src="__PUBLIC__/Js/base.js"></script>
+<include file="Public/searchheader" />
+<include file="Public/naver"/>
+
+
+
+<div class="hr-10"></div>
+<div class="g">
+	<!--面包屑 -->
+	<div class="breadcrumb-area icon-breadcrumb fcn">您现在的位置：
+		<a href="{:U('Index/index')}" title="首页">首页</a>&nbsp;&gt;&nbsp;
+		<span><b>个人中心</b></span>
+		<span id="pathPoint"></span>
+		<b id="pathTitle"></b>
+	</div>
+</div>
+<div class="hr-15"></div>
+
+<div class="g">
+    <div class="fr u-4-5"><!--个人中心 -->
+<div class="ic-area">
+	<div class="ic-detail-area">
+		<div class="h">
+			<h3><b>
+				{$user_info.user_name}
+				</b>
+				<em class="vip-state">
+					<a href="javascript:void(0)" title="VMALL 会员"><i class="{$user_level}">
+					</i></a>
+				
+				</em>
+				<b>欢迎您！</b>
+			</h3>
+			<div class="ic-detail-area">
+				<table border="0" cellpadding="0" cellspacing="0">
+					<tbody>
+						<tr>
+							<th>我的经验值：</th>
+							<td>
+									<a href="javascript:void(0);" class="red"><b>{$user_info.user_score}</b></a>
+						</td>
+						</tr>
+						<tr>
+							<th>我的特权：</th>
+							<td>
+								<div class="ic-user-privilege">
+						    			<a href="javascript:void(0);" title="“V”字身份标识：获得与Vmall会员等级对应的“V”身份标识"><img src="__PUBLIC__/images/icon_privilege_vip_large_light.png" alt="“V”字身份高亮显示"></a>
+						    			<a href="{javascript:void(0)}" title="会员日活动参与权：有权参与专属的会员日活动"><img src="__PUBLIC__/images/icon_privilege_vipDay_large_gray.png" alt="会员日活动参与权"></a>
+									
+								</div></td>
+						</tr>
+					
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="b">
+			<div class="form-detail-area">
+				<table border="0" cellpadding="0" cellspacing="0">
+					<tbody>
+						<tr>
+							<th style=" width:100px;">订单中心:</th>
+							<td>
+								<a href="{:U('OrderCenter/index')}">处理中的订单（<b>{$order_handle.order_count|default=0}</b>）</a>
+								<a id="member_index_notRemarkCount" href="{:U('OrderCenter/index')}">待评价的商品（<b id="member-notRemarkCount">{$order_handle.comment_goods_count|default=0}</b>）</a>
+							</td>
+						</tr>
+						
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="hr-70"></div>
+	
+</div>
+</div>
+	<div class="fl u-1-5">
+    	
+
+<!--左边菜单 -->
+<div class="mc-menu-area">
+	<div class="h"><a href="{:U('Member/index')}" class="button-go-mc" title="个人中心"><span>个人中心</span></a></div>
+    <div class="b">
+        <ul>
+        	<li>
+        	<h3>订单中心</h3>
+            	<ol>
+                	<li id="li-order"><a href="{:U('OrderCenter/index')}" title="我的订单"><span>我的订单</span></a></li>
+                   
+                </ol>
+            </li>
+            <li>
+            <h3>个人中心</h3>
+            	<ol>
+                	<li id="li-account"><a href="{:U('PersonCenter/index')}" title="个人信息"><span>个人信息</span></a></li>
+                    <li id="li-security"><a href="{:U('PersonCenter/pwd')}" title="密码管理"><span>密码管理</span></a></li>
+                    <li id="li-balance" ><a href="{:U('PersonCenter/account')}" title="账户余额"><span>账户余额</span></a></li>
+                    <li id="li-myAddress"><a href="{:U('PersonCenter/address')}" title="收货信息"><span>收货信息</span></a></li>
+					<li id="li-enterprise" class="hide"></li>
+                </ol>
+            </li>
+            <li>
+            <h3>社区中心</h3>
+            	<ol>
+                	<li id="li-prdRemark"><a href="{:U('Comment/index')}" title="商品评价"><span>商品评价</span></a></li>
+                </ol>
+            </li>
+        </ul>
+    </div>
+    <div class="f"></div>
+</div>
+    </div>
+</div>
+<div class="hr-60"></div>
+<!----------------引入底部公共头---------------------------->
+<include file="Public/footer" />
+</body></html>
+

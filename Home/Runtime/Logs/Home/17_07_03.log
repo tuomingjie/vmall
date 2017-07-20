@@ -1,0 +1,81 @@
+[ 2017-07-03T10:18:23+08:00 ] ::1 /vmallshop/index.php/Home/Info/css/css.css
+ERR: 非法操作:css
+
+[ 2017-07-03T10:18:23+08:00 ] ::1 /vmallshop/index.php/Home/Info/css/common.css
+ERR: 非法操作:css
+
+[ 2017-07-03T10:18:23+08:00 ] ::1 /vmallshop/index.php/Home/Info/js/jquery-1.7.2.min.js
+ERR: 非法操作:js
+
+[ 2017-07-03T10:18:23+08:00 ] ::1 /vmallshop/index.php/Home/Info/js/common.js
+ERR: 非法操作:js
+
+[ 2017-07-03T10:20:53+08:00 ] ::1 /vmallshop/index.php/Home/Info/css/css.css
+ERR: 非法操作:css
+
+[ 2017-07-03T10:20:53+08:00 ] ::1 /vmallshop/index.php/Home/Info/js/jquery-1.7.2.min.js
+ERR: 非法操作:js
+
+[ 2017-07-03T10:20:53+08:00 ] ::1 /vmallshop/index.php/Home/Info/js/common.js
+ERR: 非法操作:js
+
+[ 2017-07-03T10:20:53+08:00 ] ::1 /vmallshop/index.php/Home/Info/css/css.css
+ERR: 非法操作:css
+
+[ 2017-07-03T10:20:53+08:00 ] ::1 /vmallshop/index.php/Home/Info/js/jquery-1.7.2.min.js
+ERR: 非法操作:js
+
+[ 2017-07-03T10:20:53+08:00 ] ::1 /vmallshop/index.php/Home/Info/js/common.js
+ERR: 非法操作:js
+
+[ 2017-07-03T10:21:22+08:00 ] ::1 /vmallshop/index.php/Home/Info/js/jquery-1.7.2.min.js
+ERR: 非法操作:js
+
+[ 2017-07-03T10:21:22+08:00 ] ::1 /vmallshop/index.php/Home/Info/js/common.js
+ERR: 非法操作:js
+
+[ 2017-07-03T10:21:22+08:00 ] ::1 /vmallshop/index.php/Home/Info/js/jquery-1.7.2.min.js
+ERR: 非法操作:js
+
+[ 2017-07-03T10:21:22+08:00 ] ::1 /vmallshop/index.php/Home/Info/js/common.js
+ERR: 非法操作:js
+
+[ 2017-07-03T10:24:36+08:00 ] ::1 /vmallshop/index.php/Home/Info/js/jquery-1.7.2.min.js
+ERR: 非法操作:js
+
+[ 2017-07-03T10:24:36+08:00 ] ::1 /vmallshop/index.php/Home/Info/js/common.js
+ERR: 非法操作:js
+
+[ 2017-07-03T10:24:41+08:00 ] ::1 /vmallshop/index.php/Home/Info/js/jquery-1.7.2.min.js
+ERR: 非法操作:js
+
+[ 2017-07-03T10:24:41+08:00 ] ::1 /vmallshop/index.php/Home/Info/js/common.js
+ERR: 非法操作:js
+
+[ 2017-07-03T10:24:42+08:00 ] ::1 /vmallshop/index.php/Home/Info/js/jquery-1.7.2.min.js
+ERR: 非法操作:js
+
+[ 2017-07-03T10:24:42+08:00 ] ::1 /vmallshop/index.php/Home/Info/js/common.js
+ERR: 非法操作:js
+
+[ 2017-07-03T10:25:25+08:00 ] ::1 /vmallshop/index.php/Home/Info/js/jquery-1.7.2.min.js
+ERR: 非法操作:js
+
+[ 2017-07-03T10:25:25+08:00 ] ::1 /vmallshop/index.php/Home/Info/js/common.js
+ERR: 非法操作:js
+
+[ 2017-07-03T10:25:27+08:00 ] ::1 /vmallshop/index.php/Home/Info/js/jquery-1.7.2.min.js
+ERR: 非法操作:js
+
+[ 2017-07-03T10:25:27+08:00 ] ::1 /vmallshop/index.php/Home/Info/js/common.js
+ERR: 非法操作:js
+
+[ 2017-07-03T10:45:28+08:00 ] ::1 /vmallshop/index.php/Home/Search/index.html?keywords=%E5%BF%AB%E9%80%92%E8%B4%B9
+ERR: 模板不存在:./Home/Home/View/Search/error.html
+
+[ 2017-07-03T16:01:37+08:00 ] ::1 /vmallshop/index.php/Home/Login/index.html
+ERR: 模板不存在:./Home/Home/View/Login/index.html
+
+[ 2017-07-03T16:01:48+08:00 ] ::1 /vmallshop/index.php/Home/Login/index.html
+ERR: 模板不存在:./Home/Home/View/Login/index.html
+

@@ -1,0 +1,171 @@
+
+<style>
+    .content{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 10px;
+        /*text-align: center;*/
+    }
+    .desc{
+        margin-right: 10px;
+        width: 260px;
+        font-size: 14px;
+    }
+    .desc-input{
+        width: 100px;
+    }
+    .item{
+        padding: 10px;
+        border-bottom: 1px solid #d2d2d2;
+    }
+    .item span{
+        margin-left: 30px;
+        font-size: 14px;
+    }
+    input,select{
+        margin-left: 30px;
+        font-size: 14px;
+    }
+    .action{
+        text-align: center;
+        margin: 10px 0;
+    }
+</style>
+<include file="Public/persontop"/>
+
+<div class="g">
+    <!--面包屑 -->
+    <div class="breadcrumb-area icon-breadcrumb fcn">您现在的位置：
+        <a href="{:U('Index/index')}" title="首页">首页</a>&nbsp;&gt;&nbsp;
+        <span id="personCenter"><a href="{:U('Member/index')}" title="个人中心">个人中心</a></span>
+        <span id="pathPoint">&nbsp;&gt;&nbsp;</span>
+        <b id="pathTitle">入库记录</b>
+    </div>
+</div>
+<div class="hr-15"></div>
+
+<div class="g">
+    <div class="fr u-4-5"><!--栏目 -->
+        <div class="part-area clearfix">
+            <div class="fl">
+                <h1 style="font-size: 18px;">商品入库记录修改</h1>
+            </div>
+        </div>
+        <div class="hr-3"></div>
+        <!--搜索条件-->
+        <!--库存 -->
+        <div class="myOrders-area">
+            <div class="myOrders-title-area">
+
+                <div class="content">
+                    <div class="item">
+                        <label class="desc">所在仓库:</label>
+                        <span>{$data['user_name']}</span>
+                    </div>
+
+                    <div class="item">
+                        <label class="desc">商品名称：</label>
+                        <select class="select" name="goods_name">
+                            <volist name="goods" id="vo">
+                                <if condition="$vo.goods_id eq $goods_id">
+                                    <option value="{$vo.goods_id}" selected = "selected">{$vo.goods_name}</option>
+                                    <else/>
+                                    <option value="{$vo.goods_id}">{$vo.goods_name}</option>
+                                </if>
+
+                            </volist>
+                        </select>
+                    </div>
+                    <div class="item">
+                        <label class="desc">商品数量：<input name="goods_num" class="desc-input" value="{$data.goods_num}"></label>
+                    </div>
+                    <div class="item">
+                        <label class="desc">商品进价：<input name="goods_buy_price" class="desc-input" value="{$data.goods_buy_price}"></label>
+                    </div>
+                    <div class="item">
+                        <label class="desc">预计售价：<input name="goods_sell_price" class="desc-input" value="{$data.goods_sell_price}"></label>
+                    </div>
+
+                    <div class="action">
+                        <button style="color: #000000;font-size: 18px;" id="editaction">确认修改</button>
+                    </div>
+                </div>
+                <!--分页--------- -->
+                <div class="hr-3"></div>
+                <div class="pager" id="list-pager">
+                </div>
+            </div>
+            <div class="hr-2"></div>
+        </div>
+
+
+    </div>
+    <!--左边菜单 -->
+    <include file="Public/personcl"/>
+</div>
+<div class="hr-60"></div>
+<include file="Public/footer"/>
+<script>
+    //提交数据
+    $('#editaction').click(function () {
+        var id ="{$data.stock_desc_id}";
+        //遍历获取入库信息
+        var goods_id = $("select[name='goods_name']").val(); //或者写成：var btns= [];
+        var goods_num = $("input[name='goods_num']").val(); //或者写成：var btns= [];
+        var goods_buy_price = $("input[name='goods_buy_price']").val(); //或者写成：var btns= [];
+        var goods_sell_price = $("input[name='goods_sell_price']").val(); //或者写成：var btns= [];
+        //获取仓库id
+//        var storehouse_id = $('#store').val();
+
+        $.ajax({
+            url: "__CONTROLLER__/edit_action",
+            type: 'post',
+            dataType: 'json',
+            data: {
+                goods_id:goods_id,
+                goods_num:goods_num,
+                goods_buy_price:goods_buy_price,
+                goods_sell_price:goods_sell_price,
+//                    storehouse_id:storehouse_id,
+                stock_desc_id:id
+            },
+            success: function (data) {
+                alert(data.msg);
+                if(data.status == 'success'){
+                    window.location.replace(location.href);
+                }
+            },
+            fail: function (data) {
+
+                return;
+            }
+        });
+
+    })
+
+</script>
+</body></html>
+
+
+
+
+<!--选择商品弹框内容-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

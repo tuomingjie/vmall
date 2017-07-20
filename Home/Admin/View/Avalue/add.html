@@ -1,0 +1,36 @@
+
+<div class="pageContent">
+	<form method="post" action="__URL__/insert/navTabId/listavalue/callbackType/closeCurrent"  class="pageForm required-validate" 
+		onsubmit="return validateCallback(this,dialogAjaxDone);"><?php  //窗体组件采用这个 iframeCallback(this, navTabAjaxDone); ?>
+		<div class="pageFormContent" layoutH="60">
+			
+			
+			<dl>
+				<dt>商品属性值:</dt>
+				<dd><input type="text" class="required"  style="width:100%" name="avalue_value"/></dd>
+			</dl>
+			<p>
+			<label>所属属性：</label>
+		   <select class="combox required" name="attr_id" id="w_combox_city" ref="w_combox_area" >
+		       <option value="all">---商品属性---</option>
+			   <volist name="attr" id='vo'>
+			     <option value={$vo.attr_id}>{$vo.attr_name}</option>
+				 
+			   </volist>
+			   
+	      </select>
+          </p>
+			
+			
+			
+		</div>
+		
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+</div>
+

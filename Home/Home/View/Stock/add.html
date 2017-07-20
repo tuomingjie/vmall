@@ -1,0 +1,252 @@
+<style>
+
+    .content{
+        font-size: 12px;
+        clear: both;
+
+    }
+    .desc{
+        margin-right: 10px;
+        font-size: 12px;
+    }
+    .desc-input{
+        width: 60px;
+        font-size: 12px;
+    }
+    .item{
+        padding: 10px 0;
+        border-bottom: 1px solid #d2d2d2;
+    }
+    .item-label{
+        margin: 10px 0px;
+        font-size: 12px;
+    }
+    .action{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .bar{
+        width: 720px;
+    }
+    .bar ul{
+        list-style:none;
+        margin:0px;
+        padding:0px;
+        width: 100%;
+        height: 32px;
+        border-right: 1px solid #cccccc;
+        border-top: 1px solid #cccccc;
+    }
+    .bar li{
+        width: 17%;
+        list-style-type:none;
+        float: left;
+        border-bottom: 1px solid #cccccc;
+        border-left: 1px solid #cccccc;
+        padding: 5px 10px;
+    }
+</style>
+
+
+<include file="Public/persontop"/>
+
+<div class="g">
+    <!--面包屑 -->
+    <div class="breadcrumb-area icon-breadcrumb fcn">您现在的位置：
+        <a href="{:U('Index/index')}" title="首页">首页</a>&nbsp;&gt;&nbsp;
+        <span id="personCenter"><a href="{:U('Member/index')}" title="个人中心">个人中心</a></span>
+        <span id="pathPoint">&nbsp;&gt;&nbsp;</span>
+        <b id="pathTitle">商品入库</b>
+    </div>
+</div>
+<div class="hr-15"></div>
+
+<div class="g">
+    <div class="fr u-4-5"><!--栏目 -->
+        <div class="part-area clearfix">
+            <div class="fl">
+                <h1 style="font-size: 18px;">商品入库</h1>
+            </div>
+        </div>
+        <div class="hr-3"></div>
+        <!--搜索条件-->
+        <!--库存 -->
+        <div class="myOrders-area">
+            <div class="myOrders-title-area">
+
+                    <div class="content">
+                        <div class="item">
+                            入库仓库:
+                            <select class="store" name="store" id="store">
+                                <volist name="customerlist" id="vo">
+                                    <option value="{$vo.customer_id}">{$vo.customer_name}</option>
+                                </volist>
+                            </select>
+                        </div>
+                        <div class="item">
+                            商品名称：
+                            <select class="select" name="goods_name" style="width: 400px;">
+                                <volist name="goods" id="vo">
+                                    <if condition="$vo.goods_id eq $goods_id">
+                                        <option value="{$vo.goods_id}" selected = "selected">{$vo.goods_name}</option>
+                                        <else/>
+                                        <option value="{$vo.goods_id}">{$vo.goods_name}</option>
+                                    </if>
+                                </volist>
+                            </select>
+                            <div class="item-label">
+                                <label class="desc">商品数量：<input name="goods_num" class="desc-input" value=""></label>
+                                <label class="desc">商品进价：<input name="goods_buy_price" class="desc-input" value=""></label>
+                                <label class="desc">预计售价：<input name="goods_sell_price" class="desc-input" value=""></label>
+                            </div>
+                        </div>
+                        <div id="goods_name">
+
+                        </div>
+                        <div class="item">
+                            <button style="color: #0a79d5" id="addstock">继续添加入库商品</button>
+                        </div>
+                        <div class="item action">
+                            <button class="button-action-save vam" style="color: #000000;font-size: 18px" id="addaction"></button>
+                        </div>
+                    </div>
+                    <!--分页--------- -->
+                    <div class="hr-3"></div>
+                    <div class="pager" id="list-pager">
+                </div>
+            </div>
+            <div class="hr-2"></div>
+        </div>
+
+
+    </div>
+    <!--左边菜单 -->
+    <include file="Public/personcl"/>
+</div>
+<div class="hr-60"></div>
+<include file="Public/footer"/>
+<script>
+    //提交数据
+    $('#addaction').click(function () {
+        //遍历获取入库信息
+        var aler = true;
+        var goods_id = new Array(); //或者写成：var btns= [];
+        jQuery("select[name='goods_name']").each(function(key,value) {
+            goods_id[key] = $(this).val();
+            if(!$(this).val()){
+                aler = false;
+                return aler;
+            }
+        });
+        var goods_num = new Array(); //或者写成：var btns= [];
+        jQuery("input[name='goods_num']").each(function(key,value) {
+            goods_num[key] = $(this).val();
+            if(!$(this).val()){
+                aler = false;
+                return aler;
+            }
+        });
+        var goods_buy_price = new Array(); //或者写成：var btns= [];
+        jQuery("input[name='goods_buy_price']").each(function(key,value) {
+            goods_buy_price[key] = $(this).val();
+        });
+        var goods_sell_price = new Array(); //或者写成：var btns= [];
+        jQuery("input[name='goods_sell_price']").each(function(key,value) {
+            goods_sell_price[key] = $(this).val();
+        });
+        //获取仓库id
+        var storehouse_id = $('#store').val();
+        if(aler == true){
+            $.ajax({
+                url: "__CONTROLLER__/add_action",
+                type: 'post',
+                dataType: 'json',
+                data: {
+                    goods_id:goods_id,
+                    goods_num:goods_num,
+                    goods_buy_price:goods_buy_price,
+                    goods_sell_price:goods_sell_price,
+                    storehouse_id:storehouse_id
+                },
+                success: function (data) {
+                    alert(data.msg);
+                    if(data.status == 'success'){
+//                        window.location.replace(location.href);
+                    }
+                },
+                fail: function (data) {
+
+                    return;
+                }
+            });
+        }else {
+            alert('商品名或数量不能为空')
+        }
+
+    })
+    //添加商品demo结构
+    $('#addstock').click(function () {
+        $.ajax({
+            url: "__CONTROLLER__/goods",
+            type: 'post',
+            dataType: 'json',
+            data: {
+
+            },
+            success: function (data) {
+                var str =' <div class="item">商品名称：';
+                str+=' <select class="select" name="goods_name" style="width: 400px;">';
+                for (var i = 0; i < data.list.length; i++) {
+                    var list =data.list[i];
+                    str+='<option value="'+list.goods_id+'">'+list.goods_name+'</option>';
+                }
+                str+='        </select>';
+                str+='        <a href="#" style="color: red;margin-left: 20px" onclick="del(this)">删除商品</a>';
+                str+='        <div class="item-label">';
+                str+='            <label class="desc">商品数量：<input name="goods_num" class="desc-input" value=""></label>';
+                str+='            <label class="desc">商品进价：<input name="goods_buy_price" class="desc-input" value=""></label>';
+                str+='            <label class="desc">预计售价：<input name="goods_sell_price" class="desc-input" value=""></label>';
+                str+='        </div>';
+                str+='    </div>';
+
+                $('#goods_name').append(str);
+                if(data.status == 'error'){
+                    alert(data.msg);
+                }
+            },
+
+        });
+
+    })
+    //删除产品demo结构
+    function del(th) {
+        $(th).parent('div').remove();
+
+    }
+
+</script>
+</body></html>
+
+
+
+
+<!--选择商品隐藏内容-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

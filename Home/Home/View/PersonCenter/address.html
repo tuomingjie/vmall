@@ -1,0 +1,140 @@
+﻿
+<include file="Public/persontop"/>
+<div class="g">
+	<!--面包屑 -->
+	<div class="breadcrumb-area icon-breadcrumb fcn">您现在的位置：
+		<a href="{:U('Index/index')}" title="首页">首页</a>&nbsp;&gt;&nbsp;
+		<span id="personCenter"><a href="{:U('Member/index')}" title="个人中心">个人中心</a></span>
+		<span id="pathPoint">&nbsp;&gt;&nbsp;</span>
+		<b id="pathTitle">收货信息</b>
+	</div>
+</div>
+<div class="hr-15"></div>
+
+<div class="g">
+    <div class="fr u-4-5"><!--栏目 -->
+<div class="part-area clearfix">
+    <div class="fl">
+        <h3 class="myAddress-title"><span>我的收货地址</span></h3>
+    </div>
+</div>
+<div class="hr-2"></div>
+<!--表单-我的收货地址 -->
+<div class="myAddress-list">
+       <!----------------------一个地址--------------------------------------->
+	<volist name="address_info" id="vo">
+	<div id="myAddress-area-8543557" class="myAddress-area">
+	<div class="h clearfix">
+		<div class="fl" id="tip">
+		   <if condition="$vo['address_lock'] eq 1">
+			<b>已设为默认地址</b>
+		   <else/>
+			  <b></b>
+		   </if>
+		</div>
+	    <div class="fr">
+		   <a href="{:U('PersonCenter/delAddress',array('address_id'=>$vo['address_id']))}"  title="删除">删除</a>
+	    </div>
+	</div>
+	<div class="b">
+		<div id="address-detail-8543557" class="form-detail-area">
+			<table border="0" cellpadding="0" cellspacing="0">
+				<tbody>
+				<tr>
+					<th>收货人：</th>
+				    <td>{$vo.address_name}</td>
+				</tr>
+				<tr>
+					<th class="vat">收货地址：</th>
+				    <td>{$vo.address_content}</td>
+				</tr>
+				<tr>
+					<th>邮政编码：</th>
+				    <td>{$vo.address_post}</td>
+				</tr>
+				<tr>
+					<th>联系号码：</th>
+				    <td>{$vo.address_phone}</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	</div>
+	
+	</volist>
+ <!----------------------一个地址--------------------------------------->
+
+</div>
+<!--我的收货地址-添加新地址 -->
+
+<div class="myAddress-add-area">
+	<div class="h"><b>添加新地址</b></div>
+    <div class="b">
+    	<div class="form-edit-area">
+	    <form id="myAddress-add-form" action="{:U('PersonCenter/addAddress')}" autocomplete="off" method="post" onsubmit="return ec.member.myAddress.save(this)" data-type="add">
+            <div class="form-edit-table">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tbody><tr>
+                            <th><span class="required">*</span>收货人：</th>
+                            <td><input maxlength="20" type="text" name="address_name" class="text vam span-400" validator="validator11409811718553"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2" class="vat"><span class="required">*</span>收货地址：</th>
+                            <td>
+								<div id="myAddress-add-region" style="height:25px; float:left;">
+								 <select name="s_province" id="s_province"></select>
+	 	                         <select name="s_city" id="s_city"></select>
+	 	                         <select name="s_county" id="s_county"></select>
+								 <js href="__PUBLIC__/Js/area.js"/>
+								</div>
+								<span id="region-msg" style="float:left"></span>
+							</td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <label style="display: block; position: absolute; cursor: text; float: left; z-index: 2; color: rgb(153, 153, 153);" class="text vam span-400" for="input_label_0"></label>
+							
+							<input maxlength="100" type="text" class="text vam span-400" name="address" validator="validator21409811718554" id="input_label_0" style="z-index: 1;" placeholder="详细收货地址"></td>
+                        </tr>
+                        <tr>
+                            <th>邮编：</th>
+                            <td><input maxlength="6" type="text" class="text vam span-150 ime-disabled" name="zipCode" validator="validator31409811718554"></td>
+                        </tr>
+                        <tr>
+                            <th><span class="required">*</span>手机号码：</th>
+                            <td>
+				<div class="inline-block vam">
+				
+				       <input maxlength="15" type="text" name="mobile" class="text vam span-150 ime-disabled" alt="phone-msg" validator="validator41409811718554">&nbsp;&nbsp;</div>
+					   
+			
+				<div class="inline-block vam" id="phone-msg"></div>
+			    </td>
+                        </tr>
+                        <tr>
+                            <th>&nbsp;</th>
+                            <td><input type="checkbox" class="checkbox vam" name="defaultFlag" value="1" id="myAddress-default"><label class="vam" for="myAddress-default">设为默认地址</label></td>
+                        </tr>
+                        <input type="hidden" name="randomFlag" value="afc754d880d6b5786012c28eeb3d058f">
+                    </tbody></table>
+            </div>
+            <div class="form-edit-action"><input type="submit" class="button-action-ok-2 vam" value="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" class="button-action-cancel-2 vam" value="" onclick="ec.member.myAddress.reset()"></div>
+	    </form>
+        </div>
+    </div>
+</div>
+<div class="hr-60"></div>
+
+
+</div>
+
+<!--左边菜单 -->
+		<include file="Public/personcl"/>
+
+</div>
+<div class="hr-60"></div>
+
+<!--口号-20121025 -->
+<include  file="Public/footer" />
+</body></html>

@@ -1,0 +1,46 @@
+
+<div class="pageContent">
+	<form method="post" action="__URL__/update/navTabId/listcategory/callbackType/closeCurrent"  class="pageForm required-validate" 
+		onsubmit="return validateCallback(this,dialogAjaxDone);"><?php  //窗体组件采用这个 iframeCallback(this, navTabAjaxDone); ?>
+		<input type="hidden" name="id" value="{$vo.id}"/>
+		<div class="pageFormContent" layoutH="60">
+			<dl>
+				<dt>分类id:</dt>
+				<dd><input type="text" class="required"  style="width:100%" name="category_id" value="{$vo.category_id}"/ readonly></dd>		</dl>
+			
+			<dl>
+				<dt>分类名称:</dt>
+				<dd><input type="text"  style="width:100%" name="category_name" value="{$vo.category_name}"/></dd>
+			</dl>
+			<dl>
+				<dt>分类父类pid:</dt>
+				<select class="combox required" name="category_pid" id="w_combox_city" ref="w_combox_area" >
+				   <option value="0">---顶级分类---</option>
+				   <volist name="cat_info" id='vo1'>
+					 <option value={$vo1.category_id} <?php echo $vo['category_pid']==$vo1['category_id']?'selected':'';?>>{$vo1.category_name}</option>
+				   </volist>
+			   
+				</select>
+			  </dd>
+			</dl>
+			<dl>
+				<dt>分类路径:</dt>
+				<dd><input type="text"  style="width:100%" name="category_path" value="{$vo.category_path}" readonly></dd>
+			</dl>
+			<dl>
+				<dt>分类类型:</dt>
+				<dd><input type="text"  style="width:100%" name="category_type" value="{$vo.category_type}" readonly></dd>
+			</dl>
+			
+			
+		</div>
+		
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+</div>
+

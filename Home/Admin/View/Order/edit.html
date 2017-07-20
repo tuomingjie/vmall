@@ -1,0 +1,35 @@
+<!--* 网站后台订单修改视图 * author:莫顺渠 -->
+<div class="pageContent">
+	<form method="post" action="__URL__/update/navTabId/listorder/callbackType/closeCurrent"  class="pageForm required-validate" 
+		onsubmit="return validateCallback(this,dialogAjaxDone);"><?php  //窗体组件采用这个 iframeCallback(this, navTabAjaxDone); ?>
+		<input type="hidden" name="order_id" value="{$vo.order_id}"/>
+		<div class="pageFormContent" layoutH="60">
+				<dl>
+					<dt>支付状态：</dt>
+					<dd>
+						<select name="payment_status" class="required combox">
+							<option value="0" <?php echo $vo['payment_status']==0?'selected':'';?>>未付款</option>
+							<option value="1" <?php echo $vo['payment_status']==1?'selected':'';?>>已付款</option>
+						</select>
+					</dd>
+				</dl>
+				<dl>
+					<dt>审核状态：</dt>
+					<dd>
+						<select name="examine_status" class="required combox">
+							<option value="0" <?php echo $vo['examine_status']==0?'selected':'';?>>审核中</option>
+							<option value="1" <?php echo $vo['examine_status']==1?'selected':'';?>>不通过</option>
+							<option value="2" <?php echo $vo['examine_status']==2?'selected':'';?>>已通过</option>
+						</select>
+					</dd>
+				</dl>
+				
+		</div>
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+</div>

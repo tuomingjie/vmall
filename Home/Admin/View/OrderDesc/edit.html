@@ -1,0 +1,50 @@
+<!--* 网站后台订单修改视图 * author:莫顺渠 -->
+<div class="pageContent">
+	<form method="post" action="__URL__/update/navTabId/listorder/callbackType/closeCurrent"  class="pageForm required-validate" 
+		onsubmit="return validateCallback(this,dialogAjaxDone);"><?php  //窗体组件采用这个 iframeCallback(this, navTabAjaxDone); ?>
+		<input type="hidden" name="order_desc_id" value="{$vo.order_desc_id}"/>
+		<input type="hidden" name="parent_status" value="{$examine_status}"/>
+		<div class="pageFormContent" layoutH="60">
+				
+				<if condition=" $examine_status eq 2">
+					<dl>
+						<dt>订单状态：</dt>
+						<dd><select name="order_desc_state" class="required combox">
+							
+							<option value="200" <?php echo $vo['order_desc_state']=='200'?'selected':'';?>>确认生产</option>
+							<option value="300" <?php echo $vo['order_desc_state']=='300'?'selected':'';?>>已发货</option>
+							<option value="400" <?php echo $vo['order_desc_state']=='400'?'selected':'';?>>已完成</option>
+							<option value="500" <?php echo $vo['order_desc_state']=='500'?'selected':'';?>>已评论</option>
+						</select></dd>
+					</dl>
+					
+					<dl>
+						<dt>订单号:</dt>
+						<dd><input type="text"  style="width:100%" class="required number" name="courier_number" value="{$vo.courier_number}"/></dd>
+					</dl>
+					<else/>
+					<dl>
+						<dt>产品数量：</dt>
+						<dd>
+							<input type="text" name="order_desc_num" class="required number" value="{$vo.order_desc_num}" />
+						</dd>
+					</dl>
+					<dl>
+						<dt>总金额：</dt>
+						<dd>
+							<input type="text" name="total_price" class="required number" value="{$vo.total_price}" />
+						</dd>
+					</dl>	
+				</if>
+				
+				
+		</div>
+		
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+</div>

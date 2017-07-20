@@ -1,0 +1,42 @@
+
+<div class="pageContent">
+	<form method="post" action="__URL__/insert/navTabId/listcategory/callbackType/closeCurrent"  class="pageForm required-validate" 
+		onsubmit="return validateCallback(this,dialogAjaxDone);"><?php  //窗体组件采用这个 iframeCallback(this, navTabAjaxDone); ?>
+		<div class="pageFormContent" layoutH="60">
+			
+			
+			<dl>
+				<dt>分类名称:</dt>
+				<dd><input type="text" class="required"  style="width:100%" name="category_name"/></dd>
+			</dl>
+			<p>
+			<label>商品分类：</label>
+			<select class="combox required" name="category_pid" id="w_combox_city" ref="w_combox_area" >
+		       <option value="0">---顶级分类---</option>
+			   <volist name="cat_info" id='vo'>
+			     <option value={$vo.category_id}>{$vo.category_name}</option>
+			   </volist>
+			   
+			</select>
+          </p>
+		 <dl>
+			<dt>分类类型:</dt>
+			<dd><input type="text" class="required number"  style="width:100%" name="category_type"/></dd>
+		</dl>
+	   
+	    
+		 
+		
+		</div>
+		
+		<div class="formBar">
+			<ul>
+			    <!-- <label style="float:left"><input type="checkbox" class="checkboxCtrl" group="category_attr" />全选</label> -->
+				<!-- <li><div class="button"><div class="buttonContent"><button type="button" class="checkboxCtrl" group="category_attr" selectType="invert">反选</button></div></div></li> -->
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+</div>
+

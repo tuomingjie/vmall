@@ -1,0 +1,29 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+a{
+    color: black;
+}
+.top-info{
+    padding: 15px;
+    height: 50px;
+    background-color: #1E9FFF;
+}
+.top-info .username{
+    color: white;
+    line-height: 50px;
+    float: right;
+    margin-right: 20px;
+}
+.menu-box{
+
+}
+.menu-box .menu{
+    text-align: left;
+    height: 30px;
+    line-height: 30px;
+    padding: 5px;
+    border-bottom: 1px solid #cccccc;
+    color: #2F4056;
+}

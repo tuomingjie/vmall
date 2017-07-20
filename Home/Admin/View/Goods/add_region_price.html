@@ -1,0 +1,46 @@
+﻿
+<div class="pageContent">
+	<form method="post" action="__URL__/insert_region_price/navTabId/listgoods/callbackType/closeCurrent"  class="pageForm required-validate" 
+		onsubmit="return validateCallback(this,dialogAjaxDone);"><?php  //窗体组件采用这个 iframeCallback(this, navTabAjaxDone); ?>
+		<div class="pageFormContent" layoutH="60">
+			<volist name="one" id='vo' key='k'>
+			<dl>
+				<dt>Ⅰ{$vo.region_name}：</dt>
+				<dd>
+					<input type="hidden"  name="region_id[]" value="{$vo.region_id}" />
+					<input type="text" class="alphanumeric required"  style="width:100%" name="rp_price[]" value="0.00"/>
+				</dd>
+			</dl>
+				<volist name="two" id='vo2' key='k2'>
+					<if condition="$vo2.parent_id eq $vo.region_id ">
+						<dl>
+							<dt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ⅱ{$vo2.region_name}：</dt>
+							<dd>
+								<input type="hidden"  name="region_id[]" value="{$vo2.region_id}" />
+								<input type="text" class="alphanumeric required"  style="width:100%" name="rp_price[]" value="0.00"/>
+							</dd>
+						</dl>
+						<volist name="three" id='vo3' key='k3'>
+							<if condition="$vo3.parent_id eq $vo2.region_id ">
+								<dl>
+									<dt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ⅲ{$vo3.region_name}：</dt>
+									<dd>
+										<input type="hidden"  name="region_id[]" value="{$vo3.region_id}" />
+										<input type="text" class="alphanumeric required"  style="width:100%" name="rp_price[]" value="0.00"/>
+									</dd>
+								</dl>
+							</if>
+						</volist>
+					</if>
+				</volist>
+			</volist>
+		
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+</div>
+

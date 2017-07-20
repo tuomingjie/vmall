@@ -1,0 +1,61 @@
+
+<div class="pageContent">
+	<form method="post" action="__URL__/update/navTabId/listuser/callbackType/closeCurrent"  class="pageForm required-validate" 
+		onsubmit="return validateCallback(this,dialogAjaxDone);"><?php  //窗体组件采用这个 iframeCallback(this, navTabAjaxDone); ?>
+		<input type="hidden" name="user_id" value="{$vo.user_id}"/>
+		<div class="pageFormContent" layoutH="60">
+			
+			<dl>
+			<dt>用户id:</dt>
+				<dd><input type="text"   style="width:100%" name="user_id" value="{$vo.user_id}"  readonly></dd>
+			</dl>
+			<dl>
+				<dt>密码:</dt>
+				<dd><input type="password"   style="width:100%" name="user_pwd" id="pwd"/></dd>
+			</dl>
+			
+			<dl>
+				<dt>重置密码:</dt>
+				<dd><input type="password"   style="width:100%" name="user_pwd1"  equalto="#pwd"/></dd>
+			</dl>
+			
+			<p>
+			<label>是否锁定：</label>
+		   <select class="combox required" name="user_lock" id="w_combox_city" ref="w_combox_area" >
+		       <if condition="$vo.user_lock eq 0">
+		           <option value="0" selected>可登陆</option>
+				 <else/>
+				  <option value="0" >可登陆</option>
+				</if>
+				<if condition="$vo.user_lock eq 1">
+		           <option value="1" selected>不可登陆</option>
+				 <else/>
+				  <option value="1" >不可登陆</option>
+				</if>
+			   
+			   
+	      </select>
+          </p>
+			<dl>
+				<dt>客户ID:</dt>
+				<dd><input type="text"   style="width:100%" name="customer_id" id="customer_id" value="{$vo.customer_id}" /></dd>
+			</dl>
+		 
+		
+			 
+		    
+			  
+		  
+		  </div>
+			
+		
+		
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+</div>
+

@@ -1,0 +1,175 @@
+<?php if (!defined('THINK_PATH')) exit();?><style>
+    .title{
+        height: 60px;
+        line-height: 60px;
+        font-size: 30px;
+        margin-left: 20px;
+        margin-right: 10px;
+    }
+    .content{
+        margin-left: 20px;
+        margin-right: 10px;
+        font-size: 20px;
+        /*text-align: center;*/
+    }
+    .desc{
+        margin-right: 10px;
+        font-size: 14px;
+    }
+    .desc-input{
+        width: 60px;
+        font-size: 14px;
+    }
+    .item{
+        padding: 10px 0;
+        border-bottom: 1px solid #d2d2d2;
+    }
+    .item-label{
+        margin: 10px 0px;
+        font-size: 14px;
+    }
+    .action{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+</style>
+<div class="title">
+    商品入库
+</div>
+
+<div class="content">
+    <div class="item">
+        入库仓库:
+        <select name="store" id="store">
+            <option value="0">总仓库</option>
+            <?php if(is_array($customer)): $i = 0; $__LIST__ = $customer;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value="<?php echo ($vo["customer_id"]); ?>"><?php echo ($vo["customer_name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+        </select>
+    </div>
+    <div class="item">
+        商品名称：
+        <select class="select" name="goods_name" style="width: 400px;">
+            <?php if(is_array($goods)): $i = 0; $__LIST__ = $goods;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i; if($vo["goods_id"] == $goods_id): ?><option value="<?php echo ($vo["goods_id"]); ?>" selected = "selected"><?php echo ($vo["goods_name"]); ?></option>
+                    <?php else: ?>
+                    <option value="<?php echo ($vo["goods_id"]); ?>"><?php echo ($vo["goods_name"]); ?></option><?php endif; endforeach; endif; else: echo "" ;endif; ?>
+        </select>
+        <div class="item-label">
+            <label class="desc">商品数量：<input name="goods_num" class="desc-input" value=""></label>
+            <label class="desc">商品进价：<input name="goods_buy_price" class="desc-input" value=""></label>
+            <label class="desc">预计售价：<input name="goods_sell_price" class="desc-input" value=""></label>
+        </div>
+    </div>
+    <div id="goods_name">
+
+    </div>
+    <div class="item">
+        <button style="color: #0a79d5" id="addstock">继续添加入库商品</button>
+    </div>
+    <div class="item action">
+        <button style="color: #000000;font-size: 18px" id="addaction">确认入库</button>
+    </div>
+</div>
+
+<!--选择商品隐藏内容-->
+
+<script>
+    //提交数据
+    $('#addaction').click(function () {
+        //遍历获取入库信息
+        var aler = true;
+        var goods_id = new Array(); //或者写成：var btns= [];
+        jQuery("select[name='goods_name']").each(function(key,value) {
+            goods_id[key] = $(this).val();
+            if(!$(this).val()){
+                aler = false;
+                return aler;
+            }
+        });
+        var goods_num = new Array(); //或者写成：var btns= [];
+        jQuery("input[name='goods_num']").each(function(key,value) {
+            goods_num[key] = $(this).val();
+            if(!$(this).val()){
+                aler = false;
+                return aler;
+            }
+        });
+        var goods_buy_price = new Array(); //或者写成：var btns= [];
+        jQuery("input[name='goods_buy_price']").each(function(key,value) {
+            goods_buy_price[key] = $(this).val();
+        });
+        var goods_sell_price = new Array(); //或者写成：var btns= [];
+        jQuery("input[name='goods_sell_price']").each(function(key,value) {
+            goods_sell_price[key] = $(this).val();
+        });
+        //获取仓库id
+        var storehouse_id = $('#store').val();
+        console.log(goods_num);
+        if(aler == true){
+            $.ajax({
+                url: "/vmallshop/index.php/Admin/Stock/add_action",
+                type: 'post',
+                dataType: 'json',
+                data: {
+                    goods_id:goods_id,
+                    goods_num:goods_num,
+                    goods_buy_price:goods_buy_price,
+                    goods_sell_price:goods_sell_price,
+                    storehouse_id:storehouse_id
+                },
+                success: function (data) {
+                    alert(data.msg);
+                    if(data.status == 'success'){
+                        window.location.replace(location.href);
+                    }
+                },
+                fail: function (data) {
+
+                    return;
+                }
+            });
+        }else {
+            alert('商品名或数量不能为空')
+        }
+
+    })
+    //添加商品demo结构
+    $('#addstock').click(function () {
+        $.ajax({
+            url: "/vmallshop/index.php/Admin/Stock/goods",
+            type: 'post',
+            dataType: 'json',
+            data: {
+
+            },
+            success: function (data) {
+                var str =' <div class="item">商品名称：';
+                str+=' <select class="select" name="goods_name" style="width: 400px;">';
+                for (var i = 0; i < data.list.length; i++) {
+                    var list =data.list[i];
+                    str+='<option value="'+list.goods_id+'">'+list.goods_name+'</option>';
+                }
+                str+='        </select>';
+                str+='        <a href="#" style="color: red;margin-left: 20px" onclick="del(this)">删除商品</a>';
+                str+='        <div class="item-label">';
+                str+='            <label class="desc">商品数量：<input name="goods_num" class="desc-input" value=""></label>';
+                str+='            <label class="desc">商品进价：<input name="goods_buy_price" class="desc-input" value=""></label>';
+                str+='            <label class="desc">预计售价：<input name="goods_sell_price" class="desc-input" value=""></label>';
+                str+='        </div>';
+                str+='    </div>';
+
+                $('#goods_name').append(str);
+                if(data.status == 'error'){
+                    alert(data.msg);
+                }
+            },
+
+        });
+
+    })
+    //删除产品demo结构
+    function del(th) {
+        $(th).parent('div').remove();
+
+    }
+
+</script>

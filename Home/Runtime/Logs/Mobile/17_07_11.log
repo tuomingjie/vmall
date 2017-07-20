@@ -1,0 +1,32 @@
+[ 2017-07-11T09:07:15+08:00 ] ::1 /vmallshop/index.php/Mobile/Login/loginaction
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.046800s ]
+SQL: SELECT * FROM `vmall_user` WHERE `user_name` = 'test003' AND `user_pwd` = '8d70d8ab2768f232ebe874175065ead3'  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-11T09:07:24+08:00 ] ::1 /vmallshop/index.php/Mobile/Login/loginaction
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-11T09:07:44+08:00 ] ::1 /vmallshop/index.php/Mobile/Login/loginaction
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_user` WHERE `user_name` = 'test003' AND `user_pwd` = 'e10adc3949ba59abbe56e057f20f883e'  [ RunTime:0.000000s ]
+SQL: UPDATE `vmall_user` SET `user_last_time`=1499735264,`user_last_ip`=0 WHERE `user_id` = 27 [ RunTime:0.046800s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+

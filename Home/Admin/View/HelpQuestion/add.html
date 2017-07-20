@@ -1,0 +1,36 @@
+
+<div class="pageContent">
+	<form method="post" action="__URL__/insert/navTabId/listhelp_question/callbackType/closeCurrent"  class="pageForm required-validate" 
+		onsubmit="return validateCallback(this,dialogAjaxDone);"><?php  //窗体组件采用这个 iframeCallback(this, navTabAjaxDone); ?>
+		<div class="pageFormContent" layoutH="60">
+			<dl>
+				<dt>帮助问题分类ID:</dt>
+			   <select class="combox required" name="help_category_id" id="w_combox_city" ref="w_combox_area" >
+		       <option value="all">---帮助分类---</option>
+			   <volist name="help_category" id='vo'>
+			     <option value={$vo.help_category_id}>{$vo.help_category_name}</option>
+				 
+			   </volist>
+			   </select>
+			</dl>
+			
+			<dl>
+				<dt>帮助问题名称:</dt>
+				<dd><input type="text" class="required"  style="width:100%" name="help_title"/></dd>
+			</dl>
+			
+			<dl>
+				<dt>帮助问题内容:</dt>
+				<dd><input type="text" class="required"  style="width:100%" name="help_content"/></dd>
+			</dl>			
+		</div>
+		
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+</div>
+

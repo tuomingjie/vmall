@@ -1,0 +1,56 @@
+<style>
+    .table{
+        border: 1px solid #cccccc;
+    }
+    tr,th{
+        border-bottom: 1px solid #cccccc;
+    }
+    td,th{
+        border-right: 1px solid #cccccc;
+
+    }
+</style>
+<include file="temp"/>
+<form action="__CONTROLLER__/index" method="post">
+    选择仓库：
+    <select name="customer_id" >
+        <option value="">全部</option>
+        <volist name="customer" id="vo">
+            <option value="{$vo.customer_id}">{$vo.customer_name}</option>
+        </volist>
+
+    </select>
+    商品名称：
+    <input name="goods_name" value="">
+    <button type="submit">搜索</button>
+</form>
+<table border="1" bordercolor="#a0c6e5" style="border-collapse:collapse;width: 100%;text-align: center">
+    <thead>
+    <tr style="text-align: center">
+        <th>库存ID</th>
+        <th>仓库名称</th>
+        <th>商品名称</th>
+        <th>总库存</th>
+        <th>更新时间</th>
+        <th>操作员</th>
+    </tr>
+    </thead>
+    <tbody>
+    <volist name="list" id="vo">
+        <tr>
+            <td>{$vo.stock_id}</td>
+            <td>{$vo.customer_name}</td>
+            <td> {$vo.goods_name}</td>
+            <td>{$vo.stock_num}</td>
+            <td>{$vo.updata_time|date='Y-m-d H:i:s',###}</td>
+            <td>{$vo.user_name}</td>
+        </tr>
+    </volist>
+    <tr style="text-align: right">
+        <td colspan="6">
+            {$page}
+        </td>
+    </tr>
+    </tbody>
+</table>
+

@@ -1,0 +1,292 @@
+<style>
+
+    .content{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 10px;
+    }
+    .desc{
+        margin-right: 10px;
+        width: 260px;
+        font-size: 14px;
+    }
+    .desc-input{
+        width: 100px;
+    }
+    .item{
+        padding: 10px;
+        border-bottom: 1px solid #d2d2d2;
+    }
+    .item span{
+        margin-left: 30px;
+        font-size: 14px;
+    }
+    input,select{
+        margin-left: 30px;
+        font-size: 14px;
+    }
+    .action{
+        text-align: center;
+        margin: 10px 0;
+    }
+</style>
+
+<include file="Public/persontop"/>
+
+<div class="g">
+    <!--面包屑 -->
+    <div class="breadcrumb-area icon-breadcrumb fcn">您现在的位置：
+        <a href="{:U('Index/index')}" title="首页">首页</a>&nbsp;&gt;&nbsp;
+        <span id="personCenter"><a href="{:U('Member/index')}" title="个人中心">个人中心</a></span>
+        <span id="pathPoint">&nbsp;&gt;&nbsp;</span>
+        <b id="pathTitle">商品调拨</b>
+    </div>
+</div>
+<div class="hr-15"></div>
+
+<div class="g">
+    <div class="fr u-4-5"><!--栏目 -->
+        <div class="part-area clearfix">
+            <div class="fl">
+                <h1 style="font-size: 18px;">商品调拨</h1>
+            </div>
+        </div>
+        <div class="hr-3"></div>
+        <!--搜索条件-->
+        <!--库存 -->
+        <div class="myOrders-area">
+            <div class="myOrders-title-area">
+
+                <div class="content">
+                    <div class="item">
+                        <label class="desc">出库仓库：</label>
+                        <select name="out" id="out" onchange="out_stock()">
+                            <volist name="customerlist" id="vo">
+                                <option value="{$vo.customer_id}">{$vo.customer_name}</option>
+                            </volist>
+                        </select>
+                    </div>
+                    <diV class="item">
+                        <label class="desc">进入仓库：</label>
+                        <select name="into" id="into">
+                            <volist name="customerlist" id="vo">
+                                <option value="{$vo.customer_id}">{$vo.customer_name}</option>
+                            </volist>
+                        </select>
+                    </diV>
+                    <div id="demo">
+                        <div>
+                            <div class="item">
+                                <label class="desc">商品名称：</label>
+                                <select class="select goods_id" name="goods_id" style="width: 60%;" onchange="jiankong(this)">
+                                    <volist name="goodslist" id="goods">
+                                        <option value="{$goods.goods_id}">{$goods.goods_name}</option>
+                                    </volist>
+                                </select>
+                            </div>
+                            <div class="item">
+                                <label class="desc">库存数量：</label>
+                                <input name="stock_num" value="{$data['stock_num']}" class="stock_num1" type="hidden">
+                                <span class="stock_num2" style="color: red">{$data['stock_num']}</span>
+                                <label class="desc" style="margin-left: 10px;">调配数量：</label>
+                                <input name="goods_num" class="desc-input" style="margin-left: 10px;" value="1">
+                                <span style="color: #c2c2c2;text-align: center;margin-left: 10px; ">*调配数量不能大于库存</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="item">
+                        <a href="#" style="color: #0a79d5" id="addredeploy">继续添加商品</a>
+                    </div>
+                    <div class="action">
+                        <button class="button-action-save vam" style="color: #000000;font-size: 18px;" id="redeploy"></button>
+                    </div>
+                </div>
+                <!--分页--------- -->
+                <div class="hr-3"></div>
+                <div class="pager" id="list-pager">
+                </div>
+            </div>
+            <div class="hr-2"></div>
+        </div>
+
+
+    </div>
+    <!--左边菜单 -->
+    <include file="Public/personcl"/>
+</div>
+<div class="hr-60"></div>
+<include file="Public/footer"/>
+<script>
+    function jiankong(th) {
+        var storehouse_id =$("#out").val();
+        var goods_id =$(th).val();
+        $.ajax({
+            url: "__CONTROLLER__/stock_num",
+            type: 'post',
+            dataType: 'json',
+            data: {
+                goods_id:goods_id,
+                storehouse_id:storehouse_id
+            },
+            success: function (data) {
+                $(th).parent().next().children('.stock_num1').val(data.stock_num);
+                $(th).parent().next().children('.stock_num2').html(data.stock_num);
+
+            }
+        });
+    }
+    $("#addredeploy").click(function () {
+        var storehouse_id =$("#out").val();
+        $.ajax({
+            url: "__CONTROLLER__/stock_goods_name",
+            type: 'post',
+            dataType: 'json',
+            data: {
+                storehouse_id:storehouse_id
+            },
+            success: function (data) {
+                var str ='';
+                str+='    <div>';
+                str+='    <div class="item">';
+                str+='    <label class="desc">商品名称：</label>';
+                str+=' <select class="select goods_id" name="goods_id" style="width: 60%;" onchange="jiankong(this)">';
+                for (var i = 0; i < data.list.length; i++) {
+                    var list =data.list[i];
+                    str+='<option value="'+list.goods_id+'">'+list.goods_name+'</option>';
+                }
+                str+='        </select>';
+                str+='        <a href="#" style="color: red;margin-left: 20px" onclick="delb(this)">删除商品</a>';
+                str+='    </div>';
+                str+='         <div class="item">';
+                str+='<label class="desc">库存数量：</label>';
+                str+='<input class="stock_num1" name="stock_num" value="0"  type="hidden">';
+                str+=' <span class="stock_num2" style="color: red">0</span>';
+                str+=' <label class="desc" style="margin-left: 10px;">调配数量：</label>';
+                str+='<input name="goods_num" class="desc-input" style="margin-left: 10px;" value="1">';
+                str+='<span style="color: #c2c2c2;text-align: center;margin-left: 10px; ">*调配数量不能大于库存</span>';
+                str+=' </div>';
+                str+='    </div>';
+
+                $('#demo').append(str);
+                if(data.status == 'error'){
+                    alert(data.msg);
+                }
+            },
+
+        });
+    })
+    function delb(th) {
+        $(th).parent('div').parent().remove();
+
+    }
+    function out_stock() {
+        var storehouse_id =$("#out").val();
+        $.ajax({
+            url: "__CONTROLLER__/stock_goods_name",
+            type: 'post',
+            dataType: 'json',
+            data: {
+                storehouse_id:storehouse_id,
+            },
+            success: function (data) {
+                var str ='';
+                if(data.list.length > 0){
+                    for (var i = 0; i < data.list.length; i++) {
+                        var list =data.list[i];
+                        str+='<option value="'+list.goods_id+'">'+list.goods_name+'</option>';
+                    }
+                }else {
+                    str+='<option value="">'+data.msg+'</option>';
+                }
+
+                $('.goods_id').html(str)
+            }
+        });
+    }
+    //获取数据
+    $('#redeploy').click(function () {
+        //遍历获取入库信息
+        var aler = true;
+        var goods_id = new Array(); //或者写成：var btns= [];
+        jQuery("select[name='goods_id']").each(function(key,value) {
+            goods_id[key] = $(this).val();
+            if(!$(this).val()){
+                aler = false;
+                return aler;
+            }
+        });
+        var goods_num = new Array(); //或者写成：var btns= [];
+        jQuery("input[name='goods_num']").each(function(key,value) {
+            goods_num[key] = $(this).val();
+            if(!$(this).val()){
+                aler = false;
+                return aler;
+            }
+        });
+        //获取当前库存
+        var stock_num = new Array(); //或者写成：var btns= [];
+        jQuery("input[name='stock_num']").each(function(key,value) {
+            stock_num[key] = $(this).val();
+        });
+        //获取仓库id
+        var out_storehouse_id = $('#out').val();
+        var into_storehouse_id = $('#into').val();
+
+        if(aler == true){
+            $.ajax({
+                url: "__CONTROLLER__/redeploy_action",
+                type: 'post',
+                dataType: 'json',
+                data: {
+                    goods_id:goods_id,
+                    goods_num:goods_num,
+                    into:into_storehouse_id,
+                    out:out_storehouse_id,
+                    stock_num:stock_num
+                },
+                success: function (data) {
+                    alert(data.msg);
+                    if(data.status == 'success'){
+                        window.location.replace(location.href);
+                        aler = false;
+                        return aler;
+                    }
+                },
+                fail: function (data) {
+                    aler = false;
+                    return aler;
+                }
+            });
+        }else {
+
+        }
+
+    })
+
+</script>
+</body></html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

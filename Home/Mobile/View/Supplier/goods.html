@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <include file="Public/link" />
+    <title>商品列表</title>
+</head>
+<style>
+
+    .order_topbar{
+        height: 44px;
+        width: 100%;
+        background: #fff;
+        border-bottom: 1px solid #e3e3e3;
+    }
+    .nav{
+        height: 44px;
+        width: 16.6%;
+        line-height: 44px;
+        text-align: center;
+        font-size: 14px;
+        float: left;
+        color: #666;
+    }
+    .on{
+        height: 42px;
+        color: #ff771b;
+        border-bottom: 2px solid #ff771b;
+    }
+    .order-main{
+        padding-top: 5px;
+        background-color: #eeeeee;
+
+    }
+    .order-main .order-state{
+        color: #FF5722;
+        float: right;
+        background-color: #ffffff;
+    }
+    .order-main .order-money{
+        float: right;
+        background-color: #ffffff;
+    }
+    .back{
+        padding:8px 10px 8px 5px;
+        font-size: 20px;
+        margin: 0 10px;
+        z-index: 999
+    }
+</style>
+<body>
+<div class="bar bar-header bar-positive">
+    <i class="icon ion-ios-arrow-left back" id="back"></i>
+    <h1 class="title">供应商商品列表</h1>
+</div>
+<div style="margin-top: 44px"></div>
+
+<volist name="list" id="vo" empty="暂时没有数据">
+    <div class="order-main ">
+        <div class="item padding">
+            商品编号：{$vo.goods_no}
+            <span class="order-state">{$vo.goods_state}</span>
+        </div>
+        <div class="order-info">
+                <div class="item item-avatar" >
+                    <img src="__ROOT__/Upload{$vo.goods_big_pic}">
+                    <h2>{$vo.goods_name}</h2>
+                    <p>原价{$vo.goods_original_price}&nbsp;&nbsp;
+                            促销价￥{$vo.goods_sale_price}
+                    </p>
+                    <span style="float: right;margin-top: -20px;color: #2c2c2c">库存：{$vo.goods_num}</span>
+
+                </div>
+        </div>
+        <div class="item padding">
+            <span class="order-money">上市时间：{$vo.goods_time|date='Y-m-d',###}</span>
+        </div>
+    </div>
+</volist>
+<div style="text-align: right">
+    {$page}
+</div>
+
+</body>
+<script>
+    var url = location.search; //获取url中"?"符后的字串
+    var theRequest = new Object();
+    if (url.indexOf("?") != -1) {
+        var str = url.substr(1);
+        if(str == 'sckey=payment_status&sta=0'){
+            $('#b').addClass('on');
+        }else if(str == 'sckey=payment_status&sta=1'){
+            $('#c').addClass('on');
+        }else if(str == 'sckey=examine_status&sta=0'){
+            $('#d').addClass('on');
+        }else if(str == 'sckey=examine_status&sta=2'){
+            $('#e').addClass('on');
+        }else if(str == 'sckey=examine_status&sta=1'){
+            $('#f').addClass('on');
+        }
+    }else {
+        $('#a').addClass('on');
+    }
+    $('#back').click(function () {
+        window.location.href = "__MODULE__/Supplier/index";
+    })
+</script>
+</html>

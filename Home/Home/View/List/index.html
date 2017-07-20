@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)http://www.vmall.com/list-1#2 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta  http-equiv="Content-Language"  content="zh-cn">
+<meta  name="viewport"  content="width=device-width,initial-scale=1.0">
+<title>华为商城列表页</title>
+<meta  name="keywords"  content=",">
+<meta  name="description"  content="">
+
+<link  rel="shortcut icon"  href="__PUBLIC__/Ico/favicon.ico">
+<link  href="__PUBLIC__/Css/ec.core.css"  rel="stylesheet"  type="text/css">
+
+<link  href="__PUBLIC__/Css/main.css"  rel="stylesheet"  type="text/css">
+<script  src="__PUBLIC__/Js/jsapi.js"  namespace="ec"></script>
+<script  src="__PUBLIC__/Js/jquery-1.4.4.min.js"></script>
+<script  src="__PUBLIC__/Js/ec.core.js"></script> 
+<script  src="__PUBLIC__/Js/ec.business.js"></script> 
+<js href="__JQUERY__"/>
+<style>
+#list-pager-2 .current{
+	border:1px solid #ccc;
+	display:inline-block;
+	width:7px;
+	height:16px;
+	font-weight:400;
+	text-align:center;
+	line-height:16px;
+    font-size:12px;
+	padding:0 5px;
+	background:#D2D2D2;
+	margin-left:5px;
+	margin-right:5px;
+}
+#list-pager-2 .num{
+    border:1px solid #ccc;
+	display:inline-block;
+	width:7px;
+	height:16px;
+	font-weight:400;
+	text-align:center;
+	line-height:16px;
+    font-size:12px;
+	padding:0 5px;
+	
+	margin-left:5px;
+	margin-right:5px;
+
+}
+#list-pager-2 .prev{
+    border:1px solid #ccc;
+	display:inline-block;
+	width:7px;
+	height:16px;
+	font-weight:400;
+	text-align:center;
+	line-height:16px;
+    font-size:9px;
+	padding-left:3px;
+	padding-right:5px;
+	
+	margin-left:5px;
+	margin-right:5px;
+}
+
+#list-pager-2 .next{
+    border:1px solid #ccc;
+	display:inline-block;
+	width:7px;
+	height:16px;
+	text-align:center;
+	line-height:16px;
+    font-size:9px;
+	padding-left:3px;
+	padding-right:5px;
+	
+	margin-left:5px;
+	margin-right:5px;
+
+
+}
+</style>
+<js href="__JQUERY__" />
+</head>
+
+
+
+<body>
+
+ {//引入公共头部}
+ <include file="Public/pinkheader" />
+ <include file="Public/searchheader" />
+ <include file="Public/naver" />
+<div  class="hr-15"></div>
+<div  class="g">
+    <div  class="fl u-3-4"> 
+         <!------------------------轮换板部分--------------------------------------->
+        <div  class="banner-area">
+		
+	 <div  style="height: 230px; width: 729px;"  id="index_slider"  class="ec_slider banner-img">
+		<ul  style="width: 729px; height: 230px;">
+		 <!--------------前台图像区域-------------------->
+		 <volist name="adImg" id="ad">
+		
+			<li  style="width: 729px; height: 230px; display: none; position: absolute;">
+			<a  href="{$ad['ad_url']}"  target="_blank">
+			   <img  src="__UPLOAD__{$ad['index_sale_img']}">
+			</a>
+			</li>
+		 </volist>
+		</ul>
+		<div  class="ec-slider-nav">
+		    <!-------class=current-------->
+		    <volist name="adImg" id="ad" >
+			   <span></span>
+		    </volist>
+		</div>
+		<a  class="button-slider-prev"  href="javascript:;"  style="display: none;"></a>
+		<a  class="button-slider-next"  href="javascript:;"  style="display: none;"></a>
+	 </div>
+	 
+	 <script type="text/javascript">
+	   /* <!--  //轮换版js代码
+	     $(function(){
+		      var Lis=$("#index_slider li");
+			  var Spans=$(".ec-slider-nav span");
+			  var total=Lis.size();
+			  var timer=100000;
+			  var i=0;
+			  var t;
+			  Lis.show();
+			  go();
+			  t=setInterval(go,timer);
+			  
+			  Spans.hover(function(){
+			        clearInterval(t);
+			        i=$(this).index();
+				    go();
+			  
+			  },function(){
+			      t=setInterval(go,timer);
+			  });
+			  
+			  Lis.hover(function(){
+			     clearInterval(t);
+			   
+				
+				 
+			  },function(){
+			     t=setInterval(go,timer);
+			    
+			  });
+			  
+			
+		  
+			  function go(){
+			    
+			      if(i>total-1){
+				      i=0;
+				  }
+			      if(i<0){
+				      i=total-1;
+				  }
+				 
+				  Lis.stop();
+                  Lis.eq(i).animate({
+				     'opacity':1,
+				  },800).siblings().animate({
+				     'opacity':0,
+				  },800);				 
+				  
+				  Spans.eq(i).addClass('current').siblings().removeClass('current');
+				  
+				  i++;
+			  
+			  }
+			  
+			  
+			  
+			  
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 }); -->*/
+	 
+	 
+	 
+	 </script>
+		
+<js href="__PUBLIC__/Js/slider-min.js"/>
+<script> 
+
+          //在这里重写轮换
+
+	
+	
+			$("#index_slider").slider({
+				width: 	729, 	//　必须
+				height:	230,　	//　必须
+				style : 1, 		//　1显示分页，2只显示左右箭头
+                auto : true,
+				pause : 5000 	//　间隔时间
+			})
+	
+
+</script>
+</div>
+<!------------------------轮换板部分--------------------------------------->
+
+
+
+
+        <div  class="hr-10"></div>
+        
+        <div  class="g-l g-l-none">
+            <div  class="h">
+                <div  id="ct-list"  class="fl">
+		    <h2><a  href="{:U('List/index',array('f'=>$current_category))}"  title="{$parents[0]}">{$parents[1]}</a></h2>
+                    
+					<div  class="h-tab">
+                        <ul>
+						     <!-----------修改此进行手机配件修改----------->
+							    <volist name="categorys" id='vo'>
+								   <eq name="vo.id" value="$current_category">
+	                                   <li  class="current"><a  id="pro-cate-2"  href="{:U('List/index',array('f'=>$vo['id']))}"   title="{$vo.name}">{$vo.name}</a></li>
+									   <else/>
+									    <li  ><a  id="pro-cate-2"  href="{:U('List/index',array('f'=>$vo['id']))}"   title="{$vo.name}">{$vo.name}</a></li>
+									</eq>
+	                            </volist>
+							  
+                        </ul>
+                    </div>
+					
+                </div>
+                <div  class="fr">
+                	
+                	<div  class="sort-area">
+                    	<ul>
+                        	
+                            <li  id="sort-price" class="sort_desc"><a  href="{:U('List/index',array('f'=>$current_category,'order'=>'price'))}"  class="sort-price" >价格<s></s></a></li>
+                            <li  id="sort-time"  class="sort_time"><a  href="{:U('List/index',array('f'=>$current_category,'order'=>'time'))}"  class="sort-added" >上架时间<s></s></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+	    <span>
+<script  src="__PUBLIC__/Js/list.js"  style="display: none;"></script><script  id="jsapi_loader0"  loadtype="insert"  type="text/javascript"  src="__PUBLIC__/Js/jquery.form-2.49.js"  charset="utf-8"  style="display: none;"></script><script  style="display: none;">(function(){var time = 0,el = document.getElementById('jsapi_loader0');if(!el || (el.readyState && 'complete' != el.readyState)){ if(time<10){ setTimeout(arguments.callee,30); time++; }else{ logger.error('load the script of id jsapi_loader0 fail!');} return; }ol._setLoadStatus("jquery.form","complete");})();</script><script  id="jsapi_loader1"  loadtype="insert"  type="text/javascript"  src="__PUBLIC__/Js/ajax.js"  charset="utf-8"  style="display: none;"></script><script  style="display: none;">(function(){var time = 0,el = document.getElementById('jsapi_loader1');if(!el || (el.readyState && 'complete' != el.readyState)){ if(time<10){ setTimeout(arguments.callee,30); time++; }else{ logger.error('load the script of id jsapi_loader1 fail!');} return; }ol._setLoadStatus("ajax","complete");})();</script>
+<script  style="display: none;">
+ec.load("ec.pager");
+</script><script  id="jsapi_loader2"  loadtype="insert"  type="text/javascript"  src="__PUBLIC__/Js/pager-min.js"  charset="gbk"  style="display: none;"></script><script  style="display: none;">(function(){var time = 0,el = document.getElementById('jsapi_loader2');if(!el || (el.readyState && 'complete' != el.readyState)){ if(time<10){ setTimeout(arguments.callee,30); time++; }else{ logger.error('load the script of id jsapi_loader2 fail!');} return; }ol._setLoadStatus("ec.pager/pager-min.js","complete");})();</script>
+<div  id="category-2"  class="b">
+
+<div  class="pro-list">
+<ul  id="category-2-list">
+
+
+<!-------------一个商品分类方式-------------->
+<volist name="list_goods" id="vo">
+			<li>
+			<div>
+				 
+				 <p  class="p-img">
+				  <a  href="{:U('Product/index',array('g'=>$vo['goods_id']))}"  title="{$vo.goods_keywords}"  target="_blank">
+				  <img  alt="{$vo.goods_keywords}"  
+				  src="__UPLOAD__{$vo.goods_tiny_pic}"></a>
+				</p>
+				<p  class="p-price"><b>¥{$vo.goods_original_price}</b></p>
+				<p  class="p-name">
+				<a  href="{:U('Product/index',array('g'=>$vo['goods_id']))}"  title="{$vo.goods_keywords}"  target="_blank">{$vo.goods_name}<span  class="red"></span></a></p>
+				 <p  class="p-star"></p>
+				  <p  class="p-star">
+					  <span  class="starRating-area">
+						<!------修改width进行星星修改------------------>
+					  <s  id="remark-span-starRating1387"  style="width:{$vo.goods_score}%"></s>
+					 
+						<!------修改width进行星星修改------------------>
+					  </span>
+				  </p>
+				 <p  pid="1387"  id="remark-area1387"  class="p-score">{$vo.count_comment}人评分</p>
+				 <!---------------修改进行首发,热销等修改------------------------>
+				   <if condition="$vo['goods_state'] eq '热卖'">
+				     <i><img  src="__PUBLIC__/Images/1382542488099.png"  style=""></i>
+				   <elseif condition="$vo['goods_state'] eq '新品'"/>
+					   <i><img  src="__PUBLIC__/Images/1382542518162.png"  style=""></i>
+				   <elseif condition="$vo['goods_state'] eq '人气'"/>
+				     <i><img  src="__PUBLIC__/Images/1382542555129.png"  style=""></i>
+				   <elseif condition="$vo['goods_state'] eq '首发'"/>
+				     <i><img  src="__PUBLIC__/Images/1382593860805.png"  style=""></i>  
+					 
+			       <else/>
+					 <i></i>
+				  </if>
+			</div>
+			</li>
+</volist>
+<!-------------一个商品分类方式-------------->
+
+
+
+
+
+
+
+
+</ul>
+</div>
+<div  class="hr-25"></div>
+
+     <div  id="list-pager-2"  class="pager">
+	 
+	    
+		     {$list_show}
+			 
+		   
+		
+     </div>
+</div>
+
+    </span>
+        </div>
+    </div>
+    <div  class="fr u-1-4">
+<div  class="hot-area">
+	<div  class="h">
+		<h3><span>热销榜单</span></h3>
+	</div>
+	<div  class="b">
+	     <!-----------引入热销部分----------------------->
+		 <include file="Public/hotsale"/>
+		 
+	</div>
+</div>
+        <div  class="hr-15"></div>
+
+<div  id="product-history-area"  class="rl-area hide"  style="display: block;">
+         <!-----------------引入了商品浏览部分---------->
+		 <include file="Public/scangoods" />
+    </div>
+</div>   
+
+   </div>
+</div>
+<div  class="hr-40"></div>
+
+<include file="Public/footer" />
+
+</body></html>

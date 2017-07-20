@@ -1,0 +1,193 @@
+
+<style>
+    #list-pager .current{
+        border:1px solid #ccc;
+        display:inline-block;
+        width:7px;
+        height:16px;
+        font-weight:400;
+        text-align:center;
+        line-height:16px;
+        font-size:12px;
+        padding:0 5px;
+        background:#D2D2D2;
+        margin-left:5px;
+        margin-right:5px;
+    }
+    #list-pager .num{
+        border:1px solid #ccc;
+        display:inline-block;
+        width:7px;
+        height:16px;
+        font-weight:400;
+        text-align:center;
+        line-height:16px;
+        font-size:12px;
+        padding:0 5px;
+
+        margin-left:5px;
+        margin-right:5px;
+
+    }
+    #list-pager .prev{
+        border:1px solid #ccc;
+        display:inline-block;
+        width:7px;
+        height:16px;
+        font-weight:400;
+        text-align:center;
+        line-height:16px;
+        font-size:9px;
+        padding-left:3px;
+        padding-right:5px;
+
+        margin-left:5px;
+        margin-right:5px;
+    }
+
+    #list-pager .next{
+        border:1px solid #ccc;
+        display:inline-block;
+        width:7px;
+        height:16px;
+        text-align:center;
+        line-height:16px;
+        font-size:9px;
+        padding-left:3px;
+        padding-right:5px;
+
+        margin-left:5px;
+        margin-right:5px;
+    }
+    .pager {
+        text-align: right;
+        float: right;
+    }
+
+</style>
+
+<include file="Public/persontop"/>
+<div class="g">
+    <!--面包屑 -->
+    <div class="breadcrumb-area icon-breadcrumb fcn">您现在的位置：
+        <a href="{:U('Index/index')}" title="首页">首页</a>&nbsp;&gt;&nbsp;
+        <span id="personCenter"><a href="{:U('Member/index')}" title="个人中心">个人中心</a></span>
+        <span id="pathPoint">&nbsp;&gt;&nbsp;</span>
+        <b id="pathTitle">入库记录</b>
+    </div>
+</div>
+<div class="hr-15"></div>
+
+<div class="g">
+    <div class="fr u-4-5"><!--栏目 -->
+        <div class="part-area clearfix">
+            <div class="fl">
+                <h1 style="font-size: 18px;">入库记录</h1>
+            </div>
+        </div>
+        <div class="hr-3"></div>
+        <!--搜索条件-->
+        <div style="font-size: 16px;padding: 10px 0;">
+            <form action="__CONTROLLER__/log" method="get">
+                选择仓库：
+                <select name="customer_id" >
+                    <option value="">全部</option>
+                    <volist name="customer" id="vo">
+                        <option value="{$vo.customer_id}">{$vo.customer_name}</option>
+                    </volist>
+
+                </select>
+                商品名称：
+                <input name="goods_name" value="">
+                <button type="submit">搜索</button>
+            </form>
+        </div>
+
+        <!--库存 -->
+        <div class="myOrders-area">
+            <div class="myOrders-title-area">
+                <div class="b">
+                    <table border="1" cellpadding="0" cellspacing="0" id="order-list-head" style="text-align: center;font-size: 14px;">
+                        <thead>
+                        <tr>
+                            <!--<th style="width: 40px">ID</th>-->
+                            <th style="width: 190px">库存单号</th>
+                            <th>仓库名称</th>
+                            <th>入库时间</th>
+                            <th>商品名称</th>
+                            <th>入库数量</th>
+                            <th>进价</th>
+                            <th>售价</th>
+                            <th>利润</th>
+                            <th>操作员</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <volist name="list" id="vo">
+                            <tr target="item_id" rel="{$vo.stock_desc_id}">
+                                <!--<td>{$vo.stock_desc_id}</td>-->
+                                <td style="width: 200px">{$vo.stock_no}</td>
+                                <td>{$vo.customer_name}</td>
+                                <td>{$vo.addtime|date='Y-m-d',###}</td>
+                                <td> {$vo.goods_name}</td>
+                                <td>{$vo.goods_num}</td>
+                                <td>{$vo.goods_buy_price}</td>
+                                <td>{$vo.goods_sell_price}</td>
+                                <td>{$vo.goods_profit}</td>
+                                <td>{$vo.user_name}</td>
+                                <td>
+                                    <a href="__CONTROLLER__/edit?stock_desc_id={$vo.stock_desc_id}">编辑</a>
+                                    &nbsp;<a href="#" onclick="del({$vo.stock_desc_id})">删除</a>
+                                </td>
+                            </tr>
+                        </volist>
+
+                        </tbody>
+                    </table>
+                    <!--分页--------- -->
+                    <div class="hr-3"></div>
+                    <div class="pager" id="list-pager">
+
+                        {$page}
+
+                    </div>
+                </div>
+            </div>
+            <div class="hr-2"></div>
+        </div>
+
+
+    </div>
+    <!--左边菜单 -->
+    <include file="Public/personcl"/>
+</div>
+<div class="hr-60"></div>
+<include file="Public/footer"/>
+<script>
+    function del(id) {
+        $.ajax({
+            url:"__CONTROLLER__/delete",
+            type:'post',
+            dataType:'json',
+            data:{
+                del_id:id
+            },
+            success: function (data) {
+                alert(data.msg);
+                if(data.status == 'success'){
+                    window.location.replace(location.href);
+                }
+            },
+            fail: function (data) {
+
+                return;
+            }
+
+        })
+    }
+</script>
+</body></html>
+
+
+

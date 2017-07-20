@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <include file="Public/link" />
+    <title>供应商订单中心</title>
+</head>
+<style>
+
+    .order_topbar{
+        height: 44px;
+        width: 100%;
+        background: #fff;
+        border-bottom: 1px solid #e3e3e3;
+    }
+    .nav{
+        height: 44px;
+        width: 20%;
+        line-height: 44px;
+        text-align: center;
+        font-size: 14px;
+        float: left;
+        color: #666;
+    }
+    .on{
+        height: 42px;
+        color: #ff771b;
+        border-bottom: 2px solid #ff771b;
+    }
+    .order-main{
+        padding-top: 5px;
+        background-color: #eeeeee;
+
+    }
+    .order-main .order-state{
+        color: #FF5722;
+        float: right;
+        background-color: #ffffff;
+    }
+    .order-main .order-money{
+        float: right;
+        background-color: #ffffff;
+    }
+    .back{
+        padding:8px 10px 8px 5px;
+        font-size: 20px;
+        margin: 0 10px;
+        z-index: 999
+    }
+</style>
+<body>
+<div class="bar bar-header bar-positive">
+    <i class="icon ion-ios-arrow-left back" id="back"></i>
+    <h1 class="title">供应商订单中心</h1>
+</div>
+<div class="order_topbar" style="margin-top: 44px">
+    <a href="index"><div class="nav" id="a">全部</div></a>
+    <!--<a href="index?sta=100"><div class="nav" id="b">待处理</div></a>-->
+    <a href="index?sta=200"><div class="nav" id="c">已生产</div></a>
+    <a href="index?sta=300"><div class="nav" id="d">已发货</div></a>
+    <a href="index?sta=400"><div class="nav" id="e">已完成</div></a>
+    <a href="index?sta=500"><div class="nav" id="f">已评论</div></a>';
+</div>
+
+<volist name="list" id="vo" empty="暂时没有数据">
+    <div class="order-main ">
+        <div class="item padding">
+            订单号：{$vo.supply_num}
+            <span class="order-state">
+                <switch name="vo.order_desc_state">
+                    <case value="100">待处理</case>
+                    <case value="200">已生产</case>
+                    <case value="300">已发货</case>
+                    <case value="400">已完成</case>
+                    <case value="500">已评论</case>
+                    <default />未知
+                </switch>
+            </span>
+        </div>
+        <div class="order-info">
+                <div class="item item-avatar" >
+                    <img src="__ROOT__/Upload{$vo.goods_big_pic}">
+                    <h2>{$vo.goods_name}</h2>
+                    <p>供应价￥{$vo.supply_price}&nbsp;&nbsp;
+                    </p>
+                    <p>收货信息：{$vo.address_content}</p>
+                    <p>{$vo.address_name}&nbsp;收&nbsp;&nbsp;&nbsp;&nbsp;会员：{$vo.user_name}</p>
+                    <span style="float: right;margin-top: -20px;color: #2c2c2c">x {$vo.order_desc_num}</span>
+                </div>
+        </div>
+        <div class="item padding">
+            下单时间：{$vo.order_time|date='Y-m-d H:i:s',###}
+            <span class="order-money">￥{$vo.supply_total}</span>
+        </div>
+    </div>
+</volist>
+<div style="text-align: right">
+    {$page}
+</div>
+
+</body>
+<script>
+    var url = location.search; //获取url中"?"符后的字串
+    var theRequest = new Object();
+    if (url.indexOf("?") != -1) {
+        var str = url.substr(1);
+        if(str == 'sta=100'){
+            $('#b').addClass('on');
+        }else if(str == 'sta=200'){
+            $('#c').addClass('on');
+        }else if(str == 'sta=300'){
+            $('#d').addClass('on');
+        }else if(str == 'sta=400'){
+            $('#e').addClass('on');
+        }else if(str == 'sta=500'){
+            $('#f').addClass('on');
+        }
+    }else {
+        $('#a').addClass('on');
+    }
+    $('#back').click(function () {
+        window.location.href = "__MODULE__/Supplier/index";
+    })
+</script>
+</html>

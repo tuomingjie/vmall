@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta  charset="utf-8" />
+<title>订单创建成功_华为商城</title>
+<link rel="shortcut icon" href="__PUBLIC__/Ico/favicon.ico"/>
+<link href="__PUBLIC__/Css/cart.ec.core.css" rel="stylesheet" type="text/css">
+<link href="__PUBLIC__/Css/cart.main.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 9]> <![endif]-->
+</head>
+<body>
+<!-- 捷径栏粉红条部分 -->
+<include file="Public/pinkheader" />
+<!--头部 -->
+<div class="order-header">
+	<div class="g">
+    	<div class="fl">
+            <div class="logo"><a href=""><img src="__PUBLIC__/images/newLogo.png" /></a></div>
+        </div>
+        <div class="fr">
+            <!--步骤条-三步骤 -->
+            <div class="progress-area progress-area-2">
+                <!--核对订单 -->
+                <div id="progress-confirm" class="progress-co-area hide">填写核对订单信息</div>
+                <!--成功提交订单 -->
+                <div id="progress-submit" class="progress-sso-area hide" style="display:block;">成功提交订单</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<form action="" id="pay-go-form" method="post" target="_blank" class="hide">
+	<input type="hidden" name="orderCode" value="1070054253">
+	<input type="hidden" name="paymentMethod" id="order-paymentMethod" value="">	
+	<input type="hidden" name="paymentType" id="order-paymentType" value="">
+	<input type="hidden" name="state" value="1">
+</form>
+<div class="layout">
+	<!-- 20131130-订单-确认-鼠标悬停增加ClassName： order-confirm-expand -->
+    <div class="order-confirm" id="order-confirm-detail">
+		<div class="h">
+			<s class="icon-success-7"></s>
+			<h3>订单提交成功，请您尽快付款！</h3>			
+			<p>订单号：&nbsp;&nbsp;{$order_info.order_no}&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;付款金额（元）：&nbsp;&nbsp;<b>{$order_info.order_money}</b>&nbsp;<b>元</b></p>
+			<div class="tips">请您尽快完成支付。</div>
+		</div>
+		<div class="b">
+			<table>
+				<tbody>
+					<tr>
+						<th>订单金额：</th>
+						<td>{$order_info.order_money}元</td>
+					</tr>
+					
+					<tr>
+						<th>收货信息：</th>
+						<td>
+							{$address_info['address_content']}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							{$address_info['address_phone']}
+						</td>
+					</tr>
+					<tr>
+						<th>购买日期：</th>
+						<td>{$order_info.order_time|date="Y-m-d H:i:s",###}</td>
+					</tr>
+					<tr>
+						<th>配送方式：</th>
+						<td>
+							快递应收费用&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							运费￥{$express_money}						
+						</td>
+					</tr>
+				
+					<tr>
+						<th>订单编号：</th>
+						<td>{$order_info.order_no}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="f"><a href="javascript:;" onclick="$('#order-confirm-detail').toggleClass('order-confirm-expand')">订单详情<i></i><s></s><b></b></a></div>
+	</div><!-- 20131130-订单-确认-end -->
+	<div class="hr-15"></div>
+	<!--订单-表单-支付方式-20121012 -->
+<!--订单-表单-支付方式-20121012 -->
+<div class="order-payment" id="order-payment-mod">
+	<h3 class="title">选择支付方式</h3>
+    <div class="order-payment-list" id="order-payment-list">
+	    <dl>
+		<dd>
+			<div class="order-payment-area">
+			
+				<div class="b clearfix" id="payment-bank-list-shortcut">
+					<ul>
+						<li>
+							<div class="payment-area">
+								<input id="input-CMB-5" class="radio vam" type="radio" seed="payment_1_1" data-type="5" name="bankName-input" value="CMB">
+							<span><img src="__PUBLIC__/images/alipay.jpg" width="120" height="40"></span>
+							</div>
+						</li>
+						
+					</ul>
+				</div>
+			</div>
+			<div class="order-payment-area">
+			
+			</div>
+			<div class="order-payment-area">
+				
+		    </div>	
+		</dd>
+	    </dl>
+		<div class="order-payment-action-area"><a class="button-sytle-5" href="{:U('Payment/index')}">确认支付</a></div>
+    </div>
+	<!--订单-表单-支付方式列表结束 -->
+	
+	
+</div>
+
+
+</div>
+
+<!--口号-20121025 -->
+<include file="Public/footer" />
+<!--底部 -->
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <include file="Public/link" />
+    <title>用户中心</title>
+</head>
+<body>
+<div class="bar bar-header bar-positive">
+    <h1 class="title">用户中心</h1>
+</div>
+<div style="margin-top: 44px"></div>
+<div class="list card">
+    <a href="__CONTROLLER__/edit" class="item item-avatar" >
+        <img src="http://www.runoob.com/try/demo_source/nin_logo.jpeg">
+        <h2>{$user_info.user_name}</h2>
+        <p>{$user_info.user_login_time|date="Y-m-d H:i:s",###}</p>
+        <div style="float: right;margin-top: -44px;">
+            <h2>积分:{$user_info.user_score}</h2>
+            <p>余额:{$user_info.user_money}</p>
+        </div>
+    </a>
+</div>
+<div class="list">
+    <a class="item item-icon-left item-icon-right" href="__MODULE__/Order/index">
+        <i class="icon ion-ios-list"></i>
+        我的订单
+        <i class="icon ion-ios-arrow-forward"></i>
+    </a>
+    <a class="item item-icon-left item-icon-right" href="__MODULE__/Address/index">
+        <i class="icon ion-ios-location"></i>
+        收货地址
+        <i class="icon ion-ios-arrow-forward"></i>
+    </a>
+    <a class="item item-icon-left item-icon-right" href="__CONTROLLER__/password">
+        <i class="icon ion-ios-locked"></i>
+        修改密码
+        <i class="icon ion-ios-arrow-forward"></i>
+    </a>
+
+</div>
+<div class="content padding">
+    <button class="button button-block button-assertive" id="action">退出登录</button>
+</div>
+</body>
+<script>
+    $('#action').click(function () {
+        $.ajax({
+            url: "__MODULE__/Login/loginout",
+            type: 'post',
+            dataType: 'json',
+            data: {},
+            success: function (data) {
+                layer.open({
+                    content: data.msg
+                    ,skin: 'msg'
+                    ,time: 2 //2秒后自动关闭
+                });
+                if(data.status == 'success'){
+                    window.location.href = "__MODULE__/Login/index";
+                }else{
+
+                }
+            },
+            fail: function (data) {
+                layer.open({
+                    content: data
+                    ,skin: 'msg'
+                    ,time: 2 //2秒后自动关闭
+                });
+                return;
+            }
+        });
+    })
+</script>
+</html>

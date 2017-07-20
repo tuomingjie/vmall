@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <include file="Public/link" />
+    <title>修改资料</title>
+</head>
+<body>
+<div class="bar bar-header  bar-positive">
+    <h1 class="title">修改资料</h1>
+</div>
+<div class="list" style="margin-top: 44px">
+    <label class="item item-input">
+        <span class="input-label">用户名：</span>
+        <span>{$user_info.user_name}</span>
+    </label>
+    <label class="item item-input">
+        <span class="input-label">真实姓名：</span>
+        <input type="text" value="{$user_info.true_name}" id="true_name">
+    </label>
+    <label class="item item-input">
+        <span class="input-label">邮箱：</span>
+        <input type="text" value="{$user_info.user_email}" id="user_email">
+    </label>
+    <label class="item" style="padding: 6px 0 5px 16px">
+        <span class="input-label">性别：</span>
+        <div style="float: left;margin-left: 35%;margin-top: -28px">
+            <label><input name="man" type="radio" <if condition="$user_info.user_sex eq 1"> checked="checked"</if> value="1"/>男&nbsp;&nbsp;</label>
+            <label><input name="man" type="radio" <if condition="$user_info.user_sex eq 0"> checked="checked"</if> value="2" />女&nbsp;&nbsp;</label>
+            <label><input name="man" type="radio" <if condition="$user_info.user_sex eq 0"> checked="checked"</if> value="0" />保密</label>
+        </div>
+    </label>
+    <label class="item item-input">
+        <span class="input-label">注册时间：</span>
+        <span>{$user_info.user_login_time|date="Y-m-d H:i:s",###}</span>
+    </label>
+</div>
+<div class="content padding">
+    <button class="button button-block button-calm" id="action">保存</button>
+    <button class="button button-block button-assertive" onclick="window.history.go(-1); ">取消</button>
+</div>
+</body>
+<script>
+    $('#action').click(function () {
+        $.ajax({
+            url: "__CONTROLLER__/editaction",
+            type: 'post',
+            dataType: 'json',
+            data: {
+                true_name:$('#true_name').val(),
+                user_email:$('#user_email').val(),
+                sex:$('input[name="man"]:checked').val()
+            },
+            success: function (data) {
+                layer.open({
+                    content: data.msg
+                    ,skin: 'msg'
+                    ,time: 2 //2秒后自动关闭
+                });
+                if(data.status =='success'){
+                    window.location.href = "__CONTROLLER__/edit";
+                }
+                    return;
+            },
+            fail: function (data) {
+                layer.open({
+                    content: '保存异常'
+                    ,btn: '确定'
+                });
+                return;
+            }
+        });
+    })
+</script>
+</html>

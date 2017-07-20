@@ -1,0 +1,36 @@
+
+<div class="pageContent">
+	<form method="post" action="__URL__/update/navTabId/listsecure/callbackType/closeCurrent"  class="pageForm required-validate" 
+		onsubmit="return validateCallback(this,dialogAjaxDone);"><?php  //窗体组件采用这个 iframeCallback(this, navTabAjaxDone); ?>
+		<input type="hidden" name="id" value="{$vo.id}"/>
+		<div class="pageFormContent" layoutH="60">
+			<dl>
+				<dt>用户ID:</dt>
+				<dd><input type="text" class="required"  style="width:100%" name="secure_id" value="{$vo.secure_id}"/></dd>
+			</dl>
+			<dl>
+				<dt>密保问题:</dt>
+				<dd>
+				<input type="text" class="required"  style="width:100%" name="secure_question" value="{$vo.secure_question}"/>
+				</dd>
+				<!--<select style="50%" name="secure_question" />
+					<option value="1">11</option>
+					<option value="2">22</option>
+					<option value="3">22</option>
+					<option value="4">233</option>
+					<option value="5">4445</option>
+					<option value="6">1</option>
+					<option value="7">2</option>
+				</select>-->
+			</dl>
+		</div>
+		
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+</div>
+

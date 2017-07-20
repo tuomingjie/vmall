@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>确认订单_信源电商商城</title>
+<link rel="shortcut icon" href="__PUBLIC__/Ico/favicon.ico" />
+<link href="__PUBLIC__/Css/cart.ec.core.css" rel="stylesheet" type="text/css">
+<link href="__PUBLIC__/Css/cart.main.css" rel="stylesheet" type="text/css">
+<js href="__JQUERY__"/>
+
+<!------------------引入jquery插件------------------------->
+
+<style type="text/css">
+  #select_express{
+      width:148px;
+	  height:23px;
+	  border-color:rgb(204,204,204);
+	  color:#727272;
+	 
+  
+  }
+
+</style>
+</head>
+<body>
+<!-- 捷径栏 -->
+<include file="Public/pinkheader" />
+<!--头部 -->
+<div class="order-header">
+	<div class="g">
+    	<div class="fl">
+            <div class="logo"><a href=""><img src="__PUBLIC__/images/newLogo.png" /></a></div>
+        </div>
+        <div class="fr">
+            <!--步骤条-三步骤 -->
+            <div class="progress-area progress-area-3">
+                <!--我的购物车 -->
+                <div id="progress-cart" class="progress-sc-area hide">我的购物车</div>
+                <!--核对订单 -->
+                <div id="progress-confirm" class="progress-co-area hide" style="display:block;">填写核对订单信息</div>
+                <!--成功提交订单 -->
+                <div id="progress-submit" class="progress-sso-area hide">成功提交订单</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="g order"> 
+    <!--栏目 -->
+    <!--订单-表单 -->
+    <div class="order-form-area">
+		<!--订单-表单-地址-20121012 -->
+    	<div class="order-address" id="order-address-mod">
+            <h3 class="title">收货人信息</h3>
+            <!--地址信息-20121012 -->
+		
+           	<div  class="order-address-detail-area hide"  id="address-default-info"  style="display: block;">
+				<div  class="form-detail-area">
+				  
+				 <table  cellspacing="0"  cellpadding="0"  border="0"><tbody>
+					 <tr></php>
+						 <th>收&nbsp;&nbsp;货&nbsp;&nbsp;人：</th><td>{$default_address.address_name}</td>
+					</tr>
+					 <tr>
+						 <th>收货地址：</th><td>{$default_address.address_content}</td>
+					</tr>
+					<tr>
+					   <th>邮政编码：</th><td>{$default_address.address_post}</td>
+					</tr>
+					<tr>
+						 <th>手机号码：</th>
+						 <td>{$default_address.address_phone}</td>
+					</tr>
+					</tbody>
+					</table>
+					<p>
+					<a  href="javascript:;"  class="icon-edit fcn"  title="选择其他收货地址"  id="select_other_address">
+					选择其他收货地址&nbsp;</a><a href="{:U('PersonCenter/address')}" style="color:blue;">去添加新地址</a>
+                    <div id="other_address" display="bolck">
+                       <form action="{:U('Createcart/index')}" method="POST">
+					    <volist name="auto_address" id="vo">
+						  <table  cellspacing="0"  cellpadding="0"  border="0" style="display:inline-block;"><tbody>
+							 <tr>
+								 <th><input type='checkbox' name='other_address' checked=false value="{$vo.address_id}">&nbsp;&nbsp;收&nbsp;&nbsp;货&nbsp;&nbsp;人：</th><td>{$vo.address_name}</td>
+							  </tr>
+							  <tr>
+								 <th>收货地址：</th><td>{$vo.address_content}</td>
+							  </tr>
+							  <tr>
+							   <th>邮政编码：</th><td>{$vo.address_post}</td>
+							  </tr>
+							  <tr>
+								 <th>手机号码：</th>
+								 <td>{$vo.address_phone}</td>
+							  </tr>
+							  </tbody>
+							  </table>
+						  </volist>  
+							 
+						 
+						 
+						 </form>
+
+                     </div>					
+				</div>
+		    </div>
+			
+       </div>
+<js href="__PUBLIC__/Js/jquery.cookie.js"/>
+<script type="text/javascript">
+    $(function(){
+	    
+		$("#other_address").hide();
+		$("#other_address").find("input[type=checkbox]").prop('checked',false);
+		$("#select_other_address").toggle(function(){
+		   $("#other_address").show();
+		},function(){
+		   $("#other_address").hide();
+		
+		});
+	    var address_checkbox=$("#other_address").find("input[type=checkbox]");
+		address_checkbox.click(function(){
+		      $(this).prop('checked',true);
+			  var address_id=$(this).val();
+			     //把更改地址写入到cookie中去
+				//s alert(address_id);
+			 
+		      $.cookie('address_id',address_id,{expires:7,path:'/'});
+			  address_checkbox.not($(this)).prop("checked",false);
+			
+		
+		});
+	
+	
+	
+	
+	
+	
+	
+	});
+
+</script>
+		
+        <div class="order-delivery">
+        	<h3 class="title">配送方式</h3>
+            <div class="order-form-tips" id="order-delivery-tips"><p>默认选择顺风快递，若顺风不能到达,选择其他快递</p><s></s><b></b></div>
+            <ul class="order-delivery-list" id="order-delivery-list">
+            </ul>
+        </div>
+		
+		
+		
+        <div class="order-coupon">
+        	
+            
+		
+        
+    <!--购物车 -->
+	<h3 class="title">商品清单 <em></em></h3>
+    <div class="sc-area">
+        <div class="order-pro-list" id="order-pro-list">
+			<!--订单-商品-标题 -->
+            <div class="order-pro-title-area">
+                <div class="b">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>商品</th>
+                                <th class="tr-span-3">单价<em>/元</em></th>
+                                <th class="tr-span-3">数量</th>
+                                <th class="tr-span-4">小计<em>/元</em></th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+			<!--订单-商品-套餐-->	
+		
+			<!----------------------------遍历页------------------------------------>
+			<volist name="new_car" id="vo">
+			<div class="order-pro-area">
+				<table border="0" cellpadding="0" cellspacing="0">
+					<tbody>
+						<tr>
+							<td class="tal">
+								<ul class="pro-area-2">
+									<li><a href="">{$vo.goods_name}</a></li>
+								</ul>
+							</td>							
+							<td class="tr-span-3">&yen;{$vo.goods_original_price|number_format=2}</td>
+							<td class="tr-span-3">{$vo.goods_num}</td>
+							<td rowspan="4" class="tr-span-4"><p class="bold">&yen;{$vo.goods_total_money|number_format=2}</p></td>
+						</tr>
+					</tbody>
+				</table>
+				
+			</div>
+			</volist>
+		   <!----------------------------遍历页------------------------------------>
+        </div>     
+       
+        <!--总计 -->
+        <div class="total-area clearfix">
+            <div class="total-line-2"></div>
+             <!--订单-费用-->
+            <div class="order-cost-area">
+                <table border="0" cellpadding="0" cellspacing="0">
+                    <tbody>
+                        <tr>
+                            <td class="tal"></td>
+                            <td class="tar">商品金额总计：&yen;<em id="order-cost-area" data-oldval=" 1299.00">{$total_money}</em></td>
+                        </tr>
+                        <tr>
+                            <td class="tal"></td>
+                            <td class="tar">
+                            	运费：<em id="order-deliveryCharge">&yen; <span>{$express_money}<span></em>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tal">
+                               
+                            </td>
+                            <td class="tar">
+                            	优惠金额：<em>- &yen; 
+                                <span id="order-discountTotalPrice" data-oldVal="0.00">{$total_sale_money}</span></em>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="total-left-area clearfix">
+
+                <div class="fl order-sp-area">
+                </div>    
+               
+                <div class="fr">
+                    <em>包裹合计（含运费）</em>
+                    <b>&yen;</b> <b id="order-price" class="total" data-oldval="1299.00">{$end_money}</b>
+                </div>
+            </div>
+        </div>
+        <div class="hr-30"></div>
+        <div class="order-action-area tar">
+            <a href="{:U('Createcart/index')}"  class="button-style-1 button-submit-order " title="提交订单" seed="checkout-submit"><span>提交订单</span></a>
+        </div>
+    </div>
+</div>
+<div class="hr-60"></div>
+
+
+<!--口号-20121025 -->
+<include file="Public/footer" />
+</body>
+</html>

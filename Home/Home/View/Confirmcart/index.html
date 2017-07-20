@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>确认订单</title>
+<link rel="shortcut icon" href="__PUBLIC__/Ico/favicon.ico" />
+<link href="__PUBLIC__/Css/cart.ec.core.css" rel="stylesheet" type="text/css">
+<link href="__PUBLIC__/Css/cart.main.css" rel="stylesheet" type="text/css">
+<link href="__PUBLIC__/Home/Css/footer.css" rel="stylesheet" type="text/css">
+<link href="__PUBLIC__/layer/need/layer.css" rel="stylesheet" type="text/css">
+<js href="__JQUERY__"/>
+
+<!------------------引入jquery插件------------------------->
+
+<style type="text/css">
+  #select_express{
+      width:148px;
+	  height:23px;
+	  border-color:rgb(204,204,204);
+	  color:#727272;
+	 
+  
+  }
+ .show_tr{
+	height:80px;
+	display:none;
+ }
+ .show_ul li{float:left;padding-left:10px;}
+ .show_ul li p{font-weight:700;}
+.lamThumbImg{width:50px;}
+.order-coupon a{color:#fff;}
+</style>
+</head>
+<body>
+<!-- 捷径栏粉红条部分 -->
+
+
+<!--头部 -->
+<div class="order-header">
+	<div class="g">
+    	<div class="fl">
+            <div class="logo"><a href="{:U('Index/index')}"><img src="__PUBLIC__/images/newLogo.png" /></a></div>
+        </div>
+        <div class="fr">
+            <!--步骤条-三步骤 -->
+            <div class="progress-area progress-area-3">
+                <!--我的购物车 -->
+                <div id="progress-cart" class="progress-sc-area hide">我的购物车</div>
+                <!--核对订单 -->
+                <div id="progress-confirm" class="progress-co-area hide" style="display:block;">填写核对订单信息</div>
+                <!--成功提交订单 -->
+                <div id="progress-submit" class="progress-sso-area hide">成功提交订单</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="g order"> 
+
+    <!--栏目 -->
+    <!--订单-表单 -->
+    <div class="order-form-area">
+		<!--订单-表单-地址-20121012 -->
+    	<div class="order-address" id="order-address-mod">
+            <h3 class="title">收货人信息</h3>
+            <!--地址信息-20121012 -->
+		
+           	<div  class="order-address-detail-area hide"  id="address-default-info"  style="display: block;">
+				<div  class="form-detail-area">
+				  
+				 <table  cellspacing="0"  cellpadding="0"  border="0"><tbody>
+					 <tr></php>
+						 <th>收&nbsp;&nbsp;货&nbsp;&nbsp;人：</th><td>{$default_address.address_name}</td>
+					</tr>
+					 <tr>
+						 <th>收货地址：</th><td>{$default_address.address_content}</td>
+					</tr>
+					<tr>
+					   <th>邮政编码：</th><td>{$default_address.address_post}</td>
+					</tr>
+					<tr>
+						 <th>手机号码：</th>
+						 <td>{$default_address.address_phone}</td>
+					</tr>
+					</tbody>
+					</table>
+					<p>
+					<a  href="javascript:;"  class="icon-edit fcn"  title="选择其他收货地址"  id="select_other_address">
+					选择其他收货地址&nbsp;</a><a href="{:U('PersonCenter/address')}" style="color:blue;" target="_blank">去添加新地址</a>
+                    <div id="other_address" display="bolck">
+                       <form action="{:U('Createcart/index')}" method="POST">
+					    <volist name="auto_address" id="vo">
+						  <table  cellspacing="0"  cellpadding="0"  border="0" style="display:inline-block;"><tbody>
+							 <tr>
+								 <th><input type='checkbox' name='other_address' checked=false value="{$vo.address_id}">&nbsp;&nbsp;收&nbsp;&nbsp;货&nbsp;&nbsp;人：</th><td>{$vo.address_name}</td>
+							  </tr>
+							  <tr>
+								 <th>收货地址：</th><td>{$vo.address_content}</td>
+							  </tr>
+							  <tr>
+							   <th>邮政编码：</th><td>{$vo.address_post}</td>
+							  </tr>
+							  <tr>
+								 <th>手机号码：</th>
+								 <td>{$vo.address_phone}</td>
+							  </tr>
+							  </tbody>
+							  </table>
+						  </volist>  
+							 
+						 
+						 
+						 </form>
+
+                     </div>					
+				</div>
+		    </div>
+			
+       </div>
+<js href="__PUBLIC__/Js/jquery.cookie.js"/>
+<script type="text/javascript">
+    $(function(){
+	    
+		$("#other_address").hide();
+		$("#other_address").find("input[type=checkbox]").prop('checked',false);
+		$("#select_other_address").toggle(function(){
+		   $("#other_address").show();
+		},function(){
+		   $("#other_address").hide();
+		
+		});
+	    var address_checkbox=$("#other_address").find("input[type=checkbox]");
+		address_checkbox.click(function(){
+		      $(this).prop('checked',true);
+			  var address_id=$(this).val();
+			     //把更改地址写入到cookie中去
+				//s alert(address_id);
+			 
+		      $.cookie('address_id',address_id,{expires:7,path:'/'});
+			  address_checkbox.not($(this)).prop("checked",false);
+			
+		
+		});
+	
+	
+	
+	
+	
+	
+	
+	});
+
+</script>
+		
+        <div class="order-delivery">
+        	<h3 class="title">配送方式</h3>
+            <div class="order-form-tips" id="order-delivery-tips"><p>默认选择顺风快递，若顺风不能到达,选择其他快递</p><s></s><b></b></div>
+            <ul class="order-delivery-list" id="order-delivery-list">
+            </ul>
+        </div>
+		
+		
+		
+        <div class="order-coupon">
+        	
+            
+		
+        
+    <!--购物车 -->
+	<form action="{:U('Createcart/index')}" method="post" enctype="multipart/form-data" class="Createcart">
+	<input type="hidden" name="TOKEN" value="{:session('TOKEN')}">
+	<h3 class="title">商品清单 <em></em></h3>
+    <div class="sc-area">
+        <div class="order-pro-list" id="order-pro-list">
+			<!--订单-商品-标题 -->
+            <div class="order-pro-title-area">
+                <div class="b">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>商品</th>
+								<th class="tr-span-3">个性定制</th>
+                                <th class="tr-span-3">单价<em>/元</em></th>
+                                <th class="tr-span-3">数量</th>
+                                <th class="tr-span-4">小计<em>/元</em></th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+			<!--订单-商品-套餐-->	
+		
+			<!----------------------------遍历页------------------------------------>
+			<volist name="new_car" id="vo">
+			<div class="order-pro-area">
+				<table border="0" cellpadding="0" cellspacing="0">
+					<tbody>
+						<tr>
+							<td class="tal">
+								<ul class="pro-area-2">
+									<li><a href="">{$vo.goods_name}</a></li>
+									
+									<!--------订单信息START-------->
+									<input type="hidden" name="goods_id[]" value="{$vo.goods_id}" />
+									<input type="hidden" name="goods_num[]" value="{$vo.goods_num}" />
+									<input type="hidden" name="goods_price[]" value="{$vo.final_price}" />
+									<input type="hidden" name="is_customized[]" value="0" class="is_customized" />
+									<input type="hidden" name="is_upload[]" value="0" class="is_upload" />
+									<!--------订单信息END---------->
+									
+								</ul>
+							</td>
+							<td class="tr-span-3"><input type="checkbox" class="checkbox"  ></td>
+							<td class="tr-span-3">&yen;{$vo.final_price|number_format=2}</td>
+							<td class="tr-span-3">{$vo.goods_num}</td>
+							<td rowspan="4" class="tr-span-4">
+								<p class="bold">&yen;
+									<span old_data="{$vo.goods_total_money|number_format=2}">{$vo.goods_total_money|number_format=2}</span>
+									
+								</p>
+							</td>
+						</tr>
+						<tr class="show_tr">
+							<td colspan="4">
+								<ul class="show_ul">
+									<li>
+										<p style="text-align:left;">个性化费用：</p><input type="number" name="personality_price[]" class="personality_price" value="{$vo.personality_price|number_format=2}"  disabled="true " />
+									</li>
+									<li>
+										<p style="text-align:left;">其他费用：</p><input type="number" name="other_price[]" value="0.00"  class="other_price"  />
+									</li>
+									<li>
+										<p style="text-align:left;">个性文字：</p><input type="text" name="personality_text[]" />
+									</li>
+									<li>
+										<p style="text-align:left;">个性图片：</p>
+										<input type="file" name="personality_img[]" style="width:66px;" onchange="LamImgView(this)" />
+										<input type="button" style="width:66px;padding:1px 0;" value="删除图片" onclick="del_img(this)" />
+									</li>
+									<li>
+										<div class="lamImgBox">
+											<img src="__PUBLIC__/Images/bg31.png" class="lamThumbImg" oldimg="__PUBLIC__/Images/bg31.png" />
+										</div>
+										
+									</li>
+								</ul>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				
+			</div>
+			</volist>
+		   <!----------------------------遍历页------------------------------------>
+        </div>     
+       
+        <!--总计 -->
+        <div class="total-area clearfix">
+            <div class="total-line-2"></div>
+             <!--订单-费用-->
+			 <!--
+            <div class="order-cost-area">
+                <table border="0" cellpadding="0" cellspacing="0">
+                    <tbody>
+                        <tr>
+                            <td class="tal"></td>
+                            <td class="tar">商品金额总计：&yen;<em id="order-cost-area"  old_data="{$total_money}">{$total_money}</em></td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="tal">
+                               
+                            </td>
+                            <td class="tar">
+                            	优惠金额：<em>- &yen; 
+                                <span id="order-discountTotalPrice" old_data="{$total_sale_money}">{$total_sale_money}</span></em>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="total-left-area clearfix">
+
+                <div class="fl order-sp-area">
+                </div>    
+               
+                <div class="fr">
+                    <em>合计（含优惠金额）</em>
+                    <b>&yen;</b> <b id="order-price" class="total" old_data="{$end_money}">{$end_money}</b>
+                </div>
+            </div>-->
+        </div>
+		
+        <div class="hr-30"></div>
+        <div class="order-action-area tar">
+			
+			
+            <a href="javascript:0"  class="button-style-1 button-submit-order " title="提交订单" seed="checkout-submit"><span>提交订单</span></a>
+        </div>
+    </div>
+	</form>
+</div>
+<div class="hr-60"></div>
+</div>
+</div>
+
+								
+
+
+<!--口号-20121025 -->
+<include file="Public/footer" />
+</body>
+<js href="__PUBLIC__/Js/lamImgView.js"/>
+<js href="__PUBLIC__/layer/layer.js"/>
+<script>
+
+
+
+//开启个性定制
+$('.checkbox').click(function(){
+	var index = $(this).index();
+	
+	var bold_span = $(this).parents('tr').children('td').eq(4).children('p').children('span');
+	var order_price = bold_span.text();	//小计金额
+	var old_order_price = bold_span.attr('old_data');	//备份小计金额
+
+	var personality = $(this).parents('tr').next('tr').children('td').children('ul').children('li').eq(0).children('.personality_price');	//获取个性化费用节点
+	var personality_price = personality.val();//个性化费用金额
+	
+	var other_price = $(this).parents('tr').next('tr').children('td').children('ul').children('li').eq(1).children('.other_price');	//获取其他金额
+
+	if($(this).is(':checked')){
+		$(this).parents('td').prev('td').children('.pro-area-2').children('.is_customized').attr('value',1);
+		bold_span.text(parseInt(order_price)+parseInt(personality_price)+'.00');	//添加小计金额
+		$(this).parents('tr').next('.show_tr').show();
+	}else{
+		$(this).parents('td').prev('td').children('.pro-area-2').children('.is_customized').attr('value',0);
+		bold_span.text(parseInt(old_order_price)+'.00');//减少小计金额
+		other_price.val('0.00');
+		$(this).parents('tr').next('.show_tr').hide();
+	}
+});
+
+//其他费用
+$('.other_price').blur(function(){
+	var value = $(this).val();	//当前的值
+	if(value==''){
+		value = 0;
+	}
+	var personality_price = $(this).parents('li').prev('li').children('.personality_price').val();	//当前个性化费用
+	var bold_span = $(this).parents('tr').prev('tr').children("td").eq(4).children('.bold').children('span');	//小计金额
+	var order_price = bold_span.text();//小计金额
+	var old_order_price = bold_span.attr('old_data');//备份小计金额
+	bold_span.text(parseInt(old_order_price)+parseInt(value)+parseInt(personality_price)+'.00');
+});
+
+
+
+
+//删除定制图片
+function del_img(btn){
+	var value = $(btn).parents('li').next('li').children('.lamImgBox').children('.lamThumbImg').attr('oldimg');
+	$(btn).parents('li').next('li').children('.lamImgBox').children('.lamThumbImg').attr('src',value);
+	$(btn).parents('tr').prev('tr').children('td').children('ul').children('.is_upload').attr('value',0);
+}
+
+
+//提交订单
+$('.button-submit-order').click(function(){
+	var number = get_price();	//总金额
+	var str = '<br/>总金额：&yen;<em id="order-cost-area">'+number+'</em>';
+	layer.open({
+		content: '您确定提交订单？'+str
+		,btn: ['确定', '取消']
+		,yes: function(index){
+		   $('.Createcart').submit();
+		  layer.close(index);
+		}
+	});
+});
+
+
+
+
+//获取全部商品总金额
+function get_price(){
+	var leng = $('.bold').length;
+	var number = 0;
+	for(var i=0;i<leng;i++){
+		var price = $('.bold').eq(i).children('span').text();
+		number += parseInt(price);
+	}
+	return number+'.00';
+}
+
+
+
+
+</script>
+</html>

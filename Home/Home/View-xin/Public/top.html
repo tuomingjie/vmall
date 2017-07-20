@@ -1,0 +1,395 @@
+<style>
+	.minicart-pro-item {
+		
+		padding: 0 15px 15px;
+		margin-top: 15px;
+		vertical-align: top;
+	}
+	.p-img {
+		border: 1px solid #DDD;
+		float: left;
+		width: 60px;
+		margin-left:7px;
+	}
+	.p-name {
+		float: left;
+		width: 135px;
+		padding-left: 12px;
+	}
+	.p-price {
+		float: left;
+		width: 100px;
+		padding-left: 10px;
+	}
+	.p-price b {
+		color: #e01d20;
+	}
+	.p-price em {
+		color: #9c9590;
+		margin: 0 7px;
+	}
+	.p-price span {
+		color: #9c9590;
+	}
+	.icon-minicart-del {
+		display: inline-block;
+		width: 15px;
+		height: 15px;
+		border-radius: 2px;
+		font-size: 1px;
+		line-height: 1px;
+		background-position: -35px -43px;
+		text-indent: 100%;
+		white-space: nowrap;
+		overflow: hidden;
+		margin-top: 22px;
+		float: right;
+	}
+	.icon-minicart-del:hover {
+		background-color: #e5393c;
+		background-position: -52px -43px;
+	}
+	.icon-minicart-del {
+		margin-top: 22px;
+		float: right;
+		background: transparent url(__PUBLIC__/Images/icon1.png) scroll no-repeat;
+		background-position: -35px -43px;
+	}
+	.minicart-pro-settleup {
+		background-color: #fbfaf9;
+		position: relative;
+		height: 50px;
+		padding-top: 5px;
+		margin-top:5px;
+	}
+	.minicart-pro-settleup p {
+		color: #75706c;
+		height: 22px;
+		padding-left: 22px;
+	}
+	.minicart-pro-settleup em {
+		font-weight: 700;
+		color: #e5393c;
+		margin: 0 6px;
+	}
+	.minicart-pro-settleup b {
+		font-size: 15px;
+		color: #e5393c;
+		margin-left: 6px;
+		position: relative;
+		top: 1px;
+	}
+	.button-minicart-settleup {
+		color: #FFF !important;
+		font-size: 16px;
+		font-family: \5FAE\8F6F\96C5\9ED1;
+		border: 1px solid #b3131a;
+		background-color: #d81b24;
+		border-radius: 3px;
+		position: absolute;
+		padding: 0 11px;
+		height: 35px;
+		text-align: center;
+		line-height: 33px;
+		
+		top: 19px;
+		right: 17px;
+	}
+	
+</style>
+<div class="header">
+    <div class="head-top">
+      <div class="yzbody clearfix">
+          <div class="head-top-l">
+              <div class="fl">欢迎光临中国邮政信源农村电商产品直采平台！</div>
+              <div class="link">
+                <a href="{:U('Index/index')}" class="ico_sy">首页</a>
+				<if condition="$Think.session.user_id eq ''">
+					<span>|</span>
+					<a href="{:U('Login/index')}">登录</a>
+					<span>|</span>
+					<a href="{:U('Sign/index')}">免费注册</a>
+					<else/>
+					<span>|</span>
+					<a href="{:U('Member/index')}">{$Think.session.user_info.user_name}</a>
+					<span>|</span>
+					<a href="{:U('Login/quit')}">退出</a>
+				</if>
+              </div>
+          </div>
+		  
+          <div class="head-top-r">
+              <ul>
+                  <li><a href="{:U('OrderCenter/index')}"><img src="__PUBLIC__/Home/images/ico_dd.png" class="order">我的订单</a></li>
+                  <li>|</li>
+                  <li class="head-memu cart-menu">
+                      <a class="tit cart-a head-memu-a" href="{:U('Cart/index')}">购物车</a>
+                      <div class="subnav cart-b">
+                          <div class="catr-no" style="display:block;">暂时没有商品</div>
+						  
+						  
+						
+						  <!---购物车信息-->
+						<div style="display:none;" id="minicart-pro-list-block">
+							<ul class="minicart-pro-list" id="minicart-pro-list">
+								<li class="minicart-pro-item">
+									<div class="pro-info">
+										<div class="p-img">
+											<a href="/vmallshop2/index.php/Home/Product/index/g/13.html" title="华为P7" target="_blank">
+												<img src="/vmallshop/Upload/goods/20140911085711/60_60_5410f367c7bbd.jpg" alt="{title}">
+											</a>
+										</div>
+										<div class="p-name">
+											<a href="/vmallshop2/index.php/Home/Product/index/g/13.html" title="华为P7" target="_blank">华为P7&nbsp;<span class="p-slogan"></span><span class="p-promotions hide"></span>
+											</a>
+										</div>
+										<div class="p-price"><b>¥&nbsp;12.00</b><em>x</em><span>1</span></div>
+										<a href="javascript:;" class="icon-minicart-del" title="删除">删除</a>
+										<input type="hidden" name="goods_id" value="13">
+									</div>
+								</li>
+							</ul>
+							<div style="clear:both;"></div>
+							<div style="" class="minicart-pro-settleup" id="minicart-pro-settleup">
+								<p>共<em id="micro-cart-total">1</em>件商品</p>
+								<p>共计<b id="micro-cart-totalPrice">¥&nbsp;<span>12.00</span></b></p>
+								<a class="button-minicart-settleup" href="/vmallshop2/index.php/Home/Cart/index.html">去结算</a>
+							</div>  
+						</div>
+						
+						  <!---购物车信息-->
+						  
+						  
+						  
+						  
+						  
+						  
+                      </div>
+                  </li>
+                  <li>|</li>
+                  <li class="head-memu">
+                      <a href="" class="tit">我的收藏<span class="drop-img"><img src="__PUBLIC__/Home/images/drop.png"></span></a>
+                      <div class="subnav nav_a">
+                          <p><a href="#">申请退款</a></p>
+                          <p><a href="#">申请退换货</a></p>
+                          <p><a href="#">查看美团劵</a></p>
+                          <p><a href="#">换绑手机号</a></p>
+                          <p><a href="#">常见问题</a></p>
+                      </div>
+                  </li>
+                  <li>|</li>
+                  <li class="head-memu">
+                      <a href="" class="tit">我的浏览<span class="drop-img"><img src="__PUBLIC__/Home/images/drop.png"></span></a>
+                      <div class="subnav nav_a">
+                          <p><a href="#">申请退款</a></p>
+                          <p><a href="#">申请退换货</a></p>
+                          <p><a href="#">查看美团劵</a></p>
+                          <p><a href="#">换绑手机号</a></p>
+                          <p><a href="#">常见问题</a></p>
+                      </div>
+                  </li>
+              </ul>
+          </div>
+      </div>
+    </div>
+    <div class="head-box">
+        <div class="l-logo">
+            <a href="{:U('Index/index')}" class="logo"><img src="__PUBLIC__/Home/images/logo.png"></a>
+            <div class="logo-text">
+                <p>中国邮政信源</p>
+                <p>电商产品直采平台</p>
+            </div>
+        </div>
+        <div class="searchBar">
+            <div class="searchBar-form">
+                <form  method="get"  action="" onsubmit="return false;">
+                      <input type="text"   placeholder="请输入搜索关键字" class="inp_srh"   id="search_kw"/>
+                      <input type="submit"  value="搜索" class="btn_srh" id="submit_go"  />
+                </form>
+            </div>
+            <div class="searchBar-key">
+                <a href="{:U('Search/index')}?keywords='明信片'">明信片</a>
+                <a href="{:U('Search/index')}?keywords='年历'">年历</a>
+                <a href="{:U('Search/index')}?keywords='年历'">年历</a>
+                <a href="{:U('Search/index')}?keywords='明信片'">明信片</a>
+                <a href="{:U('Search/index')}?keywords='年历'">年历</a>
+                <a href="{:U('Search/index')}?keywords='年历'">年历</a>
+            </div>
+        </div>
+        <div class="head-cart-r">
+            <a href="{:U('Cart/index')}">
+                <h3 class="cart-num">0</h3>
+                <p>我的购物车</p>
+            </a>
+        </div>
+    </div>
+    <div class="header_nav">
+        <div class="yzbody clearfix">
+            <div class="nav-all">
+                <div class="mod_cate_hd">全部商品分类</div>
+                <div class="category-list block">
+                     <ul>
+						<foreach name="category_info" item="v1" key="k1" >
+                          <li>
+                              <h3><a href=""><i class="bg0{$k1+1}"></i><span>{$v1.category_name}</span></a></h3>
+                              <div class="nav">
+								<foreach name="v1.children" item="v2" key="k2" >
+									<if condition="$k2 lt 3 ">
+										<a href="">{$v2.category_name}</a>
+									</if>
+								</foreach>  
+                              </div>
+                          </li>
+                        </foreach>  
+                     </ul>
+                </div>
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li><a href="">首页</a></li>
+                    <li><a href="">品牌专区</a></li>
+                    <li><a href="">公司介绍</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+  </div>
+<script type="text/javascript">
+$(function(){
+
+  var url="{:U('Search/index')}";
+ 
+  $("#submit_go").click(function(){
+	 
+	  var search_kw=$("#search_kw").val();
+		 
+	  if(search_kw.length==0){
+		   alert('搜索关键字不能为空');
+	  
+	  }else{
+		 window.location.href=url+'?keywords='+search_kw;
+	  
+	  }
+
+  });
+  
+  
+  
+  
+  
+  
+
+});
+
+
+
+
+//ajax查询数量和商品
+
+do_cat();
+  
+function do_cat(){
+
+ $.ajax({
+	 
+	 url:"{:U('SmallCat/myGoods')}",
+	 type:'GET',
+	 dataType:'json',
+	 success:function(responseText,status,xhr){
+		 if(status=="success"){
+			 if(responseText.cat_status==1){
+				 $(".cart-num").html(responseText.content.total_nums);
+				 $(".catr-no").hide();
+				 $("#minicart-pro-list-block").show();
+				 $("#minicart-pro-list-block #minicart-pro-list").html(responseText.info);
+				 $("#minicart-pro-settleup").show();
+				 $("#minicart-pro-settleup #micro-cart-total").html(responseText.content.total_nums);
+				 $("#minicart-pro-settleup #micro-cart-totalPrice").find('span').html(responseText.content.total_price.toFixed(2));
+				 
+			 }else{
+			  $(".cart-num").html('0');
+			  $("#minicart-pro-list-block").hide();
+			  $("#minicart-pro-settleup").hide();
+			  $(".catr-no").show();
+			 
+			 }
+		 
+		 }else{
+		  $(".cart-num").html('0');
+		  $("#minicart-pro-list-block").hide();
+		  $("#minicart-pro-settleup").hide();
+		  $(".catr-no").show();
+		 
+		 }
+	   
+	 },
+	 error:function(){
+		 $(".cart-num").html('0');
+		 $("#minicart-pro-list-block").hide();
+		 $("#minicart-pro-settleup").hide();
+		 $(".catr-no").show();
+	 },
+	 timeout:60*1000,
+
+ });
+ 
+ 
+  //事件委托的形式添加事件
+
+$("#minicart-pro-list").on('click',".icon-minicart-del",function(){
+      var goods_id=$(this).next('input').val();
+	  var parent_li=$(this).closest('li');
+	    //ajax的形式删除元素
+	  $.ajax({
+	     url:"{:U('SmallCat/delGoods')}",
+		 type:'POST',
+		 data:{
+		    'goods_id':goods_id,
+		 },
+		 dataType:'json',
+		 success:function(responseText,status,xhr){
+		     if(status=='success'){
+			      //返回1 说明session 中删除成功!
+			     if(responseText.del_status==1){
+				    
+					    //删除此条信息
+					   
+					  parent_li.remove();
+					   //修改金额和总数量
+					  $(".cart-num").html(responseText.total_num);
+					  $("#minicart-pro-settleup #micro-cart-total").html(responseText.total_num);
+					   $("#minicart-pro-settleup #micro-cart-totalPrice").find('span').html(responseText.total_money.toFixed(2));
+	                 var lis=$("#minicart-pro-list li").size();
+					 
+					 if(lis<=0){
+					   $(".cart-num").html('0');
+			           $("#minicart-pro-list-block").hide();
+			           $("#minicart-pro-settleup").hide();
+			           $("#minicart-pro-empty").show();
+					 
+					 }else{
+					 
+					 
+					 }
+					
+				 
+				 }
+			 }
+		 
+		 }
+		 
+	  
+	  
+	  
+	  });
+	  
+});
+ 
+ 
+ 
+
+}
+
+
+
+</script>

@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Language" content="zh-cn" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>{$goods_info['goods_name']}</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+
+<link rel="shortcut icon" href="__PUBLIC__/Ico/favicon.ico" />
+<link href="__PUBLIC__/css/ec.core.css" rel="stylesheet" type="text/css">
+
+<link href="__PUBLIC__/css/main.css" rel="stylesheet" type="text/css">
+<script src="__PUBLIC__/js/jsapi.js?20120518" namespace="ec"></script>
+<script src="__PUBLIC__/js/jquery-1.4.4.min.js"></script>
+<script src="__PUBLIC__/js/ec.core.js?20120518"></script> 
+<script src="__PUBLIC__/js/ec.business.js?20131212"></script> 
+<Js  href="__JQUERY__"/>
+
+
+</head>
+
+
+
+<body>
+  <!-----------------隐藏表单技术商品信息------------------------->
+ <input type="hidden"  name="goods_id" value="{$goods_info.goods_id}" id="goods_id" />
+ <input type="hidden" name="goods_state_login"  value="{$goods_state_login}" id="goods_state_login"/>
+   {//引入头和导航}
+   <include file="Public/pinkheader" />
+   <include file="Public/searchheader" />
+   <include file="Public/naver" />
+<script type="text/javascript">
+  $(function(){
+       $.ajax({
+	      url:"{:U('ScanGoods/add')}",
+		  type:"POST",
+		  data:{
+		     'goods_id':$("input[name=goods_id]").val(),
+		  
+		  }
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   
+	   });
+  
+  
+  
+  
+  
+  
+  });
+
+
+
+</script>
+
+<script>
+	$(function () {
+		$('#naver-list li').hover(function () {
+			$(this).addClass('hover');
+		},function () {
+			$(this).removeClass('hover');
+		});
+	});
+</script>
+<script>
+(function () {
+	//所有分类显示隐藏控制
+	var isIndex =  false,
+		categoryBlock = gid('category-block');
+		
+	if(isIndex) return;
+
+	categoryBlock.onmouseover = function () {
+		categoryBlock.className = 'category category-hove';
+	};
+	categoryBlock.onmouseout = function () {
+		categoryBlock.className = 'category';
+	};
+	
+}());
+$(function () {
+	//分类间隔背景色
+	$('#category-list li:odd').addClass('odd');
+	$('#category-list li a').click(function () {
+		setTimeout(function () {
+			var id = location.hash.split("#", 2)[1];
+			if(id)return ec.product.showCategory(gid('pro-cate-'+ id) , id);
+		}, 200);
+		
+	});
+});
+</script>
+<script>
+$("body").addClass("wide detail");
+</script>
+
+
+<div class="hr-10"></div>
+<div class="g">
+	<!--面包屑 -->
+	<div class="breadcrumb-area fcn"><a href="{:U('Index/index')}" title="首页">首页</a>&nbsp;>&nbsp;<span id="bread-pro-name">{$goods_info['goods_name']}</span></div>
+</div>
+
+<div class="hr-10"></div>
+<div class="layout"> 
+	
+	<!--商品简介 -->
+	<div class="pro-summary-area clearfix">
+    	<div class="right-area">
+        	<!--商品简介-属性 -->
+        	<div class="pro-property-area clearfix">
+                <div class="pro-meta-area">
+                	<h1 id="pro-name">{$goods_info['goods_name']}</h1>
+            	
+                	<!-- 插入 商品简介-广告语-->
+                	<div class="pro-slogan" id="skuPromWord">
+							{$goods_info['goods_keywords']}
+					</div>			
+                	<div class="hr-10"></div>
+					<div class="line"></div>
+                
+                    <div class="pro-price">
+							 <s id="pro-price-old"  class="hide"><label>华&nbsp;为&nbsp;&nbsp;价：</label>&yen;&nbsp; </s>
+							 <span id="pro-price"><label>华&nbsp;为&nbsp;&nbsp;价：</label><b>&yen;&nbsp;{$goods_price}</b></span>
+                    </div>
+                    
+                    <!--chenzhongxian 促销和赠品合并-->
+                    <!--商品简介-促销规则 -->
+					
+                    <div id="pro-promotions-area" class="pro-promotions-area <if condition="$goods_sale_desc neq '' "> <else/>hide </if>      ">
+                       <dl class="clearfix">
+                            <dt>优惠信息：</dt>
+                            <dd>
+                                <ul id="pro-promotions-list">
+                                 
+                                </ul>
+                                <ul id="pro-gift-list" >
+								  <li>
+                                 <span>优惠 </span>
+                                 <a target="_blank" href="javascrpt:void(0)">{$goods_sale_desc}</a>
+                                 </li>
+                                </ul> 
+                            </dd>
+                        </dl>
+                    </div>
+					
+					
+					<if condition="$goods_state_login eq 0">
+					<div class="pro-price">
+							 <s id="pro-price-old"  class="hide"><label>&nbsp;&nbsp;状&nbsp;&nbsp;态:</label>&yen;&nbsp; </s>
+							 <span id="pro-price"><label>&nbsp;&nbsp;状&nbsp;&nbsp;态:</label><b>&nbsp<small>{$goods_state}</small></b></span>
+                    </div>
+					 <else/>
+					</if>
+                    
+                    <div class="pro-coding"><label>商品编码：</label><span id="pro-sku-code">{$goods_info.goods_no}</span></div>
+					
+					<!-------------商品评分------------->
+                    <div class="pro-evaluate"><label>商品评分：</label>
+					 <span class="pro-star">
+					   <span class="starRating-area">
+					 
+					     <s id="prd-remark-scoreAverage" style="width:{$goods_avg_scrore}%"></s>
+					   </span>
+					 </span>&nbsp;
+					 （<a id="prd-remark-jmptoremark" href="javascript:void(0)" onclick="ec.product.jmptoRemark()"   title="共&nbsp;0&nbsp;条评论">共&nbsp;{$goods_comment_count}&nbsp;条评论</a>）</div>
+					<!-------------商品评分------------->
+					<!-------------运费------------->
+			        <div class="pro-freight">
+					   <label>运&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;费：
+					   </label>
+					    满&nbsp;200&nbsp; 免运费（由信源电商通过顺丰发货，若顺丰不到转其他快递）
+				   </div>
+			      <div class="pro-service">
+				    <label>服&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;务：</label>由信源电商商城负责发货，并提供售后服务
+				 </div>
+				 	
+		    <div class="hr-10"></div>
+		    <div class="line"></div>
+		    <div class="hr-15"></div>
+					
+                    <!--商品简介-SKU -->
+                    <div id="pro-skus" class="pro-sku-area"></div>
+					
+					
+					 
+					 
+					
+					
+                    <div class="pro-stock-area" id="pro-quantity-area">
+						<dl class="clearfix">
+							<dt>购买数量：</dt>
+							<dd>
+							<span class="stock-area">
+						      <a title="减" class="icon-minus-2 vam" id="goods_num_dec" href="javascript:;"><span>-</span></a>
+							 
+							  <input type="text" autocomplete="off" value="1" 
+							  class="vam text" id="pro-quantity" style="ime-mode: disabled;">
+							   <a title="加" class="icon-plus-2 vam" id="goods_num_incre" href="javascript:;"><span>+</span>
+							   </a>
+   						    </span>
+						  </dd>
+						</dl>
+					</div><br/>
+					<script type="text/javascript">
+					    //js代码执行进行+ —
+					    $(function(){
+						    $("#goods_num_dec").click(function(){
+							    $("#pro-quantity").val(function(){
+								     
+								     if(this.value<=1){
+									    return 1;
+									 }else{
+									    return parseInt(this.value)-1;
+									 }
+								 
+								 });
+								
+							
+							});
+						
+						     //+ 操作
+							
+						    $("#goods_num_incre").click(function(){
+							     
+								 
+								   $("#pro-quantity").val(function(){
+								      if(parseInt(this.value)>9){
+									    alert("亲,为了黄牛,限购10件");
+										return 10;
+									  }else{
+									      return parseInt(this.value)+1;
+									 }
+								 
+								
+						           });
+							
+							});
+						
+						
+						
+						});
+					
+					
+					</script>
+					 <!-----------库存量----------------------->
+					<div class="pro-service">
+				    <label>库&nbsp;存&nbsp;&nbsp;量：</label>  
+					  <if condition="$goods_info['goods_num'] gt 0">
+					    <span id="goods_total">{$goods_info['goods_num']}</span>件
+					  <else/>
+					      <span id="goods_total" style="color:red">缺货</span>
+					  </if>
+				    </div>
+					
+					<!-----------------加入购物--------------------->
+                    <div class="pro-action-area" id="pro-operation" style="visibility: visible;">
+					   <a title="加入购物车" class="button-add-cart button-style-1"  href="javascript:;">
+					    <span id="content">加入购物车</span>
+					    </a>
+						
+				    </div>
+<js href="__PUBLIC__/Js/do_cat.js"/>
+<script type="text/javascript">
+ $(function(){
+             //ajax 实现购物车的功能
+			 //获取商品的id 和状态
+		 
+		   var goods_id=$("#goods_id").val();
+		   var goods_state_login=$("#goods_state_login").val();
+		   var goods_total=parseInt($("#goods_total").html());
+		  
+		   
+		   
+		 
+		  $(".button-add-cart").click(function(){
+					      //ajax去结算
+						 //先判断是否下架
+			    if(goods_state_login==0){
+				     alert("商品已经下架,不可以购买!");
+				
+				}else{
+				  //可以购买的就ajax的形式传到后台
+				  // 商品的id 和数量
+				  
+				  var num=$("#pro-quantity").val();
+				   
+				  if(num<1){
+				      alert('你选取的数量小于1');
+				  
+				  
+				  }else if(num>goods_total){
+				  
+				      alert('库存不足,少买点吧');
+				  
+				  }else{
+				      //ajax处理
+					  
+					  $.ajax({
+					       url:"{:U('Product/add')}",
+						   type:'POST',
+						   data:{
+						      'num':num,
+							  'goods_id':goods_id,
+						   
+						   },
+						   dataType:'json',
+						   success:function(responseText,status,xhr){
+						       if(status=='success'){
+							      if(responseText.status==1){
+								  
+								       //成功
+									   $("#cart-total").html(responseText.content.nums);
+									   $("#cart-price").html(responseText.content.price.toFixed(2));
+									   $(".pro-popup-area").css('display','block');
+									   do_cat("{:U('SmallCat/myGoods')}");
+									 
+									   
+								  }else{
+								    alert('加入购物车失败');
+								  }
+							   
+							   }else{
+							      alert('加入购物车失败');
+							   
+							   }
+						   
+						   },
+						   error:function(){
+						      alert("购买失败");
+						   
+						   },
+						   timeout:1000*60,
+					  
+					  
+					  
+					  
+					  
+					  
+					  
+					  });
+				  
+				  
+				  
+				  
+				  }
+				  
+				
+				
+				
+				
+				
+				}	  
+						
+					  
+		  });
+		 
+	
+		 
+		 
+		 
+ 
+ 
+ });	
+
+
+
+
+
+
+
+</script>					
+					
+					
+					
+				    <!----------购物车的数据---------------->
+				    <div class="pro-popup-area hide" id="cart-tips" style="display:none;">
+                         <div class="h">
+	                        <a title="关闭" class="pro-popup-close" onclick="$('#cart-tips').hide()" href="javascript:;"><span>关闭</span></a>
+                         </div>
+                     <div class="b">
+	               	   <div class="pro-add-success">
+						  <dl>
+							 <dt><s></s></dt>
+							<dd>
+							 <p></p>
+							  <div class="pro-add-success-msg">成功加入购物车!</div>
+							  <div class="pro-add-success-total">
+								 购物车中共&nbsp;
+								 <b id="cart-total">{//商品num}</b>
+								  &nbsp;件商品，金额合计&nbsp;
+								  <b id="cart-price">{//商品金额}</b>
+							 </div>
+							 <div class="pro-add-success-button">
+								<a  title="去购物车结算" class="button-style-1 button-go-cart" href="{:U('Cart/index')}">去结算</a>
+								<a onclick="$('#cart-tips').hide()" title="继续逛逛" href="javascript:;" class="button-style-4 button-walking">
+								  继续逛逛&nbsp;&gt;&gt;</a>
+							 </div>									
+						  </dd>
+						</dl>					
+		           </div>
+                    </div>
+                 </div>
+				
+<script type="text/javascript">
+				    
+  
+					  
+					 
+					  
+				 
+				 
+				 
+</script>
+				 <!----------购物车的数据---------------->	
+            </div>
+              
+             <div id="pro-select-sku" class="pro-selected"></b></div>
+                
+             
+<!-- Baidu Button BEGIN -->
+
+
+<!-- Baidu Button END -->            </div>
+        </div>
+        <!--------------------左侧放大镜------------------------->
+        <div class="left-area">
+        	<!--商品简介-图片画廊 -->
+        	<div class="pro-gallery-area">
+			   
+            	<div class="pro-gallery-img" >
+					<a id="product-img" href='__UPLOAD__{$goods_info.goods_big_pic}' class = 'cloud-zoom'  >
+					   <div  style="position:relative;width:480px;height:480px;" id="pic_small">
+					   <img src="__UPLOAD__{$goods_info.goods_small_pic}" alt="{$goods_info['goods_name']}" width="428" height="428"/>
+					    <!-----------图层-------------->
+						    <div  id="pic_shade" style="width:200px;height:200px;position:absolute;z-index:98;border:3px solid #E5E5E5;background:#E5E5E5;opacity:0.5;left:0px;top:0px;display:none;"></div>
+					   </div>
+					</a>
+					
+				</div>
+				<div id="pic_big_minnr" style="width:428px;height:428px;border:1px solid #E5E5E5;z-index:500;position:absolute;top:30px;left:520px;overflow:hidden;display:none;">
+				   <img src="__UPLOAD__{$goods_info.goods_big_pic}" style="position:absolute;left:0px;top:0px;"/>
+				</div>
+				    
+                
+            </div>
+			  <script type="text/javascript">
+			     //放大镜js代码
+				 $(function(){
+				     var small_div=$("#pic_small");
+					 var pic_shade=$("#pic_shade");
+					 var big_pic=$("#pic_big_minnr img");
+					 var big_pic_div=$("#pic_big_minnr");
+				      
+				     small_div.hover(function(e){
+					     var small_div_left=$(this).offset().left;
+					     var small_div_top=$(this).offset().top;
+                         pic_shade.show();
+						 big_pic_div.show();
+						 
+						  $(this).mousemove(function(e){
+						     var pic_shade_left=e.pageX;
+							 var pic_shade_top=e.pageY;
+							 
+							 var L=pic_shade_left-small_div_left;
+							 var T=pic_shade_top-small_div_top;
+							 
+							 var pic_shade_width=pic_shade.outerWidth();
+							 var pic_shade_height=pic_shade.outerHeight();
+							 
+							 
+							 
+							 var big_L=-parseInt(L/480*(800-428));
+						     var big_T=-parseInt(T/480*(800-428));
+							 
+							 big_pic.css({'left':big_L,'top':big_T});
+						     
+							  var sL=L-parseInt(pic_shade_width/2),sT=T-parseInt(pic_shade_height/2);
+							 if(L<parseInt(pic_shade_width/2)){
+							      sL=0;
+							 }
+							 
+							 if(L>(480-pic_shade_width)){
+							     sL=480-pic_shade_width;
+							 }
+						     
+							 if(T<pic_shade_height/2){
+							      
+								  sT=0;
+								  
+							 
+							 }
+							 
+							  
+							 if(T>(480-pic_shade_height)){
+							     sT=480-parseInt(pic_shade_height);
+							 }
+							 
+							  pic_shade.css({
+						       'left':sL,
+							   'top':sT
+						      });
+						  
+						  });
+						  
+				         
+						 
+						
+					 
+					 },function(e){
+					     pic_shade.hide();
+						 big_pic_div.hide();
+					 
+					 });
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+				 
+				 });
+				    
+			     
+			  </script>
+			
+        </div>
+        <!--------------------左侧放大镜------------------------->
+    </div>
+
+</div>
+
+
+
+
+
+
+<div class="hr-20"></div>
+<!-----------------下面部分------------------------>
+<div class="layout">
+	<div class="fr u-3-4">
+	 <!----------------商品详情-------------------->
+		<div class="pro-detail-area clearfix" >
+		<div class="tool-fixed-holder"></div>
+		<div id="pro-tab-all" class="pro-detail-tool">
+			
+		<!--商品详情-书签 --> 
+        <div id="pro-tab-area" class="pro-detail-tab clearfix">
+		    <!----------商品详情导航条------------   -->
+        	<div class="pro-detail-tab-nav" id="pro-detail-tab-nav-x">
+            <ul>
+                <li id="pro-tab-feature"  class="current" >
+				   <a href="javascript:;" title="商品详情"><span>商品详情</span></a>
+				</li>
+                <li id="pro-tab-evaluate" >
+				   <a href="javascript:;" title="用户评价">
+				    <span id="prd-remark-span-tab-evaluate">用户评价
+					      <em>（{$comment_count}）</em>
+				    </span>
+				   </a>
+				</li>
+                <li id="pro-tab-parameter" data-skulist="2171,1991,2069,2170,2202,2203,2204,2205"  >
+				    <a href="javascript:;" title="规格参数">
+				    <span>规格参数</span></a>
+				</li>
+                <li id="pro-tab-package" >
+				  <a href="javascript:;" title="包装清单" >
+				    <span>包装清单</span>
+				  </a>
+				</li>
+		        <li id="pro-tab-software">
+				  <a href="javascript:;" title="软件下载">
+				     <span>软件下载</span>
+				  </a>
+				</li>
+                <li id="pro-tab-service">
+				    <a href="javascript:;" title="售后服务">
+					    <span>售后服务</span>
+				    </a>
+				</li>
+              
+            </ul>
+           </div>
+            <!----------商品详情导航条------------------>
+            
+		   
+        </div>
+        </div>
+
+     <!--内容东西-->
+    <div class="pro-detail-area ">
+            <!-------------------商品详情-------------------------->
+		  <div id="pro-tab-feature-content" class="pro-detail-tab-area pro-feature-area">
+			
+				 <div class="hr-20"></div>
+				     <div id="pro-tab-parameter-content-1733">
+					     <table cellspacing="0" cellpadding="0" border="0">
+						      <tbody>
+							    <tr>
+								 <th colspan="2"><h3><b>主体</b></h3></th>
+								 
+								</tr>
+								<hr/>
+								<tr>
+								 <td class="p-name"><b>品牌：</b></td>
+								 <td class="p-desc">信源电商（HUAWEI）</td>
+								 </tr>
+								 <tr><td class="p-name"><b>上市时间：</b></td>
+								 <td class="p-desc">{$goods_info.goods_time|date="Y-m-d",###}</td>
+								 </tr>
+								 <tr>
+								 <tr><td class="p-name"><b>商品状态：</b></td>
+								 <td class="p-desc">{$goods_info.goods_state}</td>
+								 </tr>
+								 <tr><td class="p-name"><b>商品重量：</b></td>
+								 <td class="p-desc">{$goods_info.goods_weight}</td>
+								 </tr>
+								 <volist name="goods_attr_values" id="vo">
+								     <tr><td class="p-name"><b>{$vo.attr_name}：</b></td>
+								 <td class="p-desc">{$vo.avalue_value}</td>
+								 </tr>
+								 
+								 </volist>
+									
+									
+									
+									</tbody></table>
+					   
+					   </div>	
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				 <div class="pro-disclaimer-area">
+				  <p>※本网站尽可能地提供准确的信息。本网站内所涉及的产品图片与实物可能有细微区别，效果演示图和示意图仅供参考（图片为合成图、模拟演示图），有关产品的外观（包括但不限于颜色）请以实物为准。</p>
+				  <p>※限于篇幅，本网站中所包含的信息（包括但不限于产品规格、功能说明等）可能不完整，请以有关产品使用说明书的具体信息为准。</p>
+				</div>
+		 </div>
+		   {//---------- ----商品---------------------}
+		   
+		            <!--用户评价 -->
+       <div id="pro-tab-evaluate-content" class="pro-detail-tab-area pro-evaluate-area  hide">
+                
+                <div class="pro-score-area clearfix">
+                	<div class="pro-score-average">
+						<span><b id="pro-evaluate-avgSorce">{$good_status}</b>%</span>
+						<em>好评度</em>
+					</div>
+					
+					
+					<div class="pro-score-percent">
+						<dl>
+							<dt>好评<em id="pro-score-percent-high"></em></dt>
+							<dd><s id="pro-score-draw-high" style="width:{$good_status}%"></s></dd>
+						</dl>
+						<dl>
+							<dt>中评<em id="pro-score-percent-mid"></em></dt>
+							<dd><s id="pro-score-draw-mid" style="width:{$middle_status}%"></s></dd>
+						</dl>
+						<dl>
+							<dt>差评<em id="pro-score-percent-low"></em></dt>
+							<dd><s id="pro-score-draw-low"  style="width:{$bad_status}%"></s></dd>
+						</dl>
+					</div>
+					
+                  <div id="pro-score-impress"  class="pro-score-impress"></div>
+                  
+                   
+                </div>
+                
+                <!-- 20131220-商品详情-用户评论-书签-start -->
+				<div class="pro-evaluate-tab clearfix">
+				     <!--------------评价导航------------------->
+					<div class="pro-evaluate-tab-nav">
+						<ul id="pro-evaluate-click-type">
+						
+							<li id="pro-evaluate-click-all" class="current">、
+							   <a href="javascript:;">
+							       <span>全部评价
+								   <em id="pro-evaluate-number-all"></em>
+								   </span>
+								</a>
+							</li>
+							<li id="pro-evaluate-click-high">
+							   <a  href="javascript:;">
+							      <span>好评({$good_comment_count|default=0})
+								  <em id="pro-evaluate-number-high" ></em>
+								  </span>
+								</a>
+							</li>
+							<li id="pro-evaluate-click-mid" >
+							    <a href="javascript:;">
+									<span >中评({$middle_comment_count|default=0})
+									   <em id="pro-evaluate-number-mid"></em>
+									</span>
+								</a>
+						    </li>
+							
+							<li id="pro-evaluate-click-low">
+							    <a href="javascript:;">
+								    <span  >差评({$bad_comment_count|default=0})
+									    <em id="pro-evaluate-number-low"></em>
+									</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					 <!--------------评价导航------------------->
+					<div class="pro-evaluate-page">
+					<!-- 20131220-分页-start -->
+					<div id="pro-msg-pagerup" class="pager">
+					   <ul>
+					    <li class="pgNext link first first-empty"></li>
+						<li class="pgNext link pre pre-empty"></li>
+						<span class="qpages">
+						   <li class="page-number link pgCurrent"></li>
+						   <li class="page-number link"></li>
+						   <li class="page-number link"></li>
+						   <li class="page-number link"></li>
+						   <li class="page-number link"></li>
+						   <li class="text">...</li>
+						   <li class="page-number link page-number-last"></li>
+						</span>
+						<li class="pgNext link next"></li>
+						<li class="pgNext link last"></li>
+						<li class="text quickPager">
+						   <span class="fl"></span>
+						   <div id="chatpage">
+						     <input id="quickPager" class="pagenum fl" value="1" style="width:20px;">
+							 <a id="enter" class="enter fl" href="javascript:void(0)"></a>
+						   </div>
+						   <span class="fl"></span>
+						</li>
+					  </ul>
+					   
+					</div>
+					<!-- 20131220-分页-end -->
+					<div class="hr-15"></div>
+				</div>
+					
+			 </div>
+			 <!---------------评价内容部分-------------------->
+			 <div id="pro-msg-list" class="pro-comment-list">
+			     <!---------------------一个评论--------------------------->
+			    {//<div class="pro-comment-item clearfix" id="comment_content">
+				     <!----------左边--------------------->
+					 <div class="pro-comment-user">
+					   <p class="pro-comment-user-img">
+						  <br/>
+					   </p>
+					   <p class="pro-comment-user-name">13265*****</p>
+					   <s class="pro-comment-user-tag">
+						  <i class="icon-vip-level-2"></i>
+					   </s>
+					  </div>
+					  <!----------左边--------------------->
+					  <!----------右边--------------------->
+					  <div class="pro-user-comment-main">
+					     <div class="pro-user-comment">
+						   <div class="h clearfix">
+						     <div class="pro-user-comment-score">
+							   <span class="pro-star">
+							      <span class="starRating-area">
+								      <s style="width:100%"></s>
+								  </span>
+							   </span>
+							   <em><b>5&nbsp;分</b>&nbsp;&nbsp;好评</em>
+							  </div>
+							  <div class="pro-user-comment-impress">
+							    <ul><li>還行</li></ul>
+							  </div>
+							  <div class="pro-user-comment-time">
+							    2014-09-01 09:43:49</div>
+						   </div>
+						   <div class="b"> 
+						      快遞速度挺快的，就是耳機孔太松了，
+						      沒法用。其它方面都很不錯。正在換貨中
+						   </div>
+						</div>
+						<div class="arrow"></div>
+					  </div>
+					 <!----------右边--------------------->
+				 </div>}
+				  <!---------------------一个评论--------------------------->
+				  
+				  
+				  <!---------------------页面加载中--------------------------->
+			         <div  id="get_more_content" class="pro-user-comment-main" style="width:400px;height:30px;margin-left:250px;text-align:center;line-height:30px;">
+					     <center><a href="javascript:void(0)">加载更多内容</a></center>
+					 
+					 </div>
+				  
+				 <!------------------------页面加载中-------------------------------->
+				 
+				 
+				
+		 </div> 
+		  <script type="text/javascript">
+		     //ajax形式获取用户评论
+			 $("#pro-tab-evaluate").click(function(){
+			        getPage();
+			  });
+		        var get_more_content=$("#get_more_content");
+				 get_more_content.click(function(){
+				 
+				     getPage();
+				 
+				 });
+				function getPage(){
+				      
+				      $.ajax({
+				         url:"{:U('Product/userComment','','')}",
+						 type:'GET',
+						 data:{
+						     'g':$("input[name=goods_id]").val(),
+							 'type':$(".comment_content").size(),
+						 },
+						 beforeSend:function(){
+						     
+						 },
+						 
+						success:function(responseText,status,xhr){
+						    
+						     if(status=='success'){
+							     $(responseText).insertBefore(get_more_content);
+							 
+							 }else{
+							   $("#pro-msg-list").html("评论加载失败.......");
+							 
+							 
+							 }
+						 
+						 
+						 
+					    }
+						
+						});
+				      
+				 
+				 
+				 
+				 }//getPage结束
+			 
+			 
+			
+		  
+		  </script>
+		 
+		  <!---------评价尾部分-------------------->	
+				
+               
+             
+        </div>
+          <!--规格参数 -->
+		 <div id="pro-tab-parameter-content" class="pro-detail-tab-area pro-parameter-area hide">
+		     <p>手机（含内置电池） x 1，2A充电器 x 1，2A USB线 x 1，TP保护膜 x 1，后盖保护膜 x 1，插卡拔片 x 1，快速指南 x 1，售后服务手册 x 1，安全说明 x 1<br />
+			  </p>
+			  <p><br /></p><p><br /></p>
+	     </div>
+		 <!--规格参数 -->
+         <!--包装清单 -->
+         <div id="pro-tab-package-content" class="pro-detail-tab-area pro-package-area hide  ">
+         <div id="pro-tab-package-content-2171">
+              <p>手机（含内置电池） x 1，2A充电器 x 1，2A USB线 x 1，TP保护膜 x 1，后盖保护膜 x 1，插卡拔片 x 1，快速指南 x 1，售后服务手册 x 1，安全说明 x 1<br />
+			  </p>
+			  <p><br /></p><p><br /></p>
+         </div>
+    </div>   
+         <!--包装清单 -->
+		 <!--售后服务 -->
+         <div id="pro-tab-service-content" class="pro-detail-tab-area pro-service-area hide">
+		 <div id="pro-tab-service-content-2171" class=>
+		   <p>本产品全国联保，享受三包服务，质保期为：一年质保<br />如因质量问题或故障，凭厂商维修中心或特约维修点的质量检测证明，享受7天内退货，15日内换货，15日以上在质保期内享受免费保修等三包服务！<br />售后服务电话：400-830-8300<br /><span>信源电商消费者BG官网： <a href="http://consumer.huawei.com/cn/">http://consumer.huawei.com/cn/</a></span><br /></p><p><br /></p>
+		</div>
+   </div>
+	    
+
+    </div>       	
+</div>
+     <script type="text/javascript">
+	     $(function(){
+		     $("#pro-detail-tab-nav-x ul li").click(function(){
+			     
+				 $(this).addClass("current").siblings('li').removeClass("current");
+			     var index=$(this).index();
+				 $(".pro-detail-tab-area").eq(index).removeClass("hide").siblings('div').addClass("hide");
+			 
+			 
+			 
+			 });
+		 
+		 
+		 
+		 
+		 
+		 });
+	 
+	 </script>
+
+     <!-------------------商品已经到了头----------->
+    <!--------------------咨询部分------------------------------------->
+        <div class="pro-detail-area clearfix" id="prd_detail_counsel">
+			<div class="pro-detail-tool">
+				<!-- 20140624-商品详情-书签-start -->
+				<div class="pro-detail-tab clearfix">
+					<div class="pro-detail-tab-nav">
+						<ul>
+							<li class="current" id="prd_detail_counsel_1"><a href="javascript:;" onclick="ec.product.divchange(1)"><span>全部咨询</span></a></li>
+							<li id="prd_detail_counsel_2"><a href="javascript:;" onclick="ec.product.divchange(2)"><span>商品咨询</span></a></li>
+							<li id="prd_detail_counsel_3"><a href="javascript:;" onclick="ec.product.divchange(3)"><span>支付</span></a></li>
+							<li id="prd_detail_counsel_4"><a href="javascript:;" onclick="ec.product.divchange(4)"><span>配送</span></a></li>
+							<li id="prd_detail_counsel_5"><a href="javascript:;" onclick="ec.product.divchange(5)"><span>售后</span></a></li>
+							<li id="prd_detail_counsel_6"><a href="javascript:;" onclick="ec.product.divchange(6)"><span>常见问题</span></a></li>
+						</ul>
+					</div>
+					<div class="pro-detail-tab-link"><a href="#inquire-form" onclick="ec.product.loginCheckBefCoun();">发表咨询&gt;&gt;</a></div>
+				</div><!-- 20140624-商品详情-书签-end -->
+			</div>
+
+			<!-- 20140624-商品详情-全部咨询-start -->
+			<div class="pro-detail-tab-area pro-inquire-area " id="prddetail_counsel_all">
+				<!-- 20140624-商品详情-咨询提示-start -->
+				<div class="pro-inquire-tips">
+					<label>温馨提示：</label>因产线可能更改商品包装、产地、附配件等未及时通知，且每位咨询者购买、提问时间等不同。为此，客服给到的回复仅对提问者3天内有效，其他网友仅供参考！给您带来的不便还请谅解，谢谢！
+				</div><!-- 20140624-商品详情-咨询提示-end -->
+				<div class="pro-inquire-list" id="all_prd_counsel_content">
+				
+					
+					
+				
+				</div>
+				
+			</div><!-- 20140624-商品详情-全部咨询-end -->
+
+			
+			<div class="pro-detail-tab-area pro-inquire-area " id="prddetail_counsel_prd" style="display:none;">
+				<!-- 20140624-商品详情-咨询提示-start -->
+				<div class="pro-inquire-tips">
+					<label>温馨提示：</label>因产线可能更改商品包装、产地、附配件等未及时通知，且每位咨询者购买、提问时间等不同。为此，客服给到的回复仅对提问者3天内有效，其他网友仅供参考！给您带来的不便还请谅解，谢谢！
+				</div><!-- 20140624-商品详情-咨询提示-end -->
+				<div class="pro-inquire-list" id="prd_prd_counsel_content">
+				</div>
+				<div class="pro-inquire-page clearfix" id="prddetail_counsel_prd_total">
+					<div class="pro-inquire-record">共<em></em>条</div>
+					<!-- 20131220-分页-start -->
+					<div class="pager" id="prd_prd_counsel">
+					</div><!-- 20131220-分页-end -->
+				</div>
+			</div><!-- 20140624-商品详情-商品咨询-end -->
+
+			
+			<div class="pro-detail-tab-area pro-inquire-area " id="prddetail_counsel_pay" style="display:none;">
+				
+				<div class="pro-inquire-tips" >
+					<label>温馨提示：</label>因产线可能更改商品包装、产地、附配件等未及时通知，且每位咨询者购买、提问时间等不同。为此，客服给到的回复仅对提问者3天内有效，其他网友仅供参考！给您带来的不便还请谅解，谢谢！
+				</div><!-- 20140624-商品-咨询提示-end -->
+				<div class="pro-inquire-list" id="pay_prd_counsel_content">
+				</div>
+				<div class="pro-inquire-page clearfix" id="prddetail_counsel_pay_total">
+					<div class="pro-inquire-record">共<em></em>条</div>
+					<!-- 20131220-分页-start -->
+					<div class="pager" id="pay_prd_counsel_page">
+					</div><!-- 20131220-分页-end -->
+				</div>
+		   </div>
+
+			<div class="pro-detail-tab-area pro-inquire-area " id="prddetail_counsel_trans" style="display:none;">
+				<!-- 20140624-商品详情-咨询提示-start -->
+				<div class="pro-inquire-tips">
+					<label>温馨提示：</label>
+				</div><!-- 20140624-商品详情-咨询提示-end -->
+				<div class="pro-inquire-list" id="trans_prd_counsel_content">
+				</div>
+				<!--分页判断-->
+				<div class="pro-inquire-page clearfix" id="prddetail_counsel_trans_total">
+					<div class="pro-inquire-record" >共<em></em>条</div>
+					<!-- 20131220-分页-start -->
+					<div class="pager" id="trans_prd_counsel_page" >
+					</div>
+					<!-- 20131220-分页-end -->
+				</div>
+			</div><!-- 20140624-商品-配送咨询-end -->
+
+			
+	</div>
+	<!--------------------咨询部分尾------------------------------------->
+    </div>
+    
+	
+	
+	
+	
+	
+    
+
+	            <!------------------热销和浏览部分------------------------->
+				<div class="fl u-1-4">
+						<div class="hot-area">
+							<div class="h">
+								<h3><span>热销榜单</span></h3>
+							</div>
+							<div class="b">
+								<!--商品列表 -->
+								<include file="Public/hotsale" />
+							</div>
+						</div>
+								<div id="pro-seg-hot" class="hr-20"></div>
+						<!-- 最近浏览过的商品  -->
+						<div id="product-history-area" class="rl-area {//hide}">
+							 <!-- 最近浏览过的商品  -->
+							 <include file="Public/scangoods" />
+							
+						</div>   
+				</div>
+		        <!------------------热销和浏览部分------------------------->
+</div>
+<!----------下面部分------------------->
+<div id="remarkLoading"></div>
+<div class="hr-60"></div>
+
+
+
+
+                
+
+
+{//底部}
+<include file="Public/footer" />
+
+
+</body>
+</html>

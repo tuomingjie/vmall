@@ -1,0 +1,43 @@
+
+<div class="pageContent">
+	<form method="post" action="__URL__/update/navTabId/listaction/callbackType/closeCurrent"  class="pageForm required-validate" 
+		onsubmit="return validateCallback(this,dialogAjaxDone);"><?php  //窗体组件采用这个 iframeCallback(this, navTabAjaxDone); ?>
+		<input type="hidden" name="action_id" value="{$vo.action_id}"/>
+		<div class="pageFormContent" layoutH="60">
+			
+			<dl>
+			    <dt>操作id:</dt>
+				<dd><input type="text"   style="width:100%" name="action_id" value="{$vo.action_id}"  readonly></dd>
+			</dl>
+			<dl>
+				<dt>操作名称:</dt>
+				<dd><input type="text" class="required"  style="width:100%" name="action_name" value="{$vo.action_name}"/></dd>
+			</dl>
+			
+			<dl>
+				<dt>操作控制器名称:</dt>
+				<dd><input type="text" class="required"  style="width:100%" name="action_controller" value="{$vo.action_controller}"/></dd>
+			</dl>
+			
+			  <dl>
+				<dt>操作名称:</dt>
+				<dd><input type="text" class="required"  style="width:100%" name="action_func" value="{$vo.action_func}"/></dd>
+			</dl> 
+			   
+	      
+			
+         
+		  
+		  </div>
+			
+		
+		
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+</div>
+

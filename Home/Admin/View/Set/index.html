@@ -1,0 +1,84 @@
+<style>
+	.set_table{
+		width:100%;
+		padding:10px;
+	}
+	.set_table tr{
+		border-bottom:1px solid #555;
+	}
+	.set_table tr td{
+		padding:5px 0;
+	}
+	.set_name{
+		font-weight: 700;
+		color:#555;
+		width:200px;
+	}
+	.set_content{
+		width:400px;
+	}
+	.set_img{
+		width:60px;
+	}
+	
+
+</style>
+<div class="pageContent">
+	<form method="post" action="__URL__/update/navTabId/listset/callbackType/closeCurrent"  class="pageForm required-validate" 
+		onsubmit="return iframeCallback(this, navTabAjaxDone);"  enctype="multipart/form-data" ><?php  //窗体组件采用这个 iframeCallback(this, navTabAjaxDone); ?>
+		<table class="set_table">
+			<tr>
+				<td class="set_name">{$set_info[0]['set_name']}：</td>
+				<td colspan="2" class="set_content">
+					<input type="text" name="set_content[]" value="{$set_info[0]['set_content']}" />
+					<input type="hidden" name="set_id[]" value="{$set_info[0]['set_id']}" />
+				</td>
+			</tr>
+			<tr>
+				<td class="set_name">{$set_info[1]['set_name']}：</td>
+				<td colspan="2" class="set_content">
+					<input type="text" name="set_content[]" value="{$set_info[1]['set_content']}"/>
+					<input type="hidden" name="set_id[]" value="{$set_info[1]['set_id']}" />
+				</td>
+			</tr>
+			<tr>
+				<td class="set_name">{$set_info[2]['set_name']}：</td>
+				<td colspan="2" class="set_content">
+					<input type="text" name="set_content[]" value="{$set_info[2]['set_content']}"/>
+					<input type="hidden" name="set_id[]" value="{$set_info[2]['set_id']}" />
+				</td>
+			</tr>
+			<tr>
+				<td class="set_name">{$set_info[3]['set_name']}：</td>
+				<td colspan="2" class="set_content">
+					<input type="text" name="set_content[]" value="{$set_info[3]['set_content']}"/>
+					<input type="hidden" name="set_id[]" value="{$set_info[3]['set_id']}" />
+				</td>
+			</tr>
+			<tr>
+				<td class="set_name">{$set_info[4]['set_name']}：</td>
+				<td class="set_content">
+					<input type="file" name="logo_img" />
+					<input type="hidden" name="set_content[]" value="{$set_info[4]['set_content']}"/>
+					<input type="hidden" name="set_id[]" value="{$set_info[4]['set_id']}" />
+				</td>
+				<td><img src="__UPLOAD__{$set_info[4]['set_content']}" class="set_img"></td>
+			</tr>
+			<tr>
+				<td class="set_name">{$set_info[5]['set_name']}：</td>
+				<td  class="set_content">
+					<input type="file" name="weixin_img" />
+					<input type="hidden" name="set_content[]" value="{$set_info[5]['set_content']}"/>
+					<input type="hidden" name="set_id[]" value="{$set_info[5]['set_id']}" />
+				</td>
+				<td><img src="__UPLOAD__{$set_info[5]['set_content']}" class="set_img"></td>
+			</tr>
+		</table>
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+</div>

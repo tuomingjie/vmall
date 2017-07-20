@@ -1,0 +1,756 @@
+[ 2017-07-04T10:12:26+08:00 ] ::1 /vmallshop/index.php/Home/Product/index/g/11.html
+ERR: 模板不存在:./Home/Home/View/Product/index.html
+
+[ 2017-07-04T10:33:12+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE vmall_goods [ RunTime:0.005001s ]
+SQL: SELECT `goods_name`,`goods_tiny_pic` FROM `vmall_goods` WHERE `goods_id` = 13  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: str D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 97 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-04T10:45:38+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: DESCRIBE vmall_goods [ RunTime:0.005000s ]
+SQL: SELECT `goods_name`,`goods_tiny_pic` FROM `vmall_goods` WHERE `goods_id` = 13  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: str D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 97 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-07-04T10:47:56+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_goods [ RunTime:0.005001s ]
+SQL: SELECT `goods_name`,`goods_tiny_pic` FROM `vmall_goods` WHERE `goods_id` = 13  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: str D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 97 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-04T10:53:54+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE vmall_goods [ RunTime:0.007000s ]
+SQL: SELECT `goods_name`,`goods_tiny_pic` FROM `vmall_goods` WHERE `goods_id` = 13  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: str D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 97 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-04T10:54:07+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-04T10:54:14+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-04T10:54:18+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-07-04T10:54:30+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-07-04T10:54:54+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-07-04T10:58:28+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-04T11:00:21+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-04T11:01:21+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-07-04T11:01:24+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-07-04T11:04:48+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-07-04T11:07:26+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-04T11:09:23+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-07-04T11:11:33+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-04T11:11:58+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-04T11:12:05+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-04T11:14:57+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-04T11:16:28+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-04T11:16:30+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-07-04T11:17:17+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-04T11:19:29+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-07-04T11:22:11+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-07-04T11:24:19+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-04T11:26:21+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-07-04T11:28:39+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-04T11:29:58+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-04T11:30:46+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-04T11:31:20+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-04T11:31:39+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-04T14:36:00+08:00 ] ::1 /vmallshop/index.php/Home/Login/remoteLogin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.007001s ]
+SQL: SELECT * FROM `vmall_user` WHERE `user_name` = 'tset' AND `user_pwd` = '21232f297a57a5a743894a0e4a801fc3'  [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: info D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-04T14:36:49+08:00 ] ::1 /vmallshop/index.php/Home/Login/remoteLogin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.005001s ]
+SQL: SELECT * FROM `vmall_user` WHERE `user_name` = 'tesgsd' AND `user_pwd` = '21232f297a57a5a743894a0e4a801fc3'  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: info D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-04T14:39:57+08:00 ] ::1 /vmallshop/index.php/Home/Login/remoteLogin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.006001s ]
+SQL: SELECT * FROM `vmall_user` WHERE `user_name` = 'tdfd' AND `user_pwd` = '21232f297a57a5a743894a0e4a801fc3'  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: info D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-04T14:40:22+08:00 ] ::1 /vmallshop/index.php/Home/Login/remoteLogin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.006000s ]
+SQL: SELECT * FROM `vmall_user` WHERE `user_name` = 'tdfdfdsf' AND `user_pwd` = '21232f297a57a5a743894a0e4a801fc3'  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: info D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-04T14:40:37+08:00 ] ::1 /vmallshop/index.php/Home/Login/remoteLogin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.005001s ]
+SQL: SELECT * FROM `vmall_user` WHERE `user_name` = 'fdsaf' AND `user_pwd` = '14c879f3f5d8ed93a09f6090d77c2cc3'  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: info D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-04T14:41:00+08:00 ] ::1 /vmallshop/index.php/Home/Login/remoteLogin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.005000s ]
+SQL: SELECT * FROM `vmall_user` WHERE `user_name` = 'test001' AND `user_pwd` = 'e10adc3949ba59abbe56e057f20f883e'  [ RunTime:0.000000s ]
+SQL: UPDATE `vmall_user` SET `user_last_time`=1499150460,`user_last_ip`=0 WHERE `user_id` = 24 [ RunTime:0.030002s ]
+NOTIC: [8] Undefined index: info D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-04T14:42:41+08:00 ] ::1 /vmallshop/index.php/Home/Login/remoteLogin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.005000s ]
+SQL: SELECT * FROM `vmall_user` WHERE `user_name` = 'test001' AND `user_pwd` = 'e10adc3949ba59abbe56e057f20f883e'  [ RunTime:0.000000s ]
+SQL: UPDATE `vmall_user` SET `user_last_time`=1499150561,`user_last_ip`=0 WHERE `user_id` = 24 [ RunTime:0.043002s ]
+NOTIC: [8] Undefined index: info D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-04T14:42:54+08:00 ] ::1 /vmallshop/index.php/Home/Member/index.html
+ERR: 模板不存在:./Home/Home/View/Member/index.html
+
+[ 2017-07-04T14:52:27+08:00 ] ::1 /vmallshop/index.php/Home/Login/remoteLogin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.005000s ]
+SQL: SELECT * FROM `vmall_user` WHERE `user_name` = 'test001' AND `user_pwd` = 'e10adc3949ba59abbe56e057f20f883e'  [ RunTime:0.000000s ]
+SQL: UPDATE `vmall_user` SET `user_last_time`=1499151147,`user_last_ip`=0 WHERE `user_id` = 24 [ RunTime:0.049003s ]
+NOTIC: [8] Undefined index: info D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-04T14:52:59+08:00 ] ::1 /vmallshop/index.php/Home/Member/index.html
+ERR: 模板不存在:./Home/Home/View/Member/index.html
+
+[ 2017-07-04T15:03:48+08:00 ] ::1 /vmallshop/index.php/Home/Login/remoteLogin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.005000s ]
+SQL: SELECT * FROM `vmall_user` WHERE `user_name` = 'admin' AND `user_pwd` = '21232f297a57a5a743894a0e4a801fc3'  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: info D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-04T15:03:50+08:00 ] ::1 /vmallshop/index.php/Home/Login/remoteLogin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.005000s ]
+SQL: SELECT * FROM `vmall_user` WHERE `user_name` = 'admin' AND `user_pwd` = '21232f297a57a5a743894a0e4a801fc3'  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: info D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-04T15:04:27+08:00 ] ::1 /vmallshop/index.php/Home/Login/remoteLogin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.005000s ]
+SQL: SELECT * FROM `vmall_user` WHERE `user_name` = 'test001' AND `user_pwd` = 'e10adc3949ba59abbe56e057f20f883e'  [ RunTime:0.000000s ]
+SQL: UPDATE `vmall_user` SET `user_last_time`=1499151867,`user_last_ip`=0 WHERE `user_id` = 24 [ RunTime:0.036002s ]
+NOTIC: [8] Undefined index: info D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpStudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-04T15:06:59+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-07-04T15:21:08+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-04T15:22:03+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-07-04T15:23:32+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-04T15:27:35+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-07-04T15:33:07+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-04T15:34:13+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-04T15:34:22+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-07-04T16:42:10+08:00 ] ::1 /vmallshop/index.php/Home/Member/index.html
+ERR: 模板不存在:./Home/Home/View/Member/index.html
+
+[ 2017-07-04T16:42:12+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-04T16:42:14+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-04T16:42:20+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpStudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-04T17:04:33+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-04T17:05:26+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-04T17:08:25+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-04T17:08:49+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-04T17:10:10+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-04T17:11:08+08:00 ] ::1 /vmallshop/index.php/Home/Product/index/g/11.html
+ERR: 模板不存在:./Home/Home/View/Product/index.html
+
+[ 2017-07-04T17:11:29+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-04T17:44:53+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-04T18:21:46+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-04T18:22:27+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-04T18:22:29+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-04T18:24:05+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-04T18:24:17+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-04T18:37:11+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 124 行.
+NOTIC: [8] Undefined variable: str D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 125 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015600s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015600s ]
+

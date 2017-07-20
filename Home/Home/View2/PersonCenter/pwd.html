@@ -1,0 +1,201 @@
+<!doctype html>
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>密码管理_个人中心_信源电商商城</title>
+<link href="__PUBLIC__/Css/person/ec.core.css" rel="stylesheet" type="text/css">
+<link href="__PUBLIC__/Css/person/main.css" rel="stylesheet" type="text/css">
+<js href="__JQUERY_" />
+</head>
+
+<body>
+<include file="Public/pinkheader"/>
+<include file="Public/searchheader"/>
+<include file="public/naver"/>
+<div class="hr-10"></div>
+<div class="g">
+	<!--面包屑 -->
+	<div class="breadcrumb-area icon-breadcrumb fcn">您现在的位置：
+		<a href="{:U('Index/index')}" title="首页">首页</a>&nbsp;&gt;&nbsp;
+		<span id="personCenter"><a href="{:U('Member/index')}" title="个人中心">个人中心</a></span>
+		<span id="pathPoint">&nbsp;&gt;&nbsp;</span>
+		<b id="pathTitle">密码管理</b>
+	</div>
+</div>
+<div class="hr-15"></div>
+<div class="g">
+    <div class="fr u-4-5"><!--栏目 -->
+	<div class="part-area clearfix">
+		<div class="fl">
+			<h3 class="password-title"><span>密码管理</span></h3>
+		</div>
+	</div>
+	<div class="hr-35"></div>
+	<!--密码管理 -->
+	<form id="password-list"  onsubmit="return false;" >
+		<div class="password-area">
+			<div class="form-edit-area">
+				<div class="form-edit-table">
+					<table border="0" cellpadding="0" cellspacing="0">
+						<tbody>
+							<tr>
+								<th><span class="required">*</span>当前密码：</th>
+								<td><label style="display: block; position: absolute; cursor: text; float: left; z-index: 2; color: rgb(153, 153, 153);" class="text vam span-150" for="input_label_0"></label>
+								<input name="oldPassword" type="password" maxlength="16" class="text vam span-150"  id="input_label_0" style="z-index: 1;" placeholder="请输入当前密码">
+								</td>
+							</tr>
+							<tr>
+								<th><span class="required">*</span>新密码：</th>
+								<td><label style="display: block; position: absolute; cursor: text; float: left; z-index: 2; color: rgb(153, 153, 153);" class="text vam span-150" for="input_label_1">
+								</label>
+								
+								<input name="newPassword" type="password" maxlength="16" class="text vam span-150"  id="input_label_1" style="z-index: 1;" placeholder="请输入新密码">
+								</td>
+							</tr>
+							<tr>
+								<th><span class="required">*</span>重复新密码：</th>
+								<td><label style="display: block; position: absolute; cursor: text; float: left; z-index: 2; color: rgb(153, 153, 153);" class="text vam span-150" for="input_label_2"></label>
+								
+								<input name="renewPassword" type="password" maxlength="16" class="text vam span-150"  id="input_label_2" style="z-index: 1;" placeholder="重复新密码">
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="form-edit-action">
+					<input type="button" class="button-replace vam" id="pwd_submit" value="&nbsp;">
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+
+
+<div class="fl u-1-5">
+<!--左边菜单 -->
+	<div class="mc-menu-area">
+		<div class="h"><a href="#" class="button-go-mc" title="个人中心"><span>个人中心</span></a></div>
+		<div class="b">
+			<ul>
+        	<li>
+        	<h3>订单中心</h3>
+            	<ol>
+                	<li id="li-order"><a href="{:U('OrderCenter/index')}" title="我的订单"><span>我的订单</span></a></li>
+                   
+                </ol>
+            </li>
+            <li>
+            <h3>个人中心</h3>
+            	<ol>
+                	<li id="li-account"><a href="{:U('PersonCenter/index')}" title="个人信息"><span>个人信息</span></a></li>
+                    <li id="li-security" class='current'><a href="{:U('PersonCenter/pwd')}" title="密码管理"><span>密码管理</span></a></li>
+                    <li id="li-balance" ><a href="{:U('PersonCenter/account')}" title="账户余额"><span>账户余额</span></a></li>
+                    <li id="li-myAddress"><a href="{:U('PersonCenter/address')}" title="收货信息"><span>收货信息</span></a></li>
+					<li id="li-enterprise" class="hide"></li>
+                </ol>
+            </li>
+            <li>
+            <h3>社区中心</h3>
+            	<ol>
+                	<li id="li-prdRemark"><a href="{:U('Comment/index')}" title="商品评价"><span>商品评价</span></a></li>
+                </ol>
+            </li>
+        </ul>
+        </ul>
+		</div>
+		<div class="f"></div>
+	</div>
+</div>
+</div>
+<div class="hr-60"></div>
+<script text='text/javascript'>
+    $(function(){
+	     var pwd_submit=$("#pwd_submit");
+		 var url="{:U('Login/index')}";
+		 pwd_submit.click(function(){
+		     var status=1;
+		     var old_pwd=$("#input_label_0").val();
+			 var new_pwd=$("#input_label_1").val();
+			 var align_pwd=$("#input_label_2").val();
+			  
+			 if(!(/^(\d|[a-z]){6,32}$/i.test(old_pwd))){
+			     status=0;
+				 alert("旧密码不符合要求格式");
+				 return ;
+			 }
+			 if(new_pwd!=align_pwd){
+			     alert("新密码两次不相等");
+			     status=0;
+				 return;
+			 }
+			 
+		    if(!(/^(\d|[a-z]){6,32}$/i.test(new_pwd))){
+			     status=0;
+				 alert("新密码不符合要求格式");
+				 return ;
+			}
+			 
+			if(status==1){
+			  
+			     $.ajax({
+				     url:"{:U('PersonCenter/modifierPwd')}",
+					 type:"POST",
+					 data:{
+					    'old_pwd':old_pwd,
+						'new_pwd':new_pwd,
+					 
+					 },
+					 success:function(responseText,status,xhr){
+					     if(status=="success"){
+						     if(responseText==1){
+							     alert("修改成功,请重新登录");
+								 window.location.href=url;
+								 
+							 }else{
+							     alert("修改失败");
+							 
+							 }
+						 
+						 }else{
+						     alert("修改失败");
+						 }
+					 
+					 },
+					 error:function(){
+					     alert("修改失败！");
+					 
+					 },
+					 timeout:60*1000,
+				 
+				 
+				 
+				 });
+			
+			
+			
+			} 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 });
+	
+	
+	
+	
+	
+	
+	
+	
+	});
+
+
+
+
+</script>
+<!--底部 -->
+	<include file="Public/footer"/>
+
+<div id="AutocompleteContainter_7fce7" style="position: absolute; z-index: 9999; top: 93px; left: 556.5px;"><div class="autocomplete-w1"><div class="autocomplete" id="Autocomplete_7fce7" style="display: none; width: 315px; max-height: 400px;"></div></div></div></body></html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<include file="Public/head"/>
+	<link rel="stylesheet" href="__PUBLIC__/home/css/css.css">
+	<style>
+		.company-main  .side-nav .side-li a{color:green;}
+	</style>
+</head>
+<body>
+  <include file="Public/top"/>
+ <!--  header end -->
+  <div class="inx-content-bd">
+      <div class="company-main clearfix">
+          <div class="left-con">
+              <h3>平台资讯</h3>
+			  
+              <ul class="side-nav">
+				<foreach name="info_list" item="v" key="k">
+                  <li <if condition="$vo.info_id eq $v.info_id ">class="side-li"</if>   ><a href="{:U('Info/index',array('info_id'=>$v['info_id']))}">{$v.info_name}</a></li>
+                </foreach> 
+              </ul>
+          </div>
+          <div class="right-con">
+              <div class="top-head">
+                  <h3>{$vo.info_name}</h3>
+                  <div class="r-nav">
+					<foreach name="info_list" item="v" key="k">
+						<if condition="$vo.info_id neq $v.info_id ">
+							<a href="{:U('Info/index',array('info_id'=>$v['info_id']))}">{$v.info_name}</a>
+							<span>/</span>
+						</if>
+                    </foreach>       
+                  </div>
+              </div>
+              <div class="text">
+                  {$vo.info_content}
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- footer star -->
+ <include file="Public/footer"/>
+  <!-- footer end-->
+<script type="text/javascript" src="__PUBLIC__/home/js/common.js"></script>
+<script>
+    $(document).ready(function(){
+	
+	  $('.category-list').attr('class','category-list none');
+	
+	
+      $(".nav-all").hover(function(){
+        $(".category-list").removeClass("none");
+        $(".category-list").addClass("block");
+      });
+      $(".nav-all").mouseleave(function(){
+        $(".category-list").removeClass("block");
+        $(".category-list").addClass("none");
+      });
+    });
+</script>
+
+  <!-- <script>
+      $(".mod_cate_hd").click(function(){
+      $(".category-list").toggleClass("block");
+    });
+  </script> -->
+</body>
+</html>

@@ -1,0 +1,288 @@
+[ 2017-07-10T09:07:10+08:00 ] ::1 /vmallshop/index.php/Mobile/Login/loginaction
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.093600s ]
+SQL: SELECT * FROM `vmall_user` WHERE `user_name` = 'aaaaaa' AND `user_pwd` = '96e79218965eb72c92a549dd5a330112'  [ RunTime:0.000000s ]
+SQL: UPDATE `vmall_user` SET `user_last_time`=1499648830,`user_last_ip`=0 WHERE `user_id` = 30 [ RunTime:0.109200s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-10T09:07:37+08:00 ] ::1 /vmallshop/index.php/Mobile/User/editaction
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_user` WHERE `user_id` = 30 LIMIT 1   [ RunTime:0.000000s ]
+SQL: UPDATE `vmall_user` SET `true_name`='张三',`user_email`='9758432598@qq.com',`user_sex`=1 WHERE `user_id` = 30 [ RunTime:0.046800s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-10T09:07:44+08:00 ] ::1 /vmallshop/index.php/Mobile/User/editaction
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.010000s ]
+SQL: SELECT * FROM `vmall_user` WHERE `user_id` = 30 LIMIT 1   [ RunTime:0.000000s ]
+SQL: UPDATE `vmall_user` SET `true_name`='张三',`user_email`='9758432598@qq.com',`user_sex`=1 WHERE `user_id` = 30 [ RunTime:0.032200s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-10T09:08:18+08:00 ] ::1 /vmallshop/index.php/Mobile/User/editaction
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.031200s ]
+SQL: SELECT * FROM `vmall_user` WHERE `user_id` = 30 LIMIT 1   [ RunTime:0.000000s ]
+SQL: UPDATE `vmall_user` SET `true_name`='张三',`user_email`='9758432598@qq.com',`user_sex`=0 WHERE `user_id` = 30 [ RunTime:0.046800s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-10T09:20:40+08:00 ] ::1 /vmallshop/index.php/Mobile/Order/__CONTROLLER__/index?sckey=
+ERR: 非法操作:__CONTROLLER__
+
+[ 2017-07-10T09:22:30+08:00 ] ::1 /vmallshop/index.php/Mobile/Order/__CONTROLLER__/index?sckey=
+ERR: 非法操作:__CONTROLLER__
+
+[ 2017-07-10T09:22:33+08:00 ] ::1 /vmallshop/index.php/Mobile/Order/__CONTROLLER__/index?sckey=
+ERR: 非法操作:__CONTROLLER__
+
+[ 2017-07-10T09:25:04+08:00 ] ::1 /vmallshop/index.php/Mobile/Order/__CONTROLLER__/index
+ERR: 非法操作:__CONTROLLER__
+
+[ 2017-07-10T09:27:09+08:00 ] ::1 /vmallshop/index.php/Mobile/Order/index?sckey=%27payment_status%27&sta=0
+ERR: 错误的查询条件:['payment_status'=>0]
+
+[ 2017-07-10T09:29:27+08:00 ] ::1 /vmallshop/index.php/Mobile/Order/index?sckey=$sckey&sta=1
+ERR: 错误的查询条件:[$sckey=>1]
+
+[ 2017-07-10T10:12:19+08:00 ] ::1 /vmallshop/index.php/Mobile/User/editaction
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.011001s ]
+SQL: SELECT * FROM `vmall_user` WHERE `user_id` = 30 LIMIT 1   [ RunTime:0.001000s ]
+SQL: UPDATE `vmall_user` SET `true_name`='张三',`user_email`='9758432598@qq.com',`user_sex`=1 WHERE `user_id` = 30 [ RunTime:0.026001s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-10T11:55:02+08:00 ] ::1 /vmallshop/index.php/Mobile/LoginSupplier/loginaction
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_supplier [ RunTime:0.011001s ]
+SQL: SELECT * FROM `vmall_supplier` WHERE `name` = 'test001' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-10T12:20:51+08:00 ] ::1 /vmallshop/index.php/Mobile/Login/loginout
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-10T12:20:53+08:00 ] ::1 /vmallshop/index.php/Mobile/Login/loginout
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-10T12:21:13+08:00 ] ::1 /vmallshop/index.php/Mobile/Login/loginaction
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.010001s ]
+SQL: SELECT * FROM `vmall_user` WHERE `user_name` = 'test001' AND `user_pwd` = 'e10adc3949ba59abbe56e057f20f883e'  [ RunTime:0.000000s ]
+SQL: UPDATE `vmall_user` SET `user_last_time`=1499660473,`user_last_ip`=0 WHERE `user_id` = 24 [ RunTime:0.050002s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-10T12:21:57+08:00 ] ::1 /vmallshop/index.php/Mobile/LoginSupplier/loginaction
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_supplier [ RunTime:0.010000s ]
+SQL: SELECT * FROM `vmall_supplier` WHERE `name` = 'test001' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-10T14:05:06+08:00 ] ::1 /vmallshop/index.php/Mobile/Login/loginout
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-10T14:05:27+08:00 ] ::1 /vmallshop/index.php/Mobile/Login/loginaction
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.041002s ]
+SQL: SELECT * FROM `vmall_user` WHERE `user_name` = 'aaaaaa' AND `user_pwd` = '96e79218965eb72c92a549dd5a330112'  [ RunTime:0.023002s ]
+SQL: UPDATE `vmall_user` SET `user_last_time`=1499666727,`user_last_ip`=0 WHERE `user_id` = 30 [ RunTime:0.059003s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-10T14:39:20+08:00 ] ::1 /vmallshop/index.php/Mobile/Login/loginout
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-10T14:40:05+08:00 ] ::1 /vmallshop/index.php/Mobile/Login/loginaction
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.031001s ]
+SQL: SELECT * FROM `vmall_user` WHERE `user_name` = 'test005' AND `user_pwd` = 'e10adc3949ba59abbe56e057f20f883e'  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-10T14:40:42+08:00 ] ::1 /vmallshop/index.php/Mobile/Login/loginaction
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-10T14:41:06+08:00 ] ::1 /vmallshop/index.php/Mobile/Login/loginaction
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.061003s ]
+SQL: SELECT * FROM `vmall_user` WHERE `user_name` = 'test003' AND `user_pwd` = 'e10adc3949ba59abbe56e057f20f883e'  [ RunTime:0.001000s ]
+SQL: UPDATE `vmall_user` SET `user_last_time`=1499668866,`user_last_ip`=0 WHERE `user_id` = 27 [ RunTime:0.038002s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-10T15:02:22+08:00 ] ::1 /vmallshop/index.php/Mobile/LoginSupplier/loginaction
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_supplier [ RunTime:0.037002s ]
+SQL: SELECT * FROM `vmall_supplier` WHERE `name` = 'test001' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-10T15:30:20+08:00 ] ::1 /vmallshop/index.php/Mobile/Supplier/Order
+ERR: Think\Controller:_search方法不存在！
+
+[ 2017-07-10T15:31:15+08:00 ] ::1 /vmallshop/index.php/Mobile/Supplier/Order
+ERR: Think\Controller:_list方法不存在！
+
+[ 2017-07-10T15:41:12+08:00 ] ::1 /vmallshop/index.php/Mobile/Supplier/Order
+ERR: Think\Controller:_search方法不存在！
+
+[ 2017-07-10T15:49:50+08:00 ] ::1 /vmallshop/index.php/Mobile/Supplier/Order
+ERR: Think\Model:filed方法不存在！
+
+[ 2017-07-10T16:44:10+08:00 ] ::1 /vmallshop/index.php/Mobile/Supplier/Order
+ERR: 错误的查询条件:[addresss_id=>]
+
+[ 2017-07-10T16:44:33+08:00 ] ::1 /vmallshop/index.php/Mobile/Supplier/Order
+ERR: 错误的查询条件:[address_id=>]
+
+[ 2017-07-10T16:46:32+08:00 ] ::1 /vmallshop/index.php/Mobile/Supplier/Order
+ERR: 错误的查询条件:[address_id=>9]
+
+[ 2017-07-10T16:59:08+08:00 ] ::1 /vmallshop/index.php/Mobile/Supplier/Order
+ERR: 错误的查询条件:[goods_id=>3]
+
+[ 2017-07-10T18:08:59+08:00 ] ::1 /vmallshop/index.php/Mobile/Supplier/edit
+ERR: 非法操作:edit
+
+[ 2017-07-10T18:10:50+08:00 ] ::1 /vmallshop/index.php/Mobile/Supplier/changepwd
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.028001s ]
+SQL: SELECT * FROM `vmall_user` WHERE `user_id` = 27 LIMIT 1   [ RunTime:0.001000s ]
+ERR: 错误的查询条件:[id=>27]
+
+[ 2017-07-10T18:12:07+08:00 ] ::1 /vmallshop/index.php/Mobile/Supplier/changepwd
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE vmall_supplier [ RunTime:0.037003s ]
+SQL: SELECT * FROM `vmall_supplier` WHERE `id` = 15 LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: user_id D:\phpstudy\WWW\vmallshop\Home\Mobile\Controller\SupplierController.class.php 第 122 行.
+SQL: DESCRIBE vmall_user [ RunTime:0.040002s ]
+ERR: 错误的查询条件:[id=>]
+
+[ 2017-07-10T18:12:19+08:00 ] ::1 /vmallshop/index.php/Mobile/Supplier/changepwd
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_supplier [ RunTime:0.041003s ]
+SQL: SELECT * FROM `vmall_supplier` WHERE `id` = 15 LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: user_id D:\phpstudy\WWW\vmallshop\Home\Mobile\Controller\SupplierController.class.php 第 122 行.
+SQL: DESCRIBE vmall_user [ RunTime:0.038002s ]
+ERR: 错误的查询条件:[id=>]
+
+[ 2017-07-10T18:12:53+08:00 ] ::1 /vmallshop/index.php/Mobile/Supplier/changepwd
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_supplier [ RunTime:0.041003s ]
+SQL: SELECT * FROM `vmall_supplier` WHERE `id` = 15 LIMIT 1   [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.037002s ]
+ERR: 错误的查询条件:[id=>15]
+
+[ 2017-07-10T18:14:26+08:00 ] ::1 /vmallshop/index.php/Mobile/Supplier/changepwd
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_supplier [ RunTime:0.037002s ]
+SQL: SELECT * FROM `vmall_supplier` WHERE `id` = 15 LIMIT 1   [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.041002s ]
+ERR: 错误的查询条件:[id=>15]
+
+[ 2017-07-10T18:17:48+08:00 ] ::1 /vmallshop/index.php/Mobile/Supplier/changepwd
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_supplier [ RunTime:0.049003s ]
+SQL: SELECT * FROM `vmall_supplier` WHERE `id` = 15 LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `password` FROM `vmall_supplier` WHERE `id` = 15 LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+

@@ -1,0 +1,40 @@
+
+<div class="pageContent">
+	<form method="post" action="__URL__/update/navTabId/listregion/callbackType/closeCurrent"  class="pageForm required-validate" 
+		onsubmit="return validateCallback(this,dialogAjaxDone);"><?php  //窗体组件采用这个 iframeCallback(this, navTabAjaxDone); ?>
+		<input type="hidden" name="id" value="{$vo.id}"/>
+		<div class="pageFormContent" layoutH="60">
+			<!-- <dl>
+				<dt>编号ID:</dt>
+				<dd><input type="text" class="required"  style="width:100%" name="region_id" value="{$vo.region_id}"/></dd>
+			</dl>	 -->
+			<input type="hidden" class="required"  style="width:100%" name="parent_id"  value="{$vo.parent_id}"/>
+			<dl>
+				<dt>父级ID:</dt>
+				<dd><input type="text" class="required"  style="width:100%" name="parent_id"  value="{$vo.parent_id}"/></dd>
+			</dl>	
+			
+			<dl>
+				<dt>地区名称:</dt>
+				<dd><input type="text" class="required"  style="width:100%" name="region_name"  value="{$vo.region_name}"/></dd>
+			</dl>
+			<dl>
+				<dt>等级:</dt>
+			   <select class="combox required" name="region_type" id="w_combox_city" ref="w_combox_area" >
+		        <option value="0" <if condition="$vo.region_type eq 0" >selected</if>>---国家---</option>
+				<option value="1" <if condition="$vo.region_type eq 1" >selected</if>>---省级---</option>
+				<option value="2" <if condition="$vo.region_type eq 2" >selected</if>>---市级---</option>
+				<option value="3" <if condition="$vo.region_type eq 3" >selected</if>>---区域---</option>
+			   </select>
+			</dl>
+		</div>
+		
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+</div>
+

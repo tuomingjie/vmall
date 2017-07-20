@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<include file="Public/head"/>
+	<link rel="stylesheet" href="__PUBLIC__/home/css/index.css">
+	<script type="text/javascript" src="__PUBLIC__/home/js/ss.js"></script>
+</head>
+<body>
+  <include file="Public/top"/>
+  <div class="barner-box">
+    <div class="flexslider">
+      <ul class="slides">  
+		<foreach name="ad_info" item="vo" key="k">
+			<if condition="$k lt 3 ">
+				<li style="background:url(__UPLOAD__{$vo.index_sale_img}) 50% 0 no-repeat;"><a href="#"></a></li>
+			</if>
+		</foreach>
+      </ul>
+    </div>
+    <div class="user-info-bd">
+        <div class="user-info-box">
+          <div class="top-pic">
+            <a href="" class="user-pic"><img src="__PUBLIC__/Home/images/user.png"></a>
+           </div>
+           <div class="welcome">hi,欢迎登录邮乐印平台！</div>
+           <a href="" class="login-btn">登录</a>
+        </div>
+        <div class="user-info-nav">
+            <h3>快捷入口</h3>
+            <ul class="k-list">
+                <li>
+                    <a href="">
+                        <i><img src="__PUBLIC__/Home/images/k_ico01.png"></i>
+                        <p>我的浏览</p>
+                    </a>
+                </li>
+                <li style="background: none;">
+                    <a href="">
+                        <i><img src="__PUBLIC__/Home/images/k_ico02.png"></i>
+                        <p>我的收藏</p>
+                    </a>
+                </li>
+                <li style="border-bottom: none;">
+                    <a href="">
+                        <i><img src="__PUBLIC__/Home/images/k_ico03.png"></i>
+                        <p>我的订单</p>
+                    </a>
+                </li>
+                <li style="border: none;background: none;">
+                    <a href="">
+                        <i><img src="__PUBLIC__/Home/images/k_ico04.png"></i>
+                        <p>我的分享</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- banner end -->
+  </div>
+  <div class="inx-content-bd">
+    <div class="yz-content">
+      <div class="w1200 clearfix">
+          <div class="inx-hot-pro">
+              <div class="hot-pro-l">
+                <div class="top-head">
+                  <a href="">
+                    <span>信源热销产品</span>
+                    <i><img src="__PUBLIC__/Home/images/hot.png"></i>
+                  </a>
+                </div>
+                <div class="f-box">
+                    <h3><a href="{:U('Product/index',array('g'=>$topHot[0]['goods_id']))}">{$topHot[0]['index_sale_title']}</a></h3>
+                    <div class="pro">
+                        <div class="text">{$topHot[0]['index_sale_keywords']}</div>
+                        <div class="img"><img src="__UPLOAD__{$topHot[0]['index_sale_img']}"></div>
+                    </div>
+                </div>
+              </div>
+              <div class="hot-pro-r">
+                  <ul>
+                      <li>
+                          <div class="info">
+                              <h3><a href="{:U('Product/index',array('g'=>$topHot[1]['goods_id']))}">{$topHot[1]['index_sale_title']}</a></h3>
+                              <a href="{:U('Product/index',array('g'=>$topHot[1]['goods_id']))}" class="piang-g">抢购</a>
+                          </div>
+                          <a href="{:U('Product/index',array('g'=>$topHot[1]['goods_id']))}" class="pic"><img src="__UPLOAD__{$topHot[1]['index_sale_img']}"></a>
+                      </li>
+                      <li>
+                          <div class="info">
+                              <h3><a href="{:U('Product/index',array('g'=>$topHot[2]['goods_id']))}">{$topHot[2]['index_sale_title']}</a></h3>
+                              <a href="{:U('Product/index',array('g'=>$topHot[2]['goods_id']))}" class="piang-g">抢购</a>
+                          </div>
+                          <a href="{:U('Product/index',array('g'=>$topHot[2]['goods_id']))}" class="pic"><img src="__UPLOAD__{$topHot[2]['index_sale_img']}"></a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+          <div class="inx-new-pro">
+              <div class="l-new">
+                   <h3><a href="">新品上市</a></h3>
+                   <a href="{:U('Product/index',array('g'=>$newProduct[0]['goods_id']))}" class="new">{$newProduct[0]['index_sale_title']}</a>
+                   <div class="pro">
+                        <a href="{:U('Product/index',array('g'=>$newProduct[0]['goods_id']))}" class="look-btn">查看详情 ></a>
+                        <div class="img">
+                            <a href="{:U('Product/index',array('g'=>$newProduct[0]['goods_id']))}"><img src="__UPLOAD__{$newProduct[0]['index_sale_img']}"></a>
+                        </div>
+                   </div>
+              </div>
+              <div class="r-new-pro">
+                  <ul>
+					<foreach name="newProduct" item="vo" key="k">
+						<if condition="$k gt 0 && $k lt 5 ">
+						  <li>
+							  <div class="info">
+								  <h3><a href="{:U('Product/index',array('g'=>$vo['goods_id']))}">{$vo.index_sale_title}</a></h3>
+								  <a href="{:U('Product/index',array('g'=>$vo['goods_id']))}" class="look-btn">查看详情 ></a>
+							  </div>
+							  <a href="{:U('Product/index',array('g'=>$vo['goods_id']))}" class="img"><img src="__UPLOAD__{$vo.index_sale_img}"></a>
+						  </li>
+						</if>
+                    </foreach>  
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <div class="w1200 mt15">
+          <div class="inx-titel">
+              <div class="l-titel">
+                  <span class="tit-1"><em>年</em>历 新春礼包 /</span>
+                  <span class="tit-2">New Year's spring gift package</span>
+              </div>
+              <ul class="r-nav">
+                  <li><a href="">吊牌</a></li>
+                  <li><a href="">老黄历</a></li>
+                  <li><a href="">挂历</a></li>
+                  <li><a href="">吊牌</a></li>
+                  <li><a href="">老黄历</a></li>
+                  <li><a href="">挂历</a></li>
+              </ul>
+          </div>
+          <div class="f-pro-list-bd">
+              <ul class="l-pro-list">
+				<foreach name="calendarlist" item="vo" key="k">
+					<if condition="$k lt 5 ">
+						<if condition="$k % 2 eq 0 ">
+						  <li>
+							  <a href="{:U('Product/index',array('g'=>$vo['goods_id']))}" class="pic"><img src="__UPLOAD__{$vo.index_sale_img}"></a>
+							  <a href="{:U('Product/index',array('g'=>$vo['goods_id']))}" class="titbtn fl">{$vo.index_sale_title}</a>
+						  </li>
+						<else/>
+						  <li>
+							  <a href="{:U('Product/index',array('g'=>$vo['goods_id']))}" class="titbtn fr">{$vo.index_sale_title}</a>
+							  <a href="{:U('Product/index',array('g'=>$vo['goods_id']))}" class="pic"><img src="__UPLOAD__{$vo.index_sale_img}"></a>
+						  </li>
+						</if>
+					</if>
+                </foreach>  
+              </ul>
+              <ul class="r-pro-list">
+				<foreach name="calendarlist" item="vo" key="k">
+					<if condition="$k gt 4 && $k lt 11 ">
+					  <li>
+						  <a href="{:U('Product/index',array('g'=>$vo['goods_id']))}">
+							  <P class="tit">
+								  <span class="lt">{$vo.index_sale_title}</span>
+								  <span class="price">{$vo.index_sale_keywords}</span>
+							  </P>
+							  <div class="img"><img src="__UPLOAD__{$vo.index_sale_img}"></div>
+						  </a>
+					  </li>
+					</if>
+                </foreach> 
+              </ul>
+          </div>
+      </div>
+      <div class="1200 mt15">
+          <div class="inx-titel">
+              <div class="l-titel">
+                  <span class="tit-1"><em>信</em>源热销产品 /</span>
+                  <span class="tit-2">Goods sell like hot cakes</span>
+              </div>
+              <ul class="r-nav">
+                  <li><a href="">新品上市</a></li>
+                  <li><a href="">火爆热销</a></li>
+              </ul>
+          </div>
+          <div class="yz-pro-list">
+              <div class="t-box">
+                  <div class="top-text">
+                      <h3><a href="{:U('Product/index',array('g'=>$Hotlist[0]['goods_id']))}">{$Hotlist[0]['index_sale_title']}</a></h3>
+                      <p>{$Hotlist[0]['index_sale_keywords']}</p>
+                      <a href="{:U('Product/index',array('g'=>$Hotlist[0]['goods_id']))}" class="look">查看详情 ></a>
+                  </div>
+                  <a href="{:U('Product/index',array('g'=>$Hotlist[0]['goods_id']))}" class="pic"><img src="__UPLOAD__{$Hotlist[0]['index_sale_img']}"></a>
+              </div>
+              <div class="s-pro-list">
+                  <ul>
+					<foreach name="Hotlist" item="vo" key="k">
+						<if condition="$k gt 0 && $k lt 7 ">
+							<li>
+								<a href="{:U('Product/index',array('g'=>$vo['goods_id']))}" class="tit">{$vo['index_sale_keywords']}</a>
+								<a href="{:U('Product/index',array('g'=>$vo['goods_id']))}" class="more">查看详情 ></a>
+								<a href="{:U('Product/index',array('g'=>$vo['goods_id']))}" class="pic"><img src="__UPLOAD__{$vo['index_sale_img']}"></a>
+							</li>
+						</if>
+                    </foreach>
+                  </ul>
+              </div>
+               <div class="r-box">
+                  <a href="{:U('Product/index',array('g'=>$Hotlist[7]['goods_id']))}" class="pic"><img src="__UPLOAD__{$Hotlist[7]['index_sale_img']}"></a>
+                  <div class="top-text">
+                      <h3><a href="{:U('Product/index',array('g'=>$Hotlist[7]['goods_id']))}">{$Hotlist[7]['index_sale_title']}</a></h3>
+                      <a href="" class="jingping">精品特价</a>
+                      <p>{$Hotlist[7]['index_sale_keywords']}</p>
+                      <a href="{:U('Product/index',array('g'=>$Hotlist[7]['goods_id']))}" class="look">查看详情 ></a>
+                  </div>
+                 
+              </div>
+          </div>
+      </div>
+      <div class="inx-ggt"><a href="{$ad_info[3]['ad_url']}"><img src="__UPLOAD__{$ad_info[3]['index_sale_img']}"></a></div>
+      <div class="1200 mt15">
+          <div class="inx-titel">
+              <div class="l-titel">
+                  <span class="tit-1"><em>家</em>居&小电器</span>
+                  <span class="tit-2">Small household electrical appliance</span>
+              </div>
+              <ul class="r-nav">
+                  <li><a href="">个人护理</a></li>
+                  <li><a href="">生活电器</a></li>
+                  <li><a href="">厨房电器</a></li>
+              </ul>
+          </div>
+		  
+          <div class="yz-pro-list">
+              <div class="t-box">
+                  <div class="top-text">
+                      <h3><a href="{:U('Product/index',array('g'=>$homeFurnishinglist[0]['goods_id']))}">{$homeFurnishinglist[0]['index_sale_title']}</a></h3>
+                      <p>{$homeFurnishinglist[0]['index_sale_keywords']}</p>
+                      <a href="{:U('Product/index',array('g'=>$homeFurnishinglist[0]['goods_id']))}" class="look">查看详情 ></a>
+                  </div>
+                  <a href="{:U('Product/index',array('g'=>$homeFurnishinglist[0]['goods_id']))}" class="pic"><img src="__UPLOAD__{$homeFurnishinglist[0]['index_sale_img']}"></a>
+              </div>
+              <div class="s-pro-list">
+                  <ul>
+					<foreach name="homeFurnishinglist" item="vo" key="k">
+						<if condition="$k gt 0 && $k lt 7 ">
+							<li>
+								<a href="{:U('Product/index',array('g'=>$vo['goods_id']))}" class="tit">{$vo['index_sale_keywords']}</a>
+								<a href="{:U('Product/index',array('g'=>$vo['goods_id']))}" class="more">查看详情 ></a>
+								<a href="{:U('Product/index',array('g'=>$vo['goods_id']))}" class="pic"><img src="__UPLOAD__{$vo['index_sale_img']}"></a>
+							</li>
+						</if>
+                    </foreach>
+                  </ul>
+              </div>
+               <div class="r-box">
+                  <a href="{:U('Product/index',array('g'=>$homeFurnishinglist[7]['goods_id']))}" class="pic"><img src="__UPLOAD__{$homeFurnishinglist[7]['index_sale_img']}"></a>
+                  <div class="top-text" style="background: #F6518D;">
+                      <h3><a href="{:U('Product/index',array('g'=>$homeFurnishinglist[7]['goods_id']))}">{$homeFurnishinglist[7]['index_sale_title']}</a></h3>
+                      <a href="" class="jingping">精品特价</a>
+                      <p>{$homeFurnishinglist[7]['index_sale_keywords']}</p>
+                      <a href="{:U('Product/index',array('g'=>$homeFurnishinglist[7]['goods_id']))}" class="look">查看详情 ></a>
+                  </div>
+                 
+              </div>
+          </div>
+		  
+		  
+		  
+	  </div>
+      <div class="inx-ggt"><a href="{$ad_info[4]['ad_url']}"><img src="__UPLOAD__{$ad_info[4]['index_sale_img']}"></a></div>
+      <div class="1200 mt15">
+          <div class="inx-titel">
+              <div class="l-titel">
+                  <span class="tit-1"><em>数</em>码产品 /</span>
+                  <span class="tit-2">Digital product</span>
+              </div>
+              <ul class="r-nav">
+                  <li><a href="">电脑配件</a></li>
+                  <li><a href="">手机配件</a></li>
+                  <li><a href="">车载用品</a></li>
+                  <li><a href="">移动电源</a></li>
+              </ul>
+          </div>
+		  
+          <div class="yz-pro-list">
+              <div class="t-box">
+                  <div class="top-text">
+                      <h3><a href="{:U('Product/index',array('g'=>$numericalCodelist[0]['goods_id']))}">{$numericalCodelist[0]['index_sale_title']}</a></h3>
+                      <p>{$numericalCodelist[0]['index_sale_keywords']}</p>
+                      <a href="{:U('Product/index',array('g'=>$numericalCodelist[0]['goods_id']))}" class="look">查看详情 ></a>
+                  </div>
+                  <a href="{:U('Product/index',array('g'=>$numericalCodelist[0]['goods_id']))}" class="pic"><img src="__UPLOAD__{$numericalCodelist[0]['index_sale_img']}"></a>
+              </div>
+              <div class="s-pro-list">
+                  <ul>
+					<foreach name="numericalCodelist" item="vo" key="k">
+						<if condition="$k gt 0 && $k lt 7 ">
+							<li>
+								<a href="{:U('Product/index',array('g'=>$vo['goods_id']))}" class="tit">{$vo['index_sale_keywords']}</a>
+								<a href="{:U('Product/index',array('g'=>$vo['goods_id']))}" class="more">查看详情 ></a>
+								<a href="{:U('Product/index',array('g'=>$vo['goods_id']))}" class="pic"><img src="__UPLOAD__{$vo['index_sale_img']}"></a>
+							</li>
+						</if>
+                    </foreach>
+                  </ul>
+              </div>
+               <div class="r-box">
+                  <a href="{:U('Product/index',array('g'=>$numericalCodelist[7]['goods_id']))}" class="pic"><img src="__UPLOAD__{$numericalCodelist[7]['index_sale_img']}"></a>
+                  <div class="top-text" style="background: #F6518D;">
+                      <h3><a href="{:U('Product/index',array('g'=>$numericalCodelist[7]['goods_id']))}">{$numericalCodelist[7]['index_sale_title']}</a></h3>
+                      <a href="" class="jingping">精品特价</a>
+                      <p>{$numericalCodelist[7]['index_sale_keywords']}</p>
+                      <a href="{:U('Product/index',array('g'=>$numericalCodelist[7]['goods_id']))}" class="look">查看详情 ></a>
+                  </div>
+                 
+              </div>
+          </div>
+		  
+		  
+      </div>
+      <div class="inx-f-link">
+        <ul>
+			<foreach name="brand_list" item="vo">
+				<li><a href=""><img src="__UPLOAD__{$vo.brand_img}"></a></li>
+            </foreach>
+        </ul>
+      </div>
+      <div class="inx-pinpai">
+          <div class="pingpai-t"><h3>品牌专区</h3></div>
+          <div class="mr_frbox">
+              <img class="mr_frBtnL prev" src="__PUBLIC__/Home/images/left_btn.png" width="55" height="55" />
+              <div class="mr_frUl">
+                <ul>
+					<foreach name="brand_goods_list" item="vo" >
+					  <li>
+						 <p><img src="__UPLOAD__{$vo.index_sale_img}" width="264" height="404" /></p>
+						 <div class="txt">
+							<h3>{$vo.index_sale_title}</h3>
+							<p>售价：{$vo.final_price}元/条</p>
+						 </div>
+						 <a href="{:U('Product/index',array('g'=>$vo['goods_id']))}" class="botton">立即参与</a>
+					  </li>
+					</foreach>
+				</ul>
+              </div>
+              <img class="mr_frBtnR next" src="__PUBLIC__/Home/images/right_btn.png" width="55" height="55" />
+          </div>
+          <script language="javascript">
+            jQuery(".mr_frbox").slide({titCell:"",mainCell:".mr_frUl ul",autoPage:true,effect:"leftLoop",autoPlay:true,vis:5});
+          </script>
+      </div>
+    </div>
+  </div>
+  <!-- footer star -->
+  <include file="Public/footer"/>
+  <!-- footer end-->
+  <script type="text/javascript" src="__PUBLIC__/Home/js/common.js"></script>
+  <script type="text/javascript" src="__PUBLIC__/Home/js/jquery.flexslider-min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+	$('.category-list').attr('class','category-list block');
+      $('.flexslider').flexslider({
+        directionNav: true,
+        pauseOnAction: false,
+        slideshowSpeed:5000,
+      });
+    });
+</script>
+</body>
+</html>

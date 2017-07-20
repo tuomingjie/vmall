@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <include file="Public/link" />
+    <title>收货地址管理</title>
+</head>
+<body>
+    <div class="bar bar-header  bar-positive">
+        <h1 class="title">收货地址管理</h1>
+    </div>
+    <div style="margin-top: 44px;">
+            <div class="list">
+                <volist name="addr" id="vo">
+                <div class="item">
+                    <a href="__CONTROLLER__/edit?addr_id={$vo.address_id}" style=" text-decoration:none;">
+                        <h2> 收货人：{$vo.address_name}&nbsp&nbsp{$vo.address_phone}</h2>
+                        <h2>邮政编码：{$vo.address_post}</h2>
+                        <p>{$vo.address_content}</p>
+                    </a>
+                    <div style="float: right">
+                        <if condition="$vo.address_lock eq 1" >
+                            <button class="button button-calm button-small" style="margin-top: -44px" onclick="lock({$vo.address_id})">取消默认</button>
+                            <else />
+                            <button class="button button-assertive button-small" style="margin-top: -44px" onclick="lock({$vo.address_id})">设置默认</button>
+                        </if>
+                        <button class="button button-stable button-small" style="margin-top: -44px" onclick="delecte({$vo.address_id},this)">删除</button>
+                    </div>
+                </div>
+                </volist>
+            </div>
+
+    </div>
+    <div class="content padding">
+        <a class="button button-block button-calm" href="__CONTROLLER__/add">添加新地址</a>
+        <button class="button button-block button-assertive" onclick="window.history.go(-1); ">返回</button>
+    </div>
+</body>
+<script>
+    function lock(addr_id) {
+        $.ajax({
+            url:"__CONTROLLER__/lock",
+            type:'post',
+            dataType:'json',
+            data:{
+                addr_id:addr_id
+            },
+            success:function (data) {
+                layer.open({
+                    content: data.msg
+                    ,skin: 'msg'
+                    ,time: 3 //2秒后自动关闭
+                });
+                if(data.status == 'success'){
+                    window.location.reload();
+                }
+                return;
+            },
+            fail:function () {
+                layer.open({
+                    content: '设置失败'
+                    ,skin: 'msg'
+                    ,time: 3 //2秒后自动关闭
+                });
+                return;
+            }
+        })
+    }
+    function delecte(addr_id,th) {
+        $.ajax({
+            url:"__CONTROLLER__/delecte",
+            type:'post',
+            dataType:'json',
+            data:{
+                addr_id:addr_id
+            },
+            success:function (data) {
+                layer.open({
+                    content: data.msg
+                    ,skin: 'msg'
+                    ,time: 3 //2秒后自动关闭
+                });
+                if(data.status == 'success'){
+                        $(th).parent().parent().remove();
+                }
+                return;
+            },
+            fail:function () {
+                layer.open({
+                    content: '删除异常'
+                    ,skin: 'msg'
+                    ,time: 3 //2秒后自动关闭
+                });
+                return;
+            }
+        })
+    }
+
+</script>
+</html>

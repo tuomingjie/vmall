@@ -1,0 +1,73 @@
+
+
+
+<div  class="pro-list" id="pro-list">
+		<ul>
+		     <!-----------热销榜单---------------------->
+		     <!--<li>
+				<div>
+					<p  class="p-img"><a  href="{}"  title="华为 荣耀 畅玩版 真8核 双卡双待 移动版 TD-SCDMA/GSM（白色）套餐一"><img  src="__PUBLIC__/Images/60_60_11.jpg"  alt="华为 荣耀 畅玩版 真8核 双卡双待 移动版 TD-SCDMA/GSM（白色）套餐一"></a>
+					-->
+					<!--------S记录着第几个商品-------->
+					<!---<s  class="s1"></s></p>
+					<p  class="p-name"><a  href="http://www.vmall.com/product/1274.html#2155"  title="华为 荣耀 畅玩版 真8核 双卡双待 移动版 TD-SCDMA/GSM（白色）套餐一">荣耀 畅玩版 移动版（白色）套餐一</a></p>
+					<p  class="p-price"><b>¥1299</b></p>
+				</div>
+		    </li>--->
+			<!-----------热销榜单---------------------->
+			
+			
+		</ul>		
+</div>
+     <script type="text/javascript">
+	     //ajax的形式加载
+		 
+		 $(function(){
+		     $.ajax({
+			      url:"{:U('HotSale/index')}",
+				  type:'GET',
+				  dataType:'json',
+				  success:function(responseText,status,xhr){
+				       if(status=='success'){
+					      if(responseText['status']==1){
+						       var Str=responseText.content.toString();
+							   
+						       $(Str).appendTo($("#pro-list ul"));
+							 
+						  
+						  }else{
+						     
+						  }
+					      
+					   
+					   }
+				  
+				  }
+				  
+                 				 
+				 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 });
+		 
+		 
+		 
+		 
+		 
+		 
+		 });
+		 
+		 
+		 
+	 
+	 
+	 
+	 
+	 
+	 
+	 </script>

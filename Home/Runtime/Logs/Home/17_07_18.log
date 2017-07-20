@@ -1,0 +1,884 @@
+[ 2017-07-18T09:07:44+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_cart [ RunTime:0.252014s ]
+SQL: SELECT * FROM `vmall_cart` WHERE `user_id` = 0  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 137 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 137 行.
+NOTIC: [8] Undefined variable: str D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 138 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-18T09:08:02+08:00 ] ::1 /vmallshop/index.php/Home/Login/remoteLogin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.078000s ]
+SQL: SELECT * FROM `vmall_user` WHERE `user_name` = 'test001' AND `user_pwd` = 'e10adc3949ba59abbe56e057f20f883e'  [ RunTime:0.000000s ]
+SQL: UPDATE `vmall_user` SET `user_last_time`=1500340082,`user_last_ip`=0 WHERE `user_id` = 24 [ RunTime:0.031200s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-18T09:08:03+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_cart [ RunTime:0.020002s ]
+SQL: SELECT * FROM `vmall_cart` WHERE `user_id` = 24  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 137 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 137 行.
+NOTIC: [8] Undefined variable: str D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 138 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-18T09:08:18+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myShop.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.010001s ]
+SQL: SELECT `user_score` FROM `vmall_user` WHERE `user_id` = 24  [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_order [ RunTime:0.010000s ]
+ERR: 错误的查询条件:[order_state=>未付款]
+
+[ 2017-07-18T09:08:18+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE vmall_cart [ RunTime:0.028002s ]
+SQL: SELECT * FROM `vmall_cart` WHERE `user_id` = 24  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 137 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 137 行.
+NOTIC: [8] Undefined variable: str D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 138 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-07-18T09:08:18+08:00 ] ::1 /vmallshop/index.php/Home/Category/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE vmall_category [ RunTime:0.037601s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_pid` = 0 ORDER BY category_id  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-10'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-16'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-20'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-23'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-26'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-30'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-33'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-34'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-35'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-37'  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpstudy\WWW\vmallshop\Home\Home\Controller\CategoryController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpstudy\WWW\vmallshop\Home\Home\Controller\CategoryController.class.php 第 19 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-07-18T09:08:18+08:00 ] ::1 /vmallshop/index.php/Home/Login/checkLogin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.017001s ]
+SQL: SELECT `user_score` FROM `vmall_user` WHERE `user_id` = 24  [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-07-18T09:08:21+08:00 ] ::1 /vmallshop/index.php/Home/Login/checkLogin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.010001s ]
+SQL: SELECT `user_score` FROM `vmall_user` WHERE `user_id` = 24  [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-18T09:08:21+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myShop.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.011001s ]
+SQL: SELECT `user_score` FROM `vmall_user` WHERE `user_id` = 24  [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_order [ RunTime:0.007000s ]
+ERR: 错误的查询条件:[order_state=>未付款]
+
+[ 2017-07-18T09:08:21+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE vmall_cart [ RunTime:0.013001s ]
+SQL: SELECT * FROM `vmall_cart` WHERE `user_id` = 24  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 137 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 137 行.
+NOTIC: [8] Undefined variable: str D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 138 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-18T09:08:21+08:00 ] ::1 /vmallshop/index.php/Home/Category/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE vmall_category [ RunTime:0.017001s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_pid` = 0 ORDER BY category_id  [ RunTime:0.003000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-10'  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-16'  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-20'  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-23'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-26'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-30'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-33'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-34'  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-35'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-37'  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpstudy\WWW\vmallshop\Home\Home\Controller\CategoryController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpstudy\WWW\vmallshop\Home\Home\Controller\CategoryController.class.php 第 19 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-18T09:38:07+08:00 ] ::1 /vmallshop/index.php/Home/Stock/add.html
+ERR: 错误的查询条件:[storehouse_id=>3]
+
+[ 2017-07-18T09:38:42+08:00 ] ::1 /vmallshop/index.php/Home/Stock/add.html
+ERR: 错误的查询条件:[customer_id=>3]
+
+[ 2017-07-18T09:38:44+08:00 ] ::1 /vmallshop/index.php/Home/Stock/add.html
+ERR: 错误的查询条件:[customer_id=>3]
+
+[ 2017-07-18T11:43:39+08:00 ] ::1 /vmallshop/index.php/Home/Stock/goods
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_category [ RunTime:0.008001s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 1 LIMIT 9   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 2  [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_set [ RunTime:0.007000s ]
+SQL: SELECT * FROM `vmall_set`  [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_goods [ RunTime:0.011001s ]
+SQL: SELECT `goods_id`,`goods_name` FROM `vmall_goods`  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-18T11:43:47+08:00 ] ::1 /vmallshop/index.php/Home/Stock/add_action
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_category [ RunTime:0.008000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 1 LIMIT 9   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 2  [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_set [ RunTime:0.008001s ]
+SQL: SELECT * FROM `vmall_set`  [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.008000s ]
+SQL: SELECT `customer_id` FROM `vmall_user` WHERE `user_id` = 24 LIMIT 1   [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_stock [ RunTime:0.008001s ]
+SQL: SELECT * FROM `vmall_stock` WHERE `storehouse_id` = 3 AND `goods_id` = 12 LIMIT 1   [ RunTime:0.001000s ]
+SQL: INSERT INTO `vmall_stock` (`storehouse_id`,`updata_time`,`goods_id`,`stock_num`,`user_id`) VALUES (3,1500349427,12,88,24) [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_stock` WHERE `storehouse_id` = 3 AND `goods_id` = 14 LIMIT 1   [ RunTime:0.000000s ]
+SQL: INSERT INTO `vmall_stock` (`storehouse_id`,`updata_time`,`goods_id`,`stock_num`,`user_id`) VALUES (3,1500349427,14,111,24) [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_stock_desc [ RunTime:0.011001s ]
+SQL: INSERT INTO `vmall_stock_desc` (`goods_id`,`goods_num`,`goods_buy_price`,`goods_sell_price`,`addtime`,`storehouse_id`,`stock_no`,`user_id`) VALUES (12,88,99,111,1500349427,3,'2017071711434715438',24) [ RunTime:0.000000s ]
+SQL: INSERT INTO `vmall_stock_desc` (`goods_id`,`goods_num`,`goods_buy_price`,`goods_sell_price`,`addtime`,`storehouse_id`,`stock_no`,`user_id`) VALUES (14,111,222,333,1500349427,3,'2017071711434715438',24) [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-18T14:09:45+08:00 ] ::1 /vmallshop/index.php/Home/Stock/stock_num
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_category [ RunTime:0.038002s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 1 LIMIT 9   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 2  [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_set [ RunTime:0.041002s ]
+SQL: SELECT * FROM `vmall_set`  [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.040003s ]
+SQL: SELECT `customer_id` FROM `vmall_user` WHERE `user_id` = 24 LIMIT 1   [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_stock [ RunTime:0.037002s ]
+SQL: SELECT * FROM `vmall_stock` WHERE `goods_id` = 17 AND `storehouse_id` = 3 LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-18T14:42:26+08:00 ] ::1 /vmallshop/index.php/Home/Stock/log.html
+ERR: Think\Controller:user_same方法不存在！
+
+[ 2017-07-18T15:14:29+08:00 ] ::1 /vmallshop/index.php/Home/Stock/stock_num
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE vmall_category [ RunTime:0.041002s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 1 LIMIT 9   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 2  [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_set [ RunTime:0.041002s ]
+SQL: SELECT * FROM `vmall_set`  [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.041003s ]
+SQL: SELECT `customer_id` FROM `vmall_user` WHERE `user_id` = 24 LIMIT 1   [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_stock [ RunTime:0.040002s ]
+SQL: SELECT * FROM `vmall_stock` WHERE `goods_id` = 4 AND `storehouse_id` = 3 LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-18T15:55:28+08:00 ] ::1 /vmallshop/index.php/Home/Stock/stock_num
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_category [ RunTime:0.019001s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 1 LIMIT 9   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 2  [ RunTime:0.001001s ]
+SQL: DESCRIBE vmall_set [ RunTime:0.039002s ]
+SQL: SELECT * FROM `vmall_set`  [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.041002s ]
+SQL: SELECT `customer_id` FROM `vmall_user` WHERE `user_id` = 24 LIMIT 1   [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_stock [ RunTime:0.041002s ]
+SQL: SELECT * FROM `vmall_stock` WHERE `goods_id` = 6 AND `storehouse_id` = 3 LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-18T15:55:31+08:00 ] ::1 /vmallshop/index.php/Home/Stock/stock_num
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_category [ RunTime:0.041003s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 1 LIMIT 9   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 2  [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_set [ RunTime:0.040002s ]
+SQL: SELECT * FROM `vmall_set`  [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.041003s ]
+SQL: SELECT `customer_id` FROM `vmall_user` WHERE `user_id` = 24 LIMIT 1   [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_stock [ RunTime:0.041002s ]
+SQL: SELECT * FROM `vmall_stock` WHERE `goods_id` = 3 AND `storehouse_id` = 3 LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-18T15:55:33+08:00 ] ::1 /vmallshop/index.php/Home/Stock/stock_num
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_category [ RunTime:0.017001s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 1 LIMIT 9   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 2  [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_set [ RunTime:0.035002s ]
+SQL: SELECT * FROM `vmall_set`  [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.041002s ]
+SQL: SELECT `customer_id` FROM `vmall_user` WHERE `user_id` = 24 LIMIT 1   [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_stock [ RunTime:0.041002s ]
+SQL: SELECT * FROM `vmall_stock` WHERE `goods_id` = 7 AND `storehouse_id` = 3 LIMIT 1   [ RunTime:0.001001s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-18T16:16:18+08:00 ] ::1 /vmallshop/index.php/Home/Stock/stock_num
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_category [ RunTime:0.039002s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 1 LIMIT 9   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 2  [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_set [ RunTime:0.044003s ]
+SQL: SELECT * FROM `vmall_set`  [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.043002s ]
+SQL: SELECT `customer_id` FROM `vmall_user` WHERE `user_id` = 24 LIMIT 1   [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_stock [ RunTime:0.045003s ]
+SQL: SELECT * FROM `vmall_stock` WHERE `goods_id` = 13 AND `storehouse_id` = 3 LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-18T16:16:30+08:00 ] ::1 /vmallshop/index.php/Home/Stock/stock_num
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_category [ RunTime:0.042002s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 1 LIMIT 9   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 2  [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_set [ RunTime:0.041003s ]
+SQL: SELECT * FROM `vmall_set`  [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.039002s ]
+SQL: SELECT `customer_id` FROM `vmall_user` WHERE `user_id` = 24 LIMIT 1   [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_stock [ RunTime:0.039002s ]
+SQL: SELECT * FROM `vmall_stock` WHERE `goods_id` = 6 AND `storehouse_id` = 3 LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-18T16:18:16+08:00 ] ::1 /vmallshop/index.php/Home/Stock/goods
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE vmall_category [ RunTime:0.041002s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 1 LIMIT 9   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 2  [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_set [ RunTime:0.040002s ]
+SQL: SELECT * FROM `vmall_set`  [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_goods [ RunTime:0.041003s ]
+SQL: SELECT `goods_id`,`goods_name` FROM `vmall_goods`  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-18T16:21:07+08:00 ] ::1 /vmallshop/index.php/Home/Stock/stock_num
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE vmall_category [ RunTime:0.041002s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 1 LIMIT 9   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 2  [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_set [ RunTime:0.028002s ]
+SQL: SELECT * FROM `vmall_set`  [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.039002s ]
+SQL: SELECT `customer_id` FROM `vmall_user` WHERE `user_id` = 24 LIMIT 1   [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_stock [ RunTime:0.042002s ]
+SQL: SELECT * FROM `vmall_stock` WHERE `goods_id` = 6 AND `storehouse_id` = 3 LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-18T18:03:42+08:00 ] ::1 /vmallshop/index.php/Home/Stock/redeploy_action
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_category [ RunTime:0.025001s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 1 LIMIT 9   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 2  [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_set [ RunTime:0.004000s ]
+SQL: SELECT * FROM `vmall_set`  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-18T18:03:55+08:00 ] ::1 /vmallshop/index.php/Home/Stock/redeploy_action
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_category [ RunTime:0.038002s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 1 LIMIT 9   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 2  [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_set [ RunTime:0.042003s ]
+SQL: SELECT * FROM `vmall_set`  [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_stock_redeploy_log [ RunTime:0.041002s ]
+SQL: INSERT INTO `vmall_stock_redeploy_log` (`goods_num`,`goods_id`,`out_storehouse_id`,`into_storehouse_id`,`addtime`,`redeploy_no`,`user_id`) VALUES (2,1,3,6,1500372235,'2017071718035582375',24) [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_stock [ RunTime:0.041002s ]
+SQL: UPDATE `vmall_stock` SET `stock_num`=15,`updata_time`=1500372235 WHERE `goods_id` = 1 AND `storehouse_id` = 3 [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_stock` WHERE `goods_id` = 1 AND `storehouse_id` = 6 LIMIT 1   [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.041003s ]
+SQL: SELECT `customer_id` FROM `vmall_user` WHERE `user_id` = 24 LIMIT 1   [ RunTime:0.001000s ]
+SQL: INSERT INTO `vmall_stock` (`storehouse_id`,`user_id`,`updata_time`,`goods_id`,`stock_num`) VALUES (3,6,1500372235,1,2) [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-18T18:13:20+08:00 ] ::1 /vmallshop/index.php/Home/Stock/stock_num
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_category [ RunTime:0.032002s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 1 LIMIT 9   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 2  [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_set [ RunTime:0.042002s ]
+SQL: SELECT * FROM `vmall_set`  [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.035002s ]
+SQL: SELECT `customer_id` FROM `vmall_user` WHERE `user_id` = 24 LIMIT 1   [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_stock [ RunTime:0.009001s ]
+SQL: SELECT * FROM `vmall_stock` WHERE `goods_id` = 3 AND `storehouse_id` = 3 LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-18T18:14:03+08:00 ] ::1 /vmallshop/index.php/Home/Stock/stock_num
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE vmall_category [ RunTime:0.043003s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 1 LIMIT 9   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 2  [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_set [ RunTime:0.041002s ]
+SQL: SELECT * FROM `vmall_set`  [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.041003s ]
+SQL: SELECT `customer_id` FROM `vmall_user` WHERE `user_id` = 24 LIMIT 1   [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_stock [ RunTime:0.042002s ]
+SQL: SELECT * FROM `vmall_stock` WHERE `goods_id` = 21 AND `storehouse_id` = 3 LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-18T18:14:06+08:00 ] ::1 /vmallshop/index.php/Home/Stock/redeploy_action
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_category [ RunTime:0.041003s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 1 LIMIT 9   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 2  [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_set [ RunTime:0.041002s ]
+SQL: SELECT * FROM `vmall_set`  [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_stock_redeploy_log [ RunTime:0.041002s ]
+SQL: INSERT INTO `vmall_stock_redeploy_log` (`goods_num`,`goods_id`,`out_storehouse_id`,`into_storehouse_id`,`addtime`,`redeploy_no`,`user_id`) VALUES (2,21,3,6,1500372846,'2017071718140673704',24) [ RunTime:0.001001s ]
+SQL: DESCRIBE vmall_stock [ RunTime:0.041002s ]
+SQL: SELECT * FROM `vmall_stock` WHERE `goods_id` = 21 AND `storehouse_id` = 3 LIMIT 1   [ RunTime:0.001000s ]
+SQL: UPDATE `vmall_stock` SET `stock_num`=9,`updata_time`=1500372846 WHERE `goods_id` = 21 AND `storehouse_id` = 3 [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_stock` WHERE `goods_id` = 21 AND `storehouse_id` = 6 LIMIT 1   [ RunTime:0.000000s ]
+SQL: INSERT INTO `vmall_stock` (`storehouse_id`,`user_id`,`updata_time`,`goods_id`,`stock_num`) VALUES (6,24,1500372846,21,2) [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-18T18:23:41+08:00 ] ::1 /vmallshop/index.php/Home/Stock/edit_action
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_category [ RunTime:0.041002s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 1 LIMIT 9   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 2  [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_set [ RunTime:0.042003s ]
+SQL: SELECT * FROM `vmall_set`  [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_stock_desc [ RunTime:0.041002s ]
+SQL: SELECT `storehouse_id`,`goods_num`,`goods_id`,`user_id` FROM `vmall_stock_desc` WHERE `stock_desc_id` = 66 LIMIT 1   [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_stock [ RunTime:0.041002s ]
+SQL: SELECT * FROM `vmall_stock` WHERE `goods_id` = 12 AND `storehouse_id` = 3 LIMIT 1   [ RunTime:0.001000s ]
+SQL: UPDATE `vmall_stock` SET `updata_time`=1500373421,`stock_num`=0 WHERE `goods_id` = 12 AND `storehouse_id` = 3 [ RunTime:0.001001s ]
+SQL: SELECT * FROM `vmall_stock` WHERE `goods_id` = 18 AND `storehouse_id` = 3 LIMIT 1   [ RunTime:0.000000s ]
+SQL: INSERT INTO `vmall_stock` (`storehouse_id`,`updata_time`,`goods_id`,`stock_num`,`user_id`) VALUES (3,1500373421,18,66,24) [ RunTime:0.000000s ]
+SQL: UPDATE `vmall_stock_desc` SET `goods_id`=18,`goods_num`=66,`goods_buy_price`=99,`goods_sell_price`=111 WHERE `stock_desc_id` = 66 [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-18T18:30:41+08:00 ] ::1 /vmallshop/index.php/Home/Stock/stock_num
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE vmall_category [ RunTime:0.033002s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 1 LIMIT 9   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 2  [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_set [ RunTime:0.042002s ]
+SQL: SELECT * FROM `vmall_set`  [ RunTime:0.001001s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.043002s ]
+SQL: SELECT `customer_id` FROM `vmall_user` WHERE `user_id` = 24 LIMIT 1   [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_stock [ RunTime:0.044003s ]
+SQL: SELECT * FROM `vmall_stock` WHERE `goods_id` = 12 AND `storehouse_id` = 3 LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-18T18:30:43+08:00 ] ::1 /vmallshop/index.php/Home/Stock/stock_num
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE vmall_category [ RunTime:0.043003s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 1 LIMIT 9   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 2  [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_set [ RunTime:0.008000s ]
+SQL: SELECT * FROM `vmall_set`  [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.006001s ]
+SQL: SELECT `customer_id` FROM `vmall_user` WHERE `user_id` = 24 LIMIT 1   [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_stock [ RunTime:0.042002s ]
+SQL: SELECT * FROM `vmall_stock` WHERE `goods_id` = 4 AND `storehouse_id` = 3 LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-18T18:30:45+08:00 ] ::1 /vmallshop/index.php/Home/Stock/stock_num
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE vmall_category [ RunTime:0.043003s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 1 LIMIT 9   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 2  [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_set [ RunTime:0.031001s ]
+SQL: SELECT * FROM `vmall_set`  [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.041002s ]
+SQL: SELECT `customer_id` FROM `vmall_user` WHERE `user_id` = 24 LIMIT 1   [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_stock [ RunTime:0.041002s ]
+SQL: SELECT * FROM `vmall_stock` WHERE `goods_id` = 6 AND `storehouse_id` = 3 LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-18T18:30:46+08:00 ] ::1 /vmallshop/index.php/Home/Stock/stock_num
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_category [ RunTime:0.042003s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 1 LIMIT 9   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 2  [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_set [ RunTime:0.042002s ]
+SQL: SELECT * FROM `vmall_set`  [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.042003s ]
+SQL: SELECT `customer_id` FROM `vmall_user` WHERE `user_id` = 24 LIMIT 1   [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_stock [ RunTime:0.042002s ]
+SQL: SELECT * FROM `vmall_stock` WHERE `goods_id` = 2 AND `storehouse_id` = 3 LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-18T18:30:48+08:00 ] ::1 /vmallshop/index.php/Home/Stock/stock_num
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_category [ RunTime:0.042002s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 1 LIMIT 9   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 2  [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_set [ RunTime:0.042003s ]
+SQL: SELECT * FROM `vmall_set`  [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.042002s ]
+SQL: SELECT `customer_id` FROM `vmall_user` WHERE `user_id` = 24 LIMIT 1   [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_stock [ RunTime:0.042003s ]
+SQL: SELECT * FROM `vmall_stock` WHERE `goods_id` = 12 AND `storehouse_id` = 3 LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-18T18:38:30+08:00 ] ::1 /vmallshop/index.php/Home/Stock/goods
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE vmall_category [ RunTime:0.037002s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 1 LIMIT 9   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 2  [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_set [ RunTime:0.037002s ]
+SQL: SELECT * FROM `vmall_set`  [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_goods [ RunTime:0.009001s ]
+SQL: SELECT `goods_id`,`goods_name` FROM `vmall_goods`  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-18T18:38:38+08:00 ] ::1 /vmallshop/index.php/Home/Stock/add_action
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: DESCRIBE vmall_category [ RunTime:0.028002s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 1 LIMIT 9   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 2  [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_set [ RunTime:0.042002s ]
+SQL: SELECT * FROM `vmall_set`  [ RunTime:0.001001s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.032001s ]
+SQL: SELECT `customer_id` FROM `vmall_user` WHERE `user_id` = 24 LIMIT 1   [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_stock [ RunTime:0.038003s ]
+SQL: SELECT * FROM `vmall_stock` WHERE `storehouse_id` = 3 AND `goods_id` = 16 LIMIT 1   [ RunTime:0.001000s ]
+SQL: INSERT INTO `vmall_stock` (`storehouse_id`,`updata_time`,`goods_id`,`stock_num`,`user_id`) VALUES (3,1500374318,16,23,24) [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_stock` WHERE `storehouse_id` = 3 AND `goods_id` = 10 LIMIT 1   [ RunTime:0.000000s ]
+SQL: INSERT INTO `vmall_stock` (`storehouse_id`,`updata_time`,`goods_id`,`stock_num`,`user_id`) VALUES (3,1500374318,10,22,24) [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_stock_desc [ RunTime:0.039002s ]
+SQL: INSERT INTO `vmall_stock_desc` (`goods_id`,`goods_num`,`goods_buy_price`,`goods_sell_price`,`addtime`,`storehouse_id`,`stock_no`,`user_id`) VALUES (16,23,43,56,1500374318,3,'2017071718383870457',24) [ RunTime:0.001000s ]
+SQL: INSERT INTO `vmall_stock_desc` (`goods_id`,`goods_num`,`goods_buy_price`,`goods_sell_price`,`addtime`,`storehouse_id`,`stock_no`,`user_id`) VALUES (10,22,33,44,1500374318,3,'2017071718383870457',24) [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-18T18:39:44+08:00 ] ::1 /vmallshop/index.php/Home/Stock/add_action
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_category [ RunTime:0.037002s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 1 LIMIT 9   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 2  [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_set [ RunTime:0.042003s ]
+SQL: SELECT * FROM `vmall_set`  [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.040002s ]
+SQL: SELECT `customer_id` FROM `vmall_user` WHERE `user_id` = 24 LIMIT 1   [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_stock [ RunTime:0.042002s ]
+SQL: SELECT * FROM `vmall_stock` WHERE `storehouse_id` = 3 AND `goods_id` = 20 LIMIT 1   [ RunTime:0.000000s ]
+SQL: UPDATE `vmall_stock` SET `updata_time`=1500374384,`stock_num`=38 WHERE `storehouse_id` = 3 AND `goods_id` = 20 [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_stock_desc [ RunTime:0.041003s ]
+SQL: INSERT INTO `vmall_stock_desc` (`goods_id`,`goods_num`,`goods_buy_price`,`goods_sell_price`,`addtime`,`storehouse_id`,`stock_no`,`user_id`) VALUES (20,33,33,33,1500374384,3,'2017071718394443604',24) [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-18T18:42:11+08:00 ] ::1 /vmallshop/index.php/Home/Stock/goods
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE vmall_category [ RunTime:0.047003s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 1 LIMIT 9   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 2  [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_set [ RunTime:0.014001s ]
+SQL: SELECT * FROM `vmall_set`  [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_goods [ RunTime:0.018001s ]
+SQL: SELECT `goods_id`,`goods_name` FROM `vmall_goods`  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-18T18:42:23+08:00 ] ::1 /vmallshop/index.php/Home/Stock/add_action
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_category [ RunTime:0.037002s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 1 LIMIT 9   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 2  [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_set [ RunTime:0.035002s ]
+SQL: SELECT * FROM `vmall_set`  [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_stock [ RunTime:0.041003s ]
+SQL: SELECT * FROM `vmall_stock` WHERE `storehouse_id` = 0 AND `goods_id` = 3 LIMIT 1   [ RunTime:0.000000s ]
+SQL: UPDATE `vmall_stock` SET `updata_time`=1500374543,`stock_num`=14 WHERE `storehouse_id` = 0 AND `goods_id` = 3 [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_stock` WHERE `storehouse_id` = 0 AND `goods_id` = 2 LIMIT 1   [ RunTime:0.001000s ]
+SQL: INSERT INTO `vmall_stock` (`storehouse_id`,`updata_time`,`goods_id`,`stock_num`,`user_id`) VALUES (0,1500374543,2,33,24) [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_stock_desc [ RunTime:0.041002s ]
+SQL: INSERT INTO `vmall_stock_desc` (`goods_id`,`goods_num`,`goods_buy_price`,`goods_sell_price`,`addtime`,`storehouse_id`,`stock_no`,`user_id`) VALUES (3,11,11,22,1500374543,0,'2017071718422380070',24) [ RunTime:0.000000s ]
+SQL: INSERT INTO `vmall_stock_desc` (`goods_id`,`goods_num`,`goods_buy_price`,`goods_sell_price`,`addtime`,`storehouse_id`,`stock_no`,`user_id`) VALUES (2,33,55,99,1500374543,0,'2017071718422380070',24) [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-18T18:43:35+08:00 ] ::1 /vmallshop/index.php/Home/Stock/add_action
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_category [ RunTime:0.025001s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 1 LIMIT 9   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 2  [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_set [ RunTime:0.034002s ]
+SQL: SELECT * FROM `vmall_set`  [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_stock [ RunTime:0.034002s ]
+SQL: SELECT * FROM `vmall_stock` WHERE `storehouse_id` = 0 AND `goods_id` = 1 LIMIT 1   [ RunTime:0.001000s ]
+SQL: UPDATE `vmall_stock` SET `updata_time`=1500374615,`stock_num`=14 WHERE `storehouse_id` = 0 AND `goods_id` = 1 [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_stock_desc [ RunTime:0.034002s ]
+SQL: INSERT INTO `vmall_stock_desc` (`goods_id`,`goods_num`,`goods_buy_price`,`goods_sell_price`,`addtime`,`storehouse_id`,`stock_no`,`user_id`) VALUES (1,11,22,33,1500374615,0,'2017071718433565373',24) [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-18T18:44:44+08:00 ] ::1 /vmallshop/index.php/Home/Stock/add_action
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006000s ]
+SQL: DESCRIBE vmall_category [ RunTime:0.042003s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 1 LIMIT 9   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 2  [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_set [ RunTime:0.025001s ]
+SQL: SELECT * FROM `vmall_set`  [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_stock [ RunTime:0.040003s ]
+SQL: SELECT * FROM `vmall_stock` WHERE `storehouse_id` = 0 AND `goods_id` = 1 LIMIT 1   [ RunTime:0.000000s ]
+SQL: UPDATE `vmall_stock` SET `updata_time`=1500374684,`stock_num`=15 WHERE `storehouse_id` = 0 AND `goods_id` = 1 [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_stock_desc [ RunTime:0.028001s ]
+SQL: INSERT INTO `vmall_stock_desc` (`goods_id`,`goods_num`,`goods_buy_price`,`goods_sell_price`,`addtime`,`storehouse_id`,`stock_no`,`user_id`) VALUES (1,1,1,1,1500374684,0,'2017071718444414498',24) [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-18T18:49:50+08:00 ] ::1 /vmallshop/index.php/Home/Stock/add_action
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_category [ RunTime:0.034002s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 1 LIMIT 9   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 2  [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_set [ RunTime:0.038002s ]
+SQL: SELECT * FROM `vmall_set`  [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_stock [ RunTime:0.040002s ]
+SQL: SELECT * FROM `vmall_stock` WHERE `storehouse_id` = 0 AND `goods_id` = 3 LIMIT 1   [ RunTime:0.000000s ]
+SQL: UPDATE `vmall_stock` SET `updata_time`=1500374990,`stock_num`=16 WHERE `storehouse_id` = 0 AND `goods_id` = 3 [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_stock_desc [ RunTime:0.041003s ]
+SQL: INSERT INTO `vmall_stock_desc` (`goods_id`,`goods_num`,`goods_buy_price`,`goods_sell_price`,`addtime`,`storehouse_id`,`stock_no`,`user_id`) VALUES (3,2,2,2,1500374990,0,'2017071718495096827',24) [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-18T18:52:45+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_cart [ RunTime:0.047003s ]
+SQL: SELECT * FROM `vmall_cart` WHERE `user_id` = 0  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 137 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 137 行.
+NOTIC: [8] Undefined variable: str D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 138 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-18T18:52:58+08:00 ] ::1 /vmallshop/index.php/Home/Login/remoteLogin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.005000s ]
+SQL: SELECT * FROM `vmall_user` WHERE `user_name` = 'test001' AND `user_pwd` = 'e10adc3949ba59abbe56e057f20f883e'  [ RunTime:0.011001s ]
+SQL: UPDATE `vmall_user` SET `user_last_time`=1500375178,`user_last_ip`=0 WHERE `user_id` = 24 [ RunTime:0.044002s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
+[ 2017-07-18T18:52:58+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_cart [ RunTime:0.005000s ]
+SQL: SELECT * FROM `vmall_cart` WHERE `user_id` = 24  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 137 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 137 行.
+NOTIC: [8] Undefined variable: str D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 138 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-18T18:53:04+08:00 ] ::1 /vmallshop/index.php/Home/Login/checkLogin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.006000s ]
+SQL: SELECT `user_score` FROM `vmall_user` WHERE `user_id` = 24  [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-18T18:53:05+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_cart [ RunTime:0.070004s ]
+SQL: SELECT * FROM `vmall_cart` WHERE `user_id` = 24  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 137 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 137 行.
+NOTIC: [8] Undefined variable: str D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 138 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-18T18:53:05+08:00 ] ::1 /vmallshop/index.php/Home/Category/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE vmall_category [ RunTime:0.006000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_pid` = 0 ORDER BY category_id  [ RunTime:0.001001s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-10'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-16'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-20'  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-23'  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-26'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-30'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-33'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-34'  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-35'  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-37'  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpstudy\WWW\vmallshop\Home\Home\Controller\CategoryController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpstudy\WWW\vmallshop\Home\Home\Controller\CategoryController.class.php 第 19 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-18T18:53:05+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myShop.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.006000s ]
+SQL: SELECT `user_score` FROM `vmall_user` WHERE `user_id` = 24  [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_order [ RunTime:0.005000s ]
+ERR: 错误的查询条件:[order_state=>未付款]
+
+[ 2017-07-18T18:53:07+08:00 ] ::1 /vmallshop/index.php/Home/Login/checkLogin.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.010001s ]
+SQL: SELECT `user_score` FROM `vmall_user` WHERE `user_id` = 24  [ RunTime:0.013001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-18T18:53:07+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myGoods.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_cart [ RunTime:0.005000s ]
+SQL: SELECT * FROM `vmall_cart` WHERE `user_id` = 24  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: cat_total_num D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 137 行.
+NOTIC: [8] Undefined variable: cat_total_price D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 137 行.
+NOTIC: [8] Undefined variable: str D:\phpstudy\WWW\vmallshop\Home\Home\Controller\SmallCatController.class.php 第 138 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-18T18:53:07+08:00 ] ::1 /vmallshop/index.php/Home/Category/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_category [ RunTime:0.006000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_pid` = 0 ORDER BY category_id  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-10'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-16'  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-20'  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-23'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-26'  [ RunTime:0.001001s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-30'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-33'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-34'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-35'  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_path` LIKE '0-37'  [ RunTime:0.001000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpstudy\WWW\vmallshop\Home\Home\Controller\CategoryController.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpstudy\WWW\vmallshop\Home\Home\Controller\CategoryController.class.php 第 19 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-18T18:53:07+08:00 ] ::1 /vmallshop/index.php/Home/SmallCat/myShop.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.022001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.023001s ]
+SQL: DESCRIBE vmall_user [ RunTime:0.005000s ]
+SQL: SELECT `user_score` FROM `vmall_user` WHERE `user_id` = 24  [ RunTime:0.000000s ]
+SQL: DESCRIBE vmall_order [ RunTime:0.005001s ]
+ERR: 错误的查询条件:[order_state=>未付款]
+
+[ 2017-07-18T18:53:24+08:00 ] ::1 /vmallshop/index.php/Home/Stock/add_action
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_category [ RunTime:0.005000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 1 LIMIT 9   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `vmall_category` WHERE `category_type` = 2  [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_set [ RunTime:0.005001s ]
+SQL: SELECT * FROM `vmall_set`  [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_stock [ RunTime:0.005000s ]
+SQL: SELECT * FROM `vmall_stock` WHERE `storehouse_id` = 0 AND `goods_id` = 2 LIMIT 1   [ RunTime:0.000000s ]
+SQL: UPDATE `vmall_stock` SET `updata_time`=1500375204,`stock_num`=36 WHERE `storehouse_id` = 0 AND `goods_id` = 2 [ RunTime:0.001000s ]
+SQL: DESCRIBE vmall_stock_desc [ RunTime:0.005000s ]
+SQL: INSERT INTO `vmall_stock_desc` (`goods_id`,`goods_num`,`goods_buy_price`,`goods_sell_price`,`addtime`,`storehouse_id`,`stock_no`,`user_id`) VALUES (2,3,3,3,1500375204,0,'2017071718532412809',24) [ RunTime:0.001001s ]
+NOTIC: [8] Undefined index: info D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 216 行.
+NOTIC: [8] Undefined index: navTabId D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 217 行.
+NOTIC: [8] Undefined index: callbackType D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 218 行.
+NOTIC: [8] Undefined index: forwardUrl D:\phpstudy\WWW\vmallshop\ThinkPHP\Library\Think\Controller.class.php 第 219 行.
+
